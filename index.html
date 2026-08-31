@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#090a0b">
+<title>Lands of Jail — Heroes Hub</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="#">
+    <div class="brand-mark">LOJ</div>
+    <div><strong>Lands of Jail</strong><span>Heroes Hub</span></div>
+  </a>
+  <nav>
+    <a class="active" href="#heroes">Heroes</a>
+    <a href="#war">War Skills</a>
+    <a href="#guides">Guides</a>
+    <a href="#tier">Tier List</a>
+  </nav>
+  <button id="themeBtn" class="icon-btn" title="Toggle theme">☼</button>
+</header>
+
+<main>
+<section class="hero-banner">
+  <div class="hero-copy">
+    <div class="eyebrow"><span></span> COMMUNITY DATABASE</div>
+    <h1>Master every<br><em>Hero.</em></h1>
+    <p>Explore hero roles, seasons, skills, War Skills and team ideas — all in one place.</p>
+    <div class="quick-stats"><div><b id="heroTotal">0</b><small>HEROES</small></div><div><b>3</b><small>ROLES</small></div><div><b>∞</b><small>BUILDS</small></div></div>
+  </div>
+  <div class="hero-art"><div class="ring ring1"></div><div class="ring ring2"></div><div class="crest">⚔</div></div>
+</section>
+
+<section id="heroes" class="database">
+  <div class="search-row">
+    <div class="search-wrap"><span>⌕</span><input id="search" placeholder="Search by hero name..." autocomplete="off"></div>
+    <button id="clear" class="clear">Reset</button>
+  </div>
+
+  <div class="filter-panel">
+    <div class="filter-group"><label>Rarity</label><div id="rarityFilters" class="chips">
+      <button class="chip active" data-value="All">All</button><button class="chip" data-value="SSR">SSR</button><button class="chip" data-value="SR">SR</button><button class="chip" data-value="R">R</button>
+    </div></div>
+    <div class="filter-group"><label>Role</label><div id="roleFilters" class="chips">
+      <button class="chip role active" data-value="All">All</button><button class="chip role" data-value="Shield">🛡 Shield</button><button class="chip role" data-value="Shooter">⚔ Shooter</button><button class="chip role" data-value="Rider">◈ Rider</button>
+    </div></div>
+    <div class="selects"><select id="season"><option value="All">All Seasons</option><option>Base</option><option>S-1</option><option>S-2</option><option>S-3</option><option>S-4</option><option>S-5</option><option>S-6</option></select>
+    <select id="sort"><option value="rarity">Rarity</option><option value="name">Name A–Z</option></select></div>
+  </div>
+
+  <div class="section-head"><div><div class="section-kicker">HERO COLLECTION</div><h2>Heroes</h2></div><div id="count" class="count"></div></div>
+  <section id="grid" class="grid"></section>
+</section>
+
+<section id="war" class="feature-grid">
+  <article><div class="feature-icon">⚔</div><div><span>01</span><h3>War Skills</h3><p>Dedicated space for War Skill effects, stacking rules and rally contribution notes.</p></div></article>
+  <article><div class="feature-icon">♜</div><div><span>02</span><h3>Rally Builds</h3><p>Record starter heroes, joining heroes and recommended combinations for each situation.</p></div></article>
+  <article id="guides"><div class="feature-icon">✦</div><div><span>03</span><h3>Guides</h3><p>Create detailed strategy pages with your own recommendations and community knowledge.</p></div></article>
+</section>
+
+<section id="tier" class="coming">
+  <div><div class="section-kicker">COMING NEXT</div><h2>Tier List &amp; Strategy Tools</h2><p>The site structure is ready for tier rankings, rally calculators and more interactive tools.</p></div>
+  <span class="coming-badge">READY TO BUILD</span>
+</section>
+</main>
+
+<div id="modal" class="modal hidden">
+  <div class="modal-backdrop" data-close></div>
+  <article class="modal-card">
+    <button class="modal-close" data-close>×</button>
+    <div id="modalContent"></div>
+  </article>
+</div>
+<footer>Unofficial community database • English names • Free GitHub Pages project</footer>
+<script src="app.js"></script>
+<div id="editor" class="editor hidden"><div class="editor-box"><div id="editorContent"></div></div></div></body>
+</html>
