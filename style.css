@@ -1922,3 +1922,79 @@ body.light {
   }
 
 }
+/* =========================================================
+   TOME UPGRADE PAGE
+========================================================= */
+
+.tome-page {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 42px 24px 70px;
+  box-sizing: border-box;
+}
+
+.tome-page-header {
+  margin-bottom: 24px;
+}
+
+.tome-page-header .section-kicker {
+  margin-bottom: 8px;
+}
+
+.tome-page-header h1 {
+  margin: 0;
+  font-size: clamp(26px, 4vw, 42px);
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+}
+
+.tome-image-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.tome-upgrade-image {
+  display: block;
+  width: 100%;
+  max-width: 1360px;
+  height: auto;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .tome-page {
+    padding: 22px 0 40px;
+  }
+
+  .tome-page-header {
+    padding: 0 16px;
+    margin-bottom: 16px;
+  }
+
+  .tome-page-header h1 {
+    font-size: 25px;
+    line-height: 1.15;
+  }
+
+  .tome-image-wrapper {
+    width: 100%;
+    padding: 0;
+  }
+
+  .tome-upgrade-image {
+    width: 100%;
+    max-width: none;
+    height: auto;
+    border-radius: 0;
+  }
+
+}
