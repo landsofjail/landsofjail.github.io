@@ -1846,3 +1846,79 @@ body.light {
   }
 
 }
+/* =========================================================
+   TROVE UPGRADE PAGE
+========================================================= */
+
+.trove-page {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 42px 24px 70px;
+  box-sizing: border-box;
+}
+
+.trove-page-header {
+  margin-bottom: 24px;
+}
+
+.trove-page-header .section-kicker {
+  margin-bottom: 8px;
+}
+
+.trove-page-header h1 {
+  margin: 0;
+  font-size: clamp(26px, 4vw, 42px);
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+}
+
+.trove-image-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.trove-upgrade-image {
+  display: block;
+  width: 100%;
+  max-width: 1360px;
+  height: auto;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .trove-page {
+    padding: 22px 0 40px;
+  }
+
+  .trove-page-header {
+    padding: 0 16px;
+    margin-bottom: 16px;
+  }
+
+  .trove-page-header h1 {
+    font-size: 25px;
+    line-height: 1.15;
+  }
+
+  .trove-image-wrapper {
+    width: 100%;
+    padding: 0;
+  }
+
+  .trove-upgrade-image {
+    width: 100%;
+    max-width: none;
+    height: auto;
+    border-radius: 0;
+  }
+
+}
