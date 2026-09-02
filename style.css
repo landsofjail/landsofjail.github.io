@@ -3453,3 +3453,26 @@ body.light {
   text-align: center !important;
   width: 100% !important;
 }
+/* Kart içindeki tüm metinleri ve öğeleri mutlak olarak ortala */
+a.home-guide-card {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  text-align: center !important;
+}
+
+a.home-guide-card .home-guide-content {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  text-align: center !important;
+  width: 100% !important;
+}
+
+a.home-guide-card .home-guide-content h3,
+a.home-guide-card .home-guide-content p {
+  text-align: center !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  width: 100% !important;
+}
