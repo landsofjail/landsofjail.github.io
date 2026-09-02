@@ -3410,3 +3410,23 @@ body.light {
   flex-grow: 1;
   word-break: keep-all; /* Asya dillerinde kelime kırılmasını düzenler */
 }
+/* Dil seçici kapsayıcısının mobilde esnek ve düzgün sıralanması */
+.lang-switcher {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.25rem 0.5rem;
+}
+
+/* Buton içindeki metinlerin asla dikey olarak kırılmamasını sağlar */
+.lang-btn {
+  white-space: nowrap !important;
+  word-break: normal !important;
+  display: inline-block;
+}
+
+/* "|" ayraçlarının mobilde sıkışmasını önler */
+.lang-divider {
+  white-space: nowrap;
+}
