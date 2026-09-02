@@ -3412,3 +3412,80 @@ body.light {
     word-break: break-word;
   }
 }
+/* =========================================================
+   CAGE TEAM - MOBİL ALT ALTA DİZİLİM
+========================================================= */
+
+@media (max-width: 900px) {
+
+  /* 1. Sol ana kart kapsayıcısı */
+  .cage-team-area,
+  .cage-team-builder {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  /* 2. Kahraman slotları ile Troop Formation'ı bir arada tutan iç kapsayıcı */
+  /* Bu kural yan yana duran yapıyı tamamen kırıp dikey (alt alta) yapar */
+  .cage-team-area > div,
+  .cage-team-builder > div,
+  .cage-team-area *,
+  .cage-team-builder * {
+    box-sizing: border-box !important;
+  }
+
+  /* Kahraman kutuları grubu ile Troop Formation'ı içeren ana esnek esnek kutu */
+  .cage-team-area .team-content,
+  .cage-team-builder .team-content,
+  .cage-team-area > div > div,
+  .cage-team-builder > div > div {
+    flex-direction: column !important; /* Doğrudan alta geçmesini sağlar */
+    align-items: center !important;
+    width: 100% !important;
+    gap: 16px !important;
+  }
+
+  /* 3. Kahraman kutuları (3'lü slotlar) kendi içinde yan yana kalsın ama ekrana sığsın */
+  .cage-team-area ul,
+  .cage-team-builder ul,
+  .hero-slots,
+  [class*="slots"] {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    width: 100% !important;
+    gap: 6px !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  /* 4. TROOP FORMATION Tablosunu tamamen kartların altına alır */
+  .troop-formation,
+  [class*="troop-formation"],
+  [class*="formation"] {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-top: 8px !important;
+    display: block !important;
+  }
+}
+
+@media (max-width: 500px) {
+
+  /* Mobilde 3 kahraman kutusunu taşmayacak şekilde daraltır */
+  .hero-slot,
+  .select-hero-box,
+  [class*="hero-"] {
+    flex: 1 1 0 !important;
+    min-width: 0 !important; /* Mobil kırılmayı engeller */
+    max-width: 32% !important;
+    padding: 6px 2px !important;
+  }
+
+  .hero-slot span,
+  .hero-slot small,
+  [class*="hero-"] span {
+    font-size: 8px !important;
+  }
+}
