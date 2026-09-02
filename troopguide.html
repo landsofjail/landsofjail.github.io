@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#08090d">
+
+<title>Troop Guide & Combat Mechanics</title>
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="topbar">
+
+  <a class="brand" href="index.html">
+    <div class="brand-mark">LOJ</div>
+
+    <div>
+      <strong>Lands of Jail</strong>
+      <span data-i18n="hero_database">Hero Database</span>
+    </div>
+  </a>
+
+  <nav>
+    <a href="index.html" data-i18n="nav_home">Home</a>
+    <a href="cage.html" data-i18n="nav_events">Events</a>
+  </nav>
+
+  <button id="themeBtn" class="icon-btn" type="button" title="Toggle contrast">
+    UI
+  </button>
+
+</header>
+
+
+<main class="trove-page">
+
+  <section class="trove-page-header">
+    <div class="section-kicker" data-i18n="hero_kicker">HERO</div>
+
+    <h1 data-i18n="troop_guide_title">Troop Guide & Combat Mechanics</h1>
+
+    <!-- DİL SEÇİM BUTONLARI -->
+    <div class="lang-switcher">
+      <button type="button" class="lang-btn active" data-lang="en" onclick="changeLanguage('en')">English</button>
+      <span class="lang-divider">|</span>
+      <button type="button" class="lang-btn" data-lang="ko" onclick="changeLanguage('ko')">한국어</button>
+    </div>
+  </section>
+
+
+  <section class="trove-image-wrapper">
+
+    <img
+      class="trove-upgrade-image"
+      src="troopguide.jpeg"
+      alt="Troop Guide & Combat Mechanics"
+    >
+
+  </section>
+
+</main>
+
+
+<footer>
+  <span data-i18n="footer_text">Unofficial community database - Server #185 & #197 - el Fuego</span>
+</footer>
+
+
+<script>
+  const themeBtn = document.getElementById("themeBtn");
+
+  if (themeBtn) {
+    themeBtn.addEventListener("click", () => {
+      document.body.classList.toggle("ui-contrast");
+    });
+  }
+</script>
+
+<!-- DİL YÖNETİM DOSYASI -->
+<script src="lang.js"></script>
+
+</body>
+</html>
