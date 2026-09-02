@@ -2017,37 +2017,59 @@ document
   });
 
 
-document.querySelector(
-  "#season"
-).onchange = (event) => {
+const seasonElement = document.querySelector("#season");
 
-  season =
-    event.target.value;
-
-  render();
-
-};
+if (seasonElement) {
+  seasonElement.onchange = (event) => {
+    season = event.target.value;
+    render();
+  };
+}
 
 
-document.querySelector(
-  "#sort"
-).onchange = render;
+const sortElement = document.querySelector("#sort");
+
+if (sortElement) {
+  sortElement.onchange = render;
+}
 
 
-document.querySelector(
-  "#search"
-).oninput = render;
+const searchElement = document.querySelector("#search");
+
+if (searchElement) {
+  searchElement.oninput = render;
+}
 
 
-document.querySelector(
-  "#clear"
-).onclick = () => {
+const clearElement = document.querySelector("#clear");
 
-  rarity = "All";
+if (clearElement) {
 
-  heroClass = "All";
+  clearElement.onclick = () => {
 
-  season = "All";
+    rarity = "All";
+    heroClass = "All";
+    season = "All";
+
+    const search = document.querySelector("#search");
+    const seasonSelect = document.querySelector("#season");
+
+    if (search) {
+      search.value = "";
+    }
+
+    if (seasonSelect) {
+      seasonSelect.value = "All";
+    }
+
+    active("#rarityFilters .chip", "All");
+    active("#roleFilters .chip", "All");
+
+    render();
+
+  };
+
+
 
 
   document.querySelector(
@@ -2143,12 +2165,505 @@ document.addEventListener(
    THEME
 ========================================================= */
 
-document.querySelector(
-  "#themeBtn"
-).onclick = () => {
+const themeButton = document.querySelector("#themeBtn");
 
-  document.body.classList.toggle(
-    "light"
+if (themeButton) {
+
+  themeButton.onclick = () =>
+    document.body.classList.toggle("light");
+
+}
+
+/* =========================================================
+   CAGE HERO SELECTOR
+========================================================= */
+
+document.addEventListener("DOMContentLoaded", function () {
+
+  const shooterSlot = document.getElementById("cageShooterSlot");
+  const bomberSlot = document.getElementById("cageBomberSlot");
+  const shieldSlot = document.getElementById("cageShieldSlot");
+
+  const picker = document.getElementById("cageHeroPicker");
+  const pickerList = document.getElementById("cageHeroList");
+  const pickerTitle = document.getElementById("cagePickerTitle");
+  const closeButton = document.getElementById("closeCagePicker");
+
+  const shieldPercent = document.getElementById("cageShieldPercent");
+  const bomberPercent = document.getElementById("cageBomberPercent");
+  const shooterPercent = document.getElementById("cageShooterPercent");
+
+
+  /* =======================================================
+     CHECK
+  ======================================================= */
+
+  if (
+    !shooterSlot ||
+    !bomberSlot ||
+    !shieldSlot ||
+    !picker ||
+    !pickerList
+  ) {
+
+    console.warn("Cage Hero Selector: HTML elements not found.");
+
+    return;
+
+  }
+
+
+  /* =======================================================
+     HERO DATA
+  ======================================================= */
+
+  const cageHeroes = {
+
+    Shooter: [
+      {
+        name: "Ada",
+        image: "assets/ada.png"
+      },
+
+      {
+        name: "Mireya",
+        image: "assets/mireya.png"
+      }
+    ],
+
+
+    Bomber: [
+      {
+        name: "Wukong",
+        image: "assets/wukong.png"
+      },
+
+      {
+        name: "Ryuichi Ito",
+        image: "assets/ryuichi-ito.png"
+      },
+
+      {
+        name: "Flameborne",
+        image: "assets/flameborne.png"
+      },
+
+      {
+        name: "Whisper",
+        image: "assets/whisper.png"
+      }
+    ],
+
+
+    Shield: [
+      {
+        name: "Tyronn",
+        image: "assets/tyron.png"
+      },
+
+      {
+        name: "Xuanming",
+        image: "assets/xuanming.png"
+      },
+
+      {
+        name: "Phoenix",
+        image: "assets/phoenix.png"
+      }
+    ]
+
+  };
+
+
+  /* =======================================================
+     SELECTED HEROES
+  ======================================================= */
+
+  let selectedHeroes = {
+
+    Shooter: null,
+
+    Bomber: null,
+
+    Shield: null
+
+  };
+
+
+  let activeClass = null;
+
+
+  /* =======================================================
+     OPEN POPUP
+  ======================================================= */
+
+  function openCagePicker(heroClass) {
+
+    activeClass = heroClass;
+
+    pickerTitle.textContent =
+      heroClass.toUpperCase();
+
+    pickerList.innerHTML = "";
+
+
+    const heroes = cageHeroes[heroClass];
+
+
+    heroes.forEach(function (hero) {
+
+      const button = document.createElement("button");
+
+      button.type = "button";
+
+      button.className = "cage-picker-hero";
+
+
+      button.innerHTML = `
+        <img
+          src="${hero.image}"
+          alt="${hero.name}"
+        >
+
+        <strong>
+          ${hero.name}
+        </strong>
+      `;
+
+
+      button.addEventListener(
+        "click",
+        function () {
+
+          selectCageHero(hero);
+
+        }
+      );
+
+
+      pickerList.appendChild(button);
+
+    });
+
+
+    picker.classList.remove("hidden");
+
+    document.body.style.overflow = "hidden";
+
+  }
+
+
+  /* =======================================================
+     SELECT HERO
+  ======================================================= */
+
+  function selectCageHero(hero) {
+
+    if (!activeClass) {
+      return;
+    }
+
+
+    selectedHeroes[activeClass] = hero;
+
+
+    renderCageHero(
+      activeClass,
+      hero
+    );
+
+
+    updateCageFormation();
+
+
+    closeCagePicker();
+
+  }
+
+
+  /* =======================================================
+     RENDER HERO
+  ======================================================= */
+
+  function renderCageHero(heroClass, hero) {
+
+    let slot = null;
+
+
+    if (heroClass === "Shooter") {
+
+      slot = shooterSlot;
+
+    }
+
+    else if (heroClass === "Bomber") {
+
+      slot = bomberSlot;
+
+    }
+
+    else if (heroClass === "Shield") {
+
+      slot = shieldSlot;
+
+    }
+
+
+    if (!slot) {
+      return;
+    }
+
+
+    const imageBox =
+      slot.querySelector(".cage-hero-image");
+
+    const name =
+      slot.querySelector("strong");
+
+    const className =
+      slot.querySelector("small");
+
+
+    if (imageBox) {
+
+      imageBox.innerHTML = `
+        <img
+          src="${hero.image}"
+          alt="${hero.name}"
+        >
+      `;
+
+    }
+
+
+    if (name) {
+
+      name.textContent =
+        hero.name;
+
+    }
+
+
+    if (className) {
+
+      className.textContent =
+        heroClass.toUpperCase();
+
+    }
+
+  }
+
+
+  /* =======================================================
+     TROOP FORMATION
+  ======================================================= */
+
+  function updateCageFormation() {
+
+    let shield = 0;
+
+    let bomber = 0;
+
+
+    /* -------------------------------------------------------
+       ADA
+       +1% SHIELD
+    ------------------------------------------------------- */
+
+    if (
+      selectedHeroes.Shooter &&
+      selectedHeroes.Shooter.name === "Ada"
+    ) {
+
+      shield = 1;
+
+    }
+
+
+/* -------------------------------------------------------
+   BOMBER
+------------------------------------------------------- */
+
+if (selectedHeroes.Bomber) {
+
+  const bomberHero = selectedHeroes.Bomber.name;
+
+  const adaSelected =
+    selectedHeroes.Shooter &&
+    selectedHeroes.Shooter.name === "Ada";
+
+
+  if (bomberHero === "Wukong") {
+
+    // Wukong: Ada varsa 9%, yoksa 15%
+    bomber = adaSelected ? 14 : 15;
+
+  } else {
+
+    // Diğer Bomberlar: Ada varsa 9%, yoksa 10%
+    bomber = adaSelected ? 9 : 10;
+
+  }
+
+}
+
+
+    /* -------------------------------------------------------
+       SHOOTER = REMAINING %
+    ------------------------------------------------------- */
+
+    let shooter =
+      100 - shield - bomber;
+
+
+    if (shooter < 0) {
+
+      shooter = 0;
+
+    }
+
+
+    /* -------------------------------------------------------
+       UPDATE SCREEN
+    ------------------------------------------------------- */
+
+    if (shieldPercent) {
+
+      shieldPercent.textContent =
+        shield + "%";
+
+    }
+
+
+    if (bomberPercent) {
+
+      bomberPercent.textContent =
+        bomber + "%";
+
+    }
+
+
+    if (shooterPercent) {
+
+      shooterPercent.textContent =
+        shooter + "%";
+
+    }
+
+  }
+
+
+  /* =======================================================
+     CLOSE POPUP
+  ======================================================= */
+
+  function closeCagePicker() {
+
+    picker.classList.add("hidden");
+
+    document.body.style.overflow = "";
+
+    activeClass = null;
+
+  }
+
+
+  /* =======================================================
+     SLOT CLICK EVENTS
+  ======================================================= */
+
+  shooterSlot.addEventListener(
+    "click",
+    function () {
+
+      openCagePicker("Shooter");
+
+    }
   );
 
-};
+
+  bomberSlot.addEventListener(
+    "click",
+    function () {
+
+      openCagePicker("Bomber");
+
+    }
+  );
+
+
+  shieldSlot.addEventListener(
+    "click",
+    function () {
+
+      openCagePicker("Shield");
+
+    }
+  );
+
+
+  /* =======================================================
+     CLOSE BUTTON
+  ======================================================= */
+
+  if (closeButton) {
+
+    closeButton.addEventListener(
+      "click",
+      closeCagePicker
+    );
+
+  }
+
+
+  /* =======================================================
+     BACKDROP
+  ======================================================= */
+
+  const backdrop =
+    picker.querySelector(".cage-picker-backdrop");
+
+
+  if (backdrop) {
+
+    backdrop.addEventListener(
+      "click",
+      closeCagePicker
+    );
+
+  }
+
+
+  /* =======================================================
+     ESC
+  ======================================================= */
+
+  document.addEventListener(
+    "keydown",
+    function (event) {
+
+      if (
+        event.key === "Escape" &&
+        !picker.classList.contains("hidden")
+      ) {
+
+        closeCagePicker();
+
+      }
+
+    }
+  );
+
+
+  /* =======================================================
+     INITIAL FORMATION
+  ======================================================= */
+
+  updateCageFormation();
+
+
+  console.log(
+    "Cage Hero Selector loaded successfully."
+  );
+
+});
