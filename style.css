@@ -3250,46 +3250,81 @@ body.light {
 
 
 /* =========================================================
-   MOBILE RESPONSIVE
+   CAGE & TROOP FORMATION MOBILE OVERFLOW FIX
 ========================================================= */
 
 @media (max-width: 900px) {
 
+  /* 1. Ana Masaüstü Layout Esnekliğini Dikey Yap */
   .cage-main-layout,
   .cage-event-layout {
-    flex-direction: column;
-    width: 100%;
-    gap: 20px;
+    flex-direction: column !important;
+    align-items: center !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    gap: 24px !important;
   }
 
+  /* 2. Cage Team Kutusu ve İçindeki Elemanları Esnet */
   .cage-team-area,
-  .cage-team-builder,
+  .cage-team-builder {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  /* 3. Kahraman Kutuları + Troop Formation'ın Yan Yana Durduğu İç Kapsayıcıyı Alt Alta Diz */
+  .cage-team-area > div,
+  .cage-team-builder > div,
+  [class*="team-"] {
+    flex-direction: column !important;
+    flex-wrap: wrap !important;
+    align-items: center !important;
+    width: 100% !important;
+  }
+
+  /* 4. TROOP FORMATION Kartını Kesin Olarak Alta Al */
+  .troop-formation,
+  [class*="troop-formation"],
+  [class*="formation"] {
+    position: relative !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-top: 16px !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    right: auto !important;
+    box-sizing: border-box !important;
+  }
+
+  /* 5. Robotlar Alanı */
   .robot-section,
   .robot-area {
-    width: 100%;
+    width: 100% !important;
+    max-width: 100% !important;
   }
 
   .robot-cards {
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-
-  .robot-note {
-    max-width: 100%;
+    justify-content: center !important;
+    flex-wrap: wrap !important;
+    width: 100% !important;
   }
 }
 
 @media (max-width: 500px) {
 
-  .robot-cards {
-    gap: 7px;
+  /* Kahraman Seçim Kutularının Mobilde Taşmasını Önle */
+  .hero-slot,
+  .select-hero-box,
+  [class*="hero-"] {
+    max-width: 30% !important;
+    min-width: 0 !important;
+    padding: 6px 2px !important;
   }
 
+  /* Robot Kartlarını Esnet */
   .robot-card {
-    width: 100px;
-  }
-
-  .robot-image {
-    height: 82px;
+    width: calc(33.33% - 6px) !important;
+    min-width: 90px !important;
   }
 }
