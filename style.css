@@ -3345,3 +3345,70 @@ body.light {
     font-size: 9px !important;
   }
 }
+/* =========================================================
+   CAGE TEAM MOBILE OVERFLOW FIX (Kesin Taşma Çözümü)
+========================================================= */
+
+@media (max-width: 768px) {
+
+  /* 1. Tüm ana kapsayıcıların taşmasını ve taşan kısımların gizlenmesini engelle */
+  .cage-main-layout,
+  .cage-event-layout,
+  .cage-team-area,
+  .cage-team-builder,
+  [class*="cage-team"] {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  /* 2. Kahraman kutuları ile Troop Formation'ı tutan iç esnek kutuyu dikey hizala */
+  .cage-team-area > div,
+  .cage-team-builder > div,
+  .cage-team-area form,
+  .cage-team-builder form {
+    display: flex !important;
+    flex-direction: column !important; /* Yanyana yerine alt alta diz */
+    align-items: center !important;
+    width: 100% !important;
+    gap: 16px !important;
+  }
+
+  /* 3. Kahraman seçim kutularının (3'lü slotlar) kapsayıcısı */
+  .cage-team-area ul,
+  .cage-team-builder ul,
+  [class*="hero-slot"],
+  [class*="slots"] {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: center !important;
+    width: 100% !important;
+    gap: 6px !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  /* 4. Kahraman kutularının mobil genişliğini ekranla orantılı yap */
+  [class*="hero-slot"] > *,
+  [class*="select-hero"] {
+    flex: 1 1 0 !important; /* Eşit şekilde daralsınlar */
+    max-width: 105px !important;
+    min-width: 0 !important; /* Taşmayı önleyen kritik kural */
+    box-sizing: border-box !important;
+  }
+
+  /* 5. Troop Formation tablosunu/kutusunu tam genişlik yap ve alta oturt */
+  [class*="troop-formation"],
+  [class*="formation"] {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-top: 10px !important;
+    box-sizing: border-box !important;
+  }
+
+  /* 6. İçerikteki metinlerin dışarı taşmasını engelle */
+  * {
+    max-width: 100% !important;
+    word-break: break-word;
+  }
+}
