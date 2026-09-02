@@ -1,0 +1,796 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#08090d">
+
+<title>Lands of Jail - Cage Event</title>
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="topbar">
+
+  <a class="brand" href="index.html">
+
+    <div class="brand-mark">
+      LOJ
+    </div>
+
+    <div>
+      <strong>Lands of Jail</strong>
+      <span>Hero Database</span>
+    </div>
+
+  </a>
+
+
+  <nav>
+
+    <a href="index.html">
+      Heroes
+    </a>
+
+    <!-- <a href="war-skills.html">
+    War Skills
+    </a> -->
+
+    <!--<a class="active" href="guides.html">
+      Guides
+    </a>
+
+    <a href="tier-list.html">
+      Tier List
+    </a>-->
+
+    <a class="active" href="events.html">
+      Events
+    </a>
+
+  </nav>
+
+
+  <button
+    id="themeBtn"
+    class="icon-btn"
+    title="Toggle contrast"
+  >
+    UI
+  </button>
+
+</header>
+
+
+<main>
+
+
+<!-- ========================================= -->
+<!-- EVENT HERO -->
+<!-- ========================================= -->
+
+<section class="hero-banner">
+
+  <div class="hero-copy">
+
+    <div class="eyebrow">
+
+      <span></span>
+
+      EVENT GUIDE
+
+    </div>
+
+
+    <h1>
+
+      Cage<br>
+
+      <em>Event</em>
+
+    </h1>
+
+
+    <p>
+
+      Recommended rally starter heroes, joiner heroes,
+      troop ratios and strategy information
+      for the <b>Cage Event!</b>
+
+    </p>
+
+
+    <!--<div class="quick-stats">
+
+      <div>
+
+        <b>BEST</b>
+
+        <small>RALLY STARTERS</small>
+
+      </div>
+
+
+      <div>
+
+        <b>BEST</b>
+
+        <small>JOINER HEROES</small>
+
+      </div>
+
+
+      <div>
+
+        <b>HIGH</b>
+
+        <small>DAMAGE!</small>
+
+      </div>
+
+    </div>
+
+  </div>-->
+
+
+  <div class="hero-art" aria-hidden="true">
+
+    <div class="crest-card crest-a"></div>
+
+    <div class="crest-card crest-b"></div>
+
+    <div class="crest-core">
+      CAGE
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- ========================================= -->
+<!-- EVENT OVERVIEW -->
+<!-- ========================================= -->
+
+<section class="database">
+
+  <div class="section-head">
+
+    <div>
+
+      <div class="section-kicker">
+        EVENT GUIDE
+      </div>
+
+      <h2>
+        Cage Event
+      </h2>
+
+    </div>
+
+  </div>
+
+
+  <div class="guide-panel">
+
+    <!--<h3>
+      Cage Event
+    </h3>-->
+
+    <p>
+      Select your available heroes below to build custom Cage Rally teams and optimize your troop formations.
+    </p>
+
+  </div>
+
+</section>
+
+<!-- =========================================================
+     CAGE TEAM + ROBOTS
+========================================================= -->
+
+<div class="cage-event-layout">
+
+  <!-- CAGE TEAM -->
+
+  <section class="cage-team-builder">
+
+    <div class="cage-team-card">
+
+      <div class="cage-team-header">
+
+        <div>
+          <span>CAGE TEAM</span>
+          <h3>Rally Starter Team</h3>
+        </div>
+
+      </div>
+
+
+      <div class="cage-team-content">
+
+
+        <!-- HERO SLOTS -->
+
+        <div class="cage-hero-slots">
+
+
+          <!-- SHOOTER -->
+
+          <div
+            class="cage-hero-slot"
+            id="cageShooterSlot"
+            data-class="Shooter"
+          >
+
+            <div class="cage-hero-image">
+
+              <div class="cage-empty-hero">
+                +
+              </div>
+
+            </div>
+
+            <strong>Select Hero</strong>
+
+            <small>SHOOTER</small>
+
+          </div>
+
+
+          <!-- BOMBER -->
+
+          <div
+            class="cage-hero-slot"
+            id="cageBomberSlot"
+            data-class="Bomber"
+          >
+
+            <div class="cage-hero-image">
+
+              <div class="cage-empty-hero">
+                +
+              </div>
+
+            </div>
+
+            <strong>Select Hero</strong>
+
+            <small>BOMBER</small>
+
+          </div>
+
+
+          <!-- SHIELD -->
+
+          <div
+            class="cage-hero-slot"
+            id="cageShieldSlot"
+            data-class="Shield"
+          >
+
+            <div class="cage-hero-image">
+
+              <div class="cage-empty-hero">
+                +
+              </div>
+
+            </div>
+
+            <strong>Select Hero</strong>
+
+            <small>SHIELD</small>
+
+          </div>
+
+
+        </div>
+
+
+        <!-- TROOP FORMATION -->
+
+        <div class="troop-ratio">
+
+          <div class="troop-ratio-title">
+            TROOP FORMATION
+          </div>
+
+          <div class="troop-ratio-row">
+            <span>Shield</span>
+            <strong id="cageShieldPercent">0%</strong>
+          </div>
+
+          <div class="troop-ratio-row">
+            <span>Bomber</span>
+            <strong id="cageBomberPercent">0%</strong>
+          </div>
+
+          <div class="troop-ratio-row">
+            <span>Shooter</span>
+            <strong id="cageShooterPercent">100%</strong>
+          </div>
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+
+
+<!-- =========================================================
+     ROBOT AREA
+========================================================= -->
+
+<div class="robot-section">
+
+  <div class="robot-area">
+
+  <!-- ROBOT CARDS -->
+  <div class="robot-cards">
+
+    <!-- ROBOT 01 -->
+    <article class="robot-card">
+
+      <div class="robot-label">
+        Power Armor No.07
+      </div>
+
+      <h3>Phantom Cat</h3>
+
+      <div class="robot-image">
+        <img src="assets/robot01.png" alt="Phantom Cat">
+      </div>
+
+      <div class="robot-statistics">
+
+        <strong>STATISTICS(Max)</strong>
+
+       <div>
+          <span>Shooter ATK</span>
+          <b>+76%</b>
+        </div>
+
+        <div>
+          <span>Shooter DEF</span>
+          <b>+76%</b>
+        </div>
+
+      </div>
+
+    </article>
+
+
+    <!-- ROBOT 02 -->
+    <article class="robot-card">
+
+      <div class="robot-label">
+        Power Armor No.05
+      </div>
+
+      <h3>Infercore</h3>
+
+      <div class="robot-image">
+        <img src="assets/robot02.png" alt="Infercore">
+      </div>
+
+      <div class="robot-statistics">
+
+        <strong>STATISTICS(Max)</strong>
+
+        <div>
+          <span>Shooter ATK</span>
+          <b>+65%</b>
+        </div>
+
+        <div>
+          <span>Bomber ATK</span>
+          <b>+65%</b>
+        </div>
+
+
+      </div>
+
+    </article>
+
+
+    <!-- ROBOT 03 -->
+    <article class="robot-card">
+
+      <div class="robot-label">
+        Power Armor No.04
+      </div>
+
+      <h3>Ranger</h3>
+
+      <div class="robot-image">
+        <img src="assets/robot03.png" alt="Ranger">
+      </div>
+
+      <div class="robot-statistics">
+
+        <strong>STATISTICS(Max)</strong>
+
+        <div>
+          <span>Shooter ATK</span>
+          <b>+65%</b>
+        </div>
+
+        <div>
+          <span>Shooter DEF</span>
+          <b>+65%</b>
+        </div>
+
+      </div>
+
+    </article>
+
+  </div>
+
+
+  <!-- PERSONAL NOTE -->
+  <div class="robot-note">
+    "Phantom Cat (Power Armor No.07) is currently the most effective Power Armor in the Cage event. Activating more Cores will directly maximize the potential of its Core Skill."
+  </div>
+
+</div>
+</div>
+
+</div>
+
+<!-- =========================================================
+     CAGE HERO PICKER
+========================================================= -->
+
+<div
+  id="cageHeroPicker"
+  class="cage-hero-picker hidden"
+>
+
+  <div class="cage-picker-backdrop"></div>
+
+
+  <div class="cage-picker-modal">
+
+    <div class="cage-picker-header">
+
+      <div>
+
+        <span>SELECT HERO</span>
+
+        <h3 id="cagePickerTitle">
+          SELECT HERO
+        </h3>
+
+      </div>
+
+
+      <button
+        type="button"
+        id="closeCagePicker"
+        aria-label="Close"
+      >
+        ×
+      </button>
+
+    </div>
+
+
+    <div
+      id="cageHeroList"
+      class="cage-picker-list"
+    ></div>
+
+  </div>
+
+</div>
+
+</div>
+<!-- ========================================= -->
+<!-- CAGE EVENT CHARACTER LIST -->
+<!-- ========================================= -->
+
+<section class="database cage-character-section">
+
+  <div class="section-head">
+    <div>
+      <div class="section-kicker">
+        CAGE EVENT
+      </div>
+
+      <h2>
+        Joiner Heroes (Use one hero of each tier)
+      </h2>
+    </div>
+  </div>
+
+
+  <div class="cage-priority-panel">
+
+
+    <!-- PRIORITY 1 -->
+
+    <div class="cage-priority-row">
+
+      <div class="cage-priority-title">
+        <span>TIER</span>
+        <strong>1</strong>
+      </div>
+
+      <div class="cage-characters">
+
+        <div class="cage-character">
+          <img src="assets/drake.png" alt="Drake">
+          <strong>Drake</strong>
+        </div>
+
+        <div class="cage-character">
+          <img src="assets/flameborne.png" alt="Flameborne">
+          <strong>Flameborne</strong>
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- PRIORITY 2 -->
+
+    <div class="cage-priority-row">
+
+      <div class="cage-priority-title">
+        <span>TIER</span>
+        <strong>2</strong>
+        <em>DMG</em>
+      </div>
+
+      <div class="cage-characters">
+
+        <div class="cage-character">
+          <img src="assets/koschevoi.png" alt="Koschevoi">
+          <strong>Koschevoi</strong>
+        </div>
+
+        <div class="cage-character">
+          <img src="assets/phoenix.png" alt="Phoenix">
+          <strong>Phoenix</strong>
+        </div>
+
+        <div class="cage-character">
+          <img src="assets/lunarl.png" alt="Lunarl">
+          <strong>Lunarl</strong>
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- PRIORITY 3 -->
+
+    <div class="cage-priority-row">
+
+      <div class="cage-priority-title">
+        <span>TIER</span>
+        <strong>3</strong>
+        <em>ATK</em>
+      </div>
+
+      <div class="cage-characters">
+
+        <div class="cage-character">
+          <img src="assets/kate.png" alt="Kate">
+          <strong>Kate</strong>
+        </div>
+
+        <div class="cage-character">
+          <img src="assets/vivian.png" alt="Vivian">
+          <strong>Vivian</strong>
+        </div>
+
+        <div class="cage-character">
+          <img src="assets/lofili.png" alt="Lofili">
+          <strong>Lofili</strong>
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- PRIORITY 4 -->
+
+    <div class="cage-priority-row">
+
+      <div class="cage-priority-title">
+        <span>TIER</span>
+        <strong>4</strong>
+        <em>LETHALITY</em>
+      </div>
+
+      <div class="cage-characters">
+
+        <div class="cage-character">
+          <img src="assets/xuanming.png" alt="Xuanming">
+          <strong>Xuanming</strong>
+        </div>
+
+        <div class="cage-character">
+          <img src="assets/devilian.png" alt="Devilian">
+          <strong>Devilian</strong>
+        </div>
+
+        <div class="cage-character">
+          <img src="assets/ekko.png" alt="Ekko">
+          <strong>Ekko</strong>
+        </div>
+
+        <div class="cage-character">
+          <img src="assets/samir.png" alt="Samir">
+          <strong>Samir</strong>
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- PRIORITY 5 -->
+
+    <div class="cage-priority-row">
+
+      <div class="cage-priority-title">
+        <span>TIER</span>
+        <strong>5</strong>
+      </div>
+
+      <div class="cage-characters">
+
+        <div class="cage-character">
+          <img src="assets/worrell.png" alt="Worrell">
+          <strong>Worrel</strong>
+        </div>
+
+        <div class="cage-character">
+          <img src="assets/ryuichi-ito.png" alt="Ryuichi Ito">
+          <strong>Ryuichi Ito</strong>
+        </div>
+
+        <div class="cage-character">
+          <img src="assets/veronica.png" alt="Veronica">
+          <strong>Veronica</strong>
+        </div>
+
+        <div class="cage-character">
+          <img src="assets/tyron.png" alt="Tyronn">
+          <strong>Tyronn</strong>
+        </div>
+
+        <div class="cage-character">
+          <img src="assets/wukong.png" alt="Wukong">
+          <strong>Wukong</strong>
+        </div>
+
+      </div>
+
+    </div>
+
+
+  </div>
+
+
+  <!-- EVENT NOTES -->
+
+  <div class="cage-event-notes">
+
+    <div class="cage-note">
+      <span class="cage-note-icon">★</span>
+      <p>Use only <strong>4-star or higher</strong> characters with <strong>first war skill Maxed/Level 5</strong></p>
+    </div>
+
+    <div class="cage-note">
+      <span class="cage-note-icon">◆</span>
+      <p>Adjust the first 4 joiner heroes in yor own rallies.</p>
+    </div>
+
+    <div class="cage-note">
+      <span class="cage-note-icon">✦</span>
+      <p>Same joiner war skills <strong>will not stack</strong>.</p>
+    </div>
+
+  </div>
+
+</section>
+
+
+
+
+
+<!-- ========================================= -->
+<!-- STRATEGY -->
+<!-- ========================================= -->
+
+<section class="database">
+
+  <div class="section-head">
+
+    <div>
+
+      <div class="section-kicker">
+        EVENT STRATEGY
+      </div>
+
+      <h2>
+        Strategy
+      </h2>
+
+    </div>
+
+  </div>
+
+
+  <div class="guide-panel">
+
+    <p>
+      Strategy information will be added here.
+    </p>
+
+  </div>
+
+</section>
+
+
+
+<!-- ========================================= -->
+<!-- TIPS -->
+<!-- ========================================= -->
+
+<section class="coming">
+
+  <div>
+
+    <div class="section-kicker">
+      COMMUNITY KNOWLEDGE
+    </div>
+
+    <h2>
+      Tips & Notes
+    </h2>
+
+    <p>
+      Useful tips, tested formations and community
+      notes will be added here.
+    </p>
+
+  </div>
+
+
+  <span class="coming-badge">
+    CAGE EVENT
+  </span>
+
+</section>
+
+
+</main>
+
+
+<footer>
+
+  Unofficial community database - Server #185 & #197 - el Fuego
+
+</footer>
+
+
+<script src="app.js"></script>
+
+</body>
+</html>
