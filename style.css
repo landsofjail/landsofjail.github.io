@@ -3430,3 +3430,26 @@ body.light {
 .lang-divider {
   white-space: nowrap;
 }
+/* Kartların içindeki tüm elementleri (resim, başlık, açıklama) dikeyde ortala */
+.home-guide-card {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  text-align: center !important;
+}
+
+/* Metinlerin bulunduğu içerik alanını da ortalı ve tam genişlikte yap */
+.home-guide-content {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  text-align: center !important;
+  width: 100% !important;
+}
+
+/* Başlık ve açıklamaların metin hizalamasını kesin olarak ortala */
+.home-guide-content h3,
+.home-guide-content p {
+  text-align: center !important;
+  width: 100% !important;
+}
