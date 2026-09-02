@@ -3293,3 +3293,55 @@ body.light {
     height: 82px;
   }
 }
+/* =========================================================
+   CAGE TEAM BUILDER MOBILE FIX (Troop Formation Taşma Çözümü)
+========================================================= */
+
+@media (max-width: 900px) {
+
+  /* Sol taraftaki "Cage Team" kartının kendisi */
+  .cage-team-area,
+  .cage-team-builder {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box;
+  }
+
+  /* Kahraman Seçim Kutuları ve Troop Formation'ın bulunduğu kapsayıcı */
+  /* Eğer farklı bir sınıf adı kullanıyorsanız bunu responsive esnek yapıya getiriyoruz */
+  .cage-team-builder > div,
+  .cage-team-area > div,
+  .team-content-wrapper {
+    flex-direction: column !important; /* Tabloyu kahramanların altına alır */
+    align-items: center !important;
+    width: 100% !important;
+    gap: 16px !important;
+  }
+
+  /* Troop Formation kutusu */
+  .troop-formation,
+  [class*="troop-formation"] {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box;
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 500px) {
+
+  /* Mobil ekranlarda 3 Kahraman Kutusu yan yana sığabilsin diye boyut küçültme */
+  .hero-select-slot,
+  .hero-slot,
+  [class*="hero-slot"] {
+    width: calc(33.33% - 8px) !important;
+    min-width: 80px !important;
+    padding: 6px 2px !important;
+  }
+
+  /* Kahraman kutuları içindeki yazıları küçük ekranlara sığdırma */
+  .hero-slot span,
+  .hero-slot small {
+    font-size: 9px !important;
+  }
+}
