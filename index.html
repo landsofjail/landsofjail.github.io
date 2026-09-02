@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#08090d">
+<title>Lands of Jail - Hero Database</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <a class="brand" href="index.html">
+    <div class="brand-mark">LOJ</div>
+    <div>
+      <strong>Lands of Jail</strong>
+      <span data-i18n="hero_database">Hero Database</span>
+    </div>
+  </a>
+  <nav>
+    <a class="active hero-nav-link" href="index.html" data-i18n="nav_heroes">Heroes</a>
+    <a href="cage.html" data-i18n="nav_events">Events</a>
+  </nav>
+  <button id="themeBtn" class="icon-btn" type="button" title="Toggle contrast">UI</button>
+</header>
+
+<main>
+
+  <!-- RISE FROM ASHES BANNER -->
+  <section class="home-banner">
+    <img
+      src="rise-from-ashes-banner.png"
+      alt="Rise From Ashes"
+      class="home-banner-image"
+    >
+  </section>
+
+  <section class="home-menu">
+
+    <div class="home-menu-header">
+      <div class="section-kicker">LANDS OF JAIL</div>
+      <h1 data-i18n="community_db_title">Community Database</h1>
+      <p data-i18n="select_section">Select a section to continue</p>
+      </div>
+      <!-- 4 DİLLİ SEÇİM BUTONLARI -->
+<!-- 5 DİLLİ SEÇİM BUTONLARI -->
+<div class="lang-switcher">
+  <button type="button" class="lang-btn active" data-lang="en" onclick="changeLanguage('en')">English</button>
+  <span class="lang-divider">|</span>
+  <button type="button" class="lang-btn" data-lang="ko" onclick="changeLanguage('ko')">한국어</button>
+  <span class="lang-divider">|</span>
+  <button type="button" class="lang-btn" data-lang="zh-TW" onclick="changeLanguage('zh-TW')">繁體中文</button>
+  <span class="lang-divider">|</span>
+  <button type="button" class="lang-btn" data-lang="de" onclick="changeLanguage('de')">Deutsch</button>
+  <span class="lang-divider">|</span>
+  <button type="button" class="lang-btn" data-lang="tr" onclick="changeLanguage('tr')">Türkçe</button>
+</div>
+
+    <div class="home-menu-grid">
+      <section class="home-guides">
+
+        <a href="cage.html" class="home-guide-card">
+          <img src="images/cage.png" alt="Cage Event">
+          <div class="home-guide-content">
+            <h3 data-i18n="card_cage_title">Cage Event</h3>
+            <p data-i18n="card_cage_desc">Cage event information.</p>
+          </div>
+        </a>
+
+        <a href="armor.html" class="home-guide-card">
+          <img src="images/armor.png" alt="Prisoner Armor">
+          <div class="home-guide-content">
+            <h3 data-i18n="card_armor_title">Prisoner Armor</h3>
+            <p data-i18n="card_armor_desc">Prisoner Armor levelling and core upgrading requirements.</p>
+          </div>
+        </a>
+
+        <a href="trove.html" class="home-guide-card">
+          <img src="images/trove.png" alt="Trove Upgrade">
+          <div class="home-guide-content">
+            <h3 data-i18n="card_trove_title">Trove Upgrade</h3>
+            <p data-i18n="card_trove_desc">Trove upgrade requirements.</p>
+          </div>
+        </a>
+
+        <a href="tome.html" class="home-guide-card">
+          <img src="images/tome.png" alt="Tome Upgrade">
+          <div class="home-guide-content">
+            <h3 data-i18n="card_tome_title">Tome Upgrade</h3>
+            <p data-i18n="card_tome_desc">Tome upgrade requirements.</p>
+          </div>
+        </a>
+
+        <a href="troopguide.html" class="home-guide-card">
+          <img src="images/troopguide.png" alt="Troop Guide">
+          <div class="home-guide-content">
+            <h3 data-i18n="card_troop_title">Troop Guide</h3>
+            <p data-i18n="card_troop_desc">Troop types, counters and combat mechanics.</p>
+          </div>
+        </a>
+
+        <a href="satelite.html" class="home-guide-card">
+          <img src="images/satellite.png" alt="Satellite">
+          <div class="home-guide-content">
+            <h3 data-i18n="card_satellite_title">Satellite</h3>
+            <p data-i18n="card_satellite_desc">Satellite information and upgrade guide.</p>
+          </div>
+        </a>
+
+        <a href="equipment.html" class="home-guide-card">
+          <img src="images/equipment.png" alt="Hero Equipment Reformation">
+          <div class="home-guide-content">
+            <h3 data-i18n="card_equip_ref_title">Hero Equipment Reformation</h3>
+            <p data-i18n="card_equip_ref_desc">Hero Equipment Reformation upgrade requirements.</p>
+          </div>
+        </a>
+
+        <a href="heroequipment.html" class="home-guide-card">
+          <img src="images/heroequipment.png" alt="Hero Exclusive Equipment">
+          <div class="home-guide-content">
+            <h3 data-i18n="card_hero_equip_title">Hero Exclusive Equipment</h3>
+            <p data-i18n="card_hero_equip_desc">Hero exclusive equipment information and requirements.</p>
+          </div>
+        </a>
+
+        <a href="herostar.html" class="home-guide-card">
+          <img src="images/herostar.png" alt="Hero Star">
+          <div class="home-guide-content">
+            <h3 data-i18n="card_hero_star_title">Hero Star</h3>
+            <p data-i18n="card_hero_star_desc">Hero star upgrade requirements.</p>
+          </div>
+        </a>
+
+      </section>
+    </div>
+
+  </section>
+
+</main>
+
+<div id="modal" class="modal hidden">
+  <div class="modal-backdrop" data-close></div>
+  <article class="modal-card">
+    <button class="modal-close" data-close>Close</button>
+    <div id="modalContent"></div>
+  </article>
+</div>
+
+<div id="editor" class="editor hidden">
+  <div class="editor-box"><div id="editorContent"></div></div>
+</div>
+
+<footer>
+  <span data-i18n="footer_text">Unofficial community database - Server #185 & #197 - el Fuego</span>
+</footer>
+
+<!-- DİL YÖNETİM VE UYGULAMA DOSYALARI -->
+<script src="lang.js"></script>
+<script src="app.js"></script>
+
+</body>
+</html>
