@@ -3249,4 +3249,47 @@ body.light {
 }
 
 
+/* =========================================================
+   MOBILE RESPONSIVE
+========================================================= */
 
+@media (max-width: 900px) {
+
+  .cage-main-layout,
+  .cage-event-layout {
+    flex-direction: column;
+    width: 100%;
+    gap: 20px;
+  }
+
+  .cage-team-area,
+  .cage-team-builder,
+  .robot-section,
+  .robot-area {
+    width: 100%;
+  }
+
+  .robot-cards {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .robot-note {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 500px) {
+
+  .robot-cards {
+    gap: 7px;
+  }
+
+  .robot-card {
+    width: 100px;
+  }
+
+  .robot-image {
+    height: 82px;
+  }
+}
