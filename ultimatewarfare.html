@@ -1,0 +1,1645 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#08090d">
+  <title>The Ultimate Tactical Warfare Guide</title>
+
+  <!-- Keep the existing site stylesheet and language system. -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="ultimatewarfare.css">
+</head>
+<body>
+
+<header class="topbar">
+
+  <a class="brand" href="index.html">
+    <div class="brand-mark">LOJ</div>
+
+    <div>
+      <strong>Lands of Jail</strong>
+      <span data-i18n="hero_database">Hero Database</span>
+    </div>
+  </a>
+
+  <nav>
+    <a href="index.html" data-i18n="nav_home">Home</a>
+    <a href="cage.html" data-i18n="nav_events">Events</a>
+  </nav>
+
+  <button id="themeBtn" class="icon-btn" type="button" title="Toggle contrast">
+    UI
+  </button>
+
+</header>
+
+  <main class="uw-guide" id="uw-top">
+
+    <!-- Replace this banner image with the exact existing guide banner filename. -->
+    <section class="uw-banner">
+      <img src="assets/ultimate-warfare-banner.jfif" alt="The Ultimate Tactical Warfare Guide" class="uw-banner-image">
+      <div class="uw-banner-overlay">
+        <p class="uw-eyebrow" data-i18n="uw_auto_p_0001">ULTIMATE WARFARE</p>
+        <h1 data-i18n="ultimate_guide_title">THE ULTIMATE TACTICAL WARFARE GUIDE</h1>
+        <p data-i18n="uw_auto_p_0002">
+          The comprehensive master handbook for army formation, stat interactions,
+          hero synergies, and robot power armor mechanics.
+        </p>
+      </div>
+    </section>
+<div class="lang-switcher uw-lang-switcher">
+  <button type="button" class="lang-btn active" data-lang="en" onclick="changeLanguage(&#x27;en&#x27;)" data-i18n="uw_auto_button_0003">English</button>
+  <span class="lang-divider" data-i18n="uw_auto_span_0004">|</span>
+
+  <button type="button" class="lang-btn" data-lang="ko" onclick="changeLanguage(&#x27;ko&#x27;)" data-i18n="uw_auto_button_0005">한국어</button>
+  <span class="lang-divider" data-i18n="uw_auto_span_0006">|</span>
+
+  <button type="button" class="lang-btn" data-lang="zh-TW" onclick="changeLanguage(&#x27;zh-TW&#x27;)" data-i18n="uw_auto_button_0007">繁體中文</button>
+  <span class="lang-divider" data-i18n="uw_auto_span_0008">|</span>
+
+  <button type="button" class="lang-btn" data-lang="de" onclick="changeLanguage(&#x27;de&#x27;)" data-i18n="uw_auto_button_0009">Deutsch</button>
+  <span class="lang-divider" data-i18n="uw_auto_span_0010">|</span>
+
+  <button type="button" class="lang-btn" data-lang="tr" onclick="changeLanguage(&#x27;tr&#x27;)" data-i18n="uw_auto_button_0011">Türkçe</button>
+</div>
+    <!-- Same-page navigation only -->
+    <div class="uw-toc-header">
+  <span class="uw-section-kicker" data-i18n="uw_guide_contents">
+    GUIDE CONTENTS
+  </span>
+
+  <h2 data-i18n="uw_jump_to_section">
+    Jump to a Section
+  </h2>
+</div>
+
+      <div class="uw-toc-group">
+        <a href="#ultimate-guide" class="uw-toc-main" data-i18n="uw_core_title">
+  The Ultimate Tactical Warfare Guide
+</a>
+        <div class="uw-toc-sub">
+          <a href="#troop-triangle" data-i18n="uw_troop_triangle_title">
+  1. The Troop Triangle &amp; Targeting Mechanics
+</a>
+          <a href="#stat-interactions" data-i18n="uw_stat_interactions_title">
+  2. Stat Interactions &amp; Damage Dynamics
+</a>
+          <a href="#battle-report" data-i18n="uw_battle_report_title">
+  3. Deciphering the Battle Report
+</a>
+          <a href="#pvp-defense-advantage" data-i18n="uw_pvp_title">
+  4. PvP Battles &amp; Defender's Advantage
+</a>
+          <a href="#hero-index" data-i18n="uw_auto_a_0012">5. Hero Index &amp; Class Synergies</a>
+          <a href="#robot-arsenal" data-i18n="uw_auto_a_0013">6. Power Armor / Robot Arsenal</a>
+        </div>
+      </div>
+
+      <div class="uw-toc-group">
+        <a href="#solo-attack" class="uw-toc-main" data-i18n="uw_auto_a_0014">The Master Guide to Solo Attack</a>
+        <div class="uw-toc-sub">
+          <a href="#solo-attack-equipment" data-i18n="uw_auto_a_0015">1. The Solo Attack Equipment Filter</a>
+          <a href="#solo-attack-formations" data-i18n="uw_auto_a_0016">2. Optimized Solo Attack Formations &amp; Examples</a>
+          <a href="#solo-scout-analysis" data-i18n="uw_auto_a_0017">3. Scout Analysis &amp; Counter Selection with Equipment Priority</a>
+        </div>
+      </div>
+
+      <div class="uw-toc-group">
+        <a href="#solo-defense" class="uw-toc-main" data-i18n="uw_auto_a_0018">The Master Guide to Solo Defense</a>
+        <div class="uw-toc-sub">
+          <a href="#solo-defense-equipment" data-i18n="uw_auto_a_0019">1. The Triple-Equipment Defensive Filter</a>
+          <a href="#solo-defense-archetypes" data-i18n="uw_toc_solodef_archetypes">2. Defensive Formation Archetypes &amp; Step-by-Step Scenarios</a>
+          <a href="#solo-defense-scout-matrix" data-i18n="uw_toc_solodef_scoutmatrix">3. Scout Response &amp; Defensive Matrix</a>
+        </div>
+      </div>
+
+      <div class="uw-toc-group">
+        <a href="#rally-attack" class="uw-toc-main" data-i18n="uw_auto_a_0020">The Master Guide to Rally Attacks</a>
+        <div class="uw-toc-sub">
+          <a href="#rally-attack-equipment" data-i18n="uw_auto_a_0021">1. The Triple-Equipment Rally Starter Filter</a>
+          <a href="#rally-attack-joiners" data-i18n="uw_toc_rallyjoiners">2. The Top 4 Joiner Assist Pool (Skill 1 Only)</a>
+          <a href="#rally-scenarios" data-i18n="uw_auto_a_0022">3. Rally Scenarios &amp; Step-by-Step Executions</a>
+          <a href="#rally-matrix" data-i18n="uw_auto_a_0023">4. Rally Captain Quick-Reference Matrix</a>
+        </div>
+      </div>
+
+      <div class="uw-toc-group">
+        <a href="#rally-garrison-defense" class="uw-toc-main" data-i18n="uw_auto_a_0024">The Master Guide to Rally Garrison Defense</a>
+        <div class="uw-toc-sub">
+          <a href="#garrison-equipment" data-i18n="uw_auto_a_0025">1. The Triple-Equipment Garrison Starter Filter</a>
+          <a href="#garrison-joiners" data-i18n="uw_auto_a_0026">2. Top 4 Defensive Joiner Assist Pool</a>
+          <a href="#garrison-scenarios" data-i18n="uw_auto_a_0027">3. Rally Garrison Scenarios &amp; Step-by-Step Executions</a>
+          <a href="#garrison-matrix" data-i18n="uw_auto_a_0028">4. Rally Garrison Quick-Reference Matrix</a>
+        </div>
+      </div>
+    </nav>
+
+    <article class="uw-content">
+
+      <section id="ultimate-guide" class="uw-section">
+        <header class="uw-section-title">
+          <span class="uw-section-kicker" data-i18n="uw_auto_span_0029">CORE MECHANICS</span>
+          <h2 data-i18n="ultimate_guide_title">THE ULTIMATE TACTICAL WARFARE GUIDE</h2>
+          <p data-i18n="uw_auto_p_0030">
+            Welcome to the comprehensive master handbook for army formation, stat
+            interactions, hero synergies, and robot power armor mechanics. This guide
+            explains the core systems in straightforward language and uses practical
+            combat examples.
+          </p>
+        </header>
+
+        <section id="troop-triangle" class="uw-subsection">
+          <h3 data-i18n="uw_troop_triangle_title">
+  1. The Troop Triangle &amp; Targeting Mechanics
+</h3>
+
+<p data-i18n="uw_troop_triangle_intro">
+  Combat revolves around a strict Rock-Paper-Scissors hierarchy among three
+  distinct troop types. Banners and positions are locked automatically by the
+  system; your control lies entirely in troop composition ratios.
+</p>
+
+          <div class="uw-triangle">
+            <strong data-i18n="uw_shield_bearers">
+  Shield Bearers
+</strong>
+
+<span data-i18n="uw_shield_tanks">
+  Tanks
+</span>
+            <div class="uw-triangle-arrow uw-a1">COUNTERS</div>
+            <strong data-i18n="uw_bombers">
+  Bombers
+</strong>
+
+<span data-i18n="uw_bomber_role">
+  Balanced / Tactical
+</span>
+            <div class="uw-triangle-arrow uw-a2">COUNTERS</div>
+            <strong data-i18n="uw_shooters">
+  Shooters
+</strong>
+
+<span data-i18n="uw_shooter_role">
+  DPS
+</span>
+          </div>
+
+          <div class="uw-info-grid">
+            <div class="uw-info-card">
+              <h4 data-i18n="uw_shield_bearers">
+  Shield Bearers
+</h4>
+
+<ul>
+
+  <li data-i18n="uw_auto_li_0031">
+    <strong data-i18n="uw_role">
+      Role
+    </strong>:
+
+    <span data-i18n="uw_primary_damage_absorbers">
+      Primary damage absorbers (Tanks).
+    </span>
+  </li>
+
+  <li data-i18n="uw_auto_li_0032">
+    <strong data-i18n="uw_targeting_priority">
+      Targeting Priority
+    </strong>:
+
+    <span data-i18n="uw_shield_targeting">
+      Shield Bearers → Bombers → Shooters.
+    </span>
+  </li>
+
+  <li data-i18n="uw_auto_li_0033">
+    <strong data-i18n="uw_strengths_weaknesses">
+      Strengths &amp; Weaknesses
+    </strong>:
+
+    <span data-i18n="uw_shield_strength">
+      Excellent against Bombers; weak against Shooters.
+    </span>
+  </li>
+
+</ul>
+
+            <div class="uw-info-card">
+              <h4 data-i18n="uw_bombers">
+  Bombers
+</h4>
+              <ul>
+                <li data-i18n="uw_auto_li_0034">
+  <strong data-i18n="uw_role">Role</strong>:
+
+  <span data-i18n="uw_bomber_role_text">
+    Balanced units specialized in backline disruption and tactical bursts.
+  </span>
+</li>
+                <li data-i18n="uw_auto_li_0035">
+  <strong data-i18n="uw_targeting_priority">
+    Targeting Priority
+  </strong>:
+
+  <span data-i18n="uw_bomber_targeting">
+    Shield Bearers (or 20% chance to jump directly to Shooters)
+    → Bombers → Shooters.
+  </span>
+</li>
+                <li data-i18n="uw_auto_li_0036">
+  <strong data-i18n="uw_strengths_weaknesses">
+    Strengths &amp; Weaknesses
+  </strong>:
+
+  <span data-i18n="uw_bomber_strength">
+    Excellent against Shooters; weak against Shield Bearers.
+  </span>
+</li>
+              </ul>
+              <p data-i18n="uw_auto_p_0037">
+  <strong>Example 1:</strong>
+  <span data-i18n="uw_shield_example_1">
+    If your enemy relies heavily on Bombers to deal damage, sending a heavy
+    front line of Shield Bearers will mitigate incoming hits and absorb the assault.
+  </span>
+</p>
+              <p data-i18n="uw_auto_p_0038">
+  <strong>Example 2:</strong>
+  <span data-i18n="uw_shield_example_2">
+    If you send Shield Bearers against an army composed mostly of Shooters,
+    your Shield Bearers will melt rapidly because Shooters naturally shred their defense.
+  </span>
+</p>
+            </div>
+
+            <div class="uw-info-card">
+              <h4 data-i18n="uw_shooters">
+  Shooters
+</h4>
+                <li data-i18n="uw_auto_li_0039">
+  <strong data-i18n="uw_role">
+    Role
+  </strong>:
+
+  <span data-i18n="uw_shooter_role_text">
+    Main DPS (Damage Per Second) carry.
+  </span>
+</li>
+                <li data-i18n="uw_auto_li_0040">
+  <strong data-i18n="uw_targeting_priority">
+    Targeting Priority
+  </strong>:
+
+  <span data-i18n="uw_shooter_targeting">
+    Shield Bearers → Bombers → Shooters.
+  </span>
+</li>
+                <li data-i18n="uw_auto_li_0041">
+  <strong data-i18n="uw_strengths_weaknesses">
+    Strengths &amp; Weaknesses
+  </strong>:
+
+  <span data-i18n="uw_shooter_strength">
+    Great at melting Shield Bearers; weak against Bombers.
+  </span>
+</li>
+              </ul>
+              <p data-i18n="uw_auto_p_0042"><strong>Example 1:</strong> Facing a heavy turtle setup with max Shield Bearers? Loading your march with Shooters will shred their massive health pool faster than any other unit.</p>
+              <p data-i18n="uw_auto_p_0043"><strong>Example 2:</strong> If enemy Bombers bypass or break through your frontline, your Shooters will take massive counter-damage due to their structural weakness against Bombers.</p>
+            </div>
+          </div>
+        </section>
+
+        <section id="stat-interactions" class="uw-subsection">
+          <h3 data-i18n="uw_stat_interactions_title">
+  2. Stat Interactions &amp; Damage Dynamics
+</h3>
+
+<p data-i18n="uw_stat_interactions_intro">
+  Understanding how stats balance each other is essential for optimizing build power thresholds.
+</p>
+          <div class="uw-table-wrap">
+            <table class="uw-table">
+              <th data-i18n="uw_stat">Stat</th>
+<th data-i18n="uw_what_it_does">What It Does</th>
+              <tbody>
+                <td>
+  <strong data-i18n="uw_attack">
+    Attack (ATK)
+  </strong>
+</td>
+
+<td data-i18n="uw_attack_desc">
+  Dictates raw offensive damage. Higher ATK forces more enemy troops
+  to trigger a "kill check."
+</td>
+                <td>
+  <strong data-i18n="uw_defense">
+    Defense (DEF)
+  </strong>
+</td>
+
+<td data-i18n="uw_defense_desc">
+  Directly mitigates incoming raw damage from enemy ATK.
+</td>
+                <td>
+  <strong data-i18n="uw_health">
+    Health (HP)
+  </strong>
+</td>
+
+<td data-i18n="uw_health_desc">
+  Dictates individual unit hitpoints. High HP keeps troops fighting longer
+  and directly prevents troop death.
+</td>
+                <td>
+  <strong data-i18n="uw_lethality">
+    Lethality
+  </strong>
+</td>
+
+<td data-i18n="uw_lethality_desc">
+  A specialized damage parameter that bypasses standard defense armor
+  to lower the threshold needed to permanently incapacitate/kill a unit.
+</td>
+                <td>
+  <strong data-i18n="uw_tactical_damage">
+    Tactical Damage
+  </strong>
+</td>
+
+<td data-i18n="uw_tactical_damage_desc">
+  Flat/extra damage triggered when specific skill conditions are met.
+  Calculated completely independently from standard basic attack calculations
+  and added on top of total damage.
+</td>
+              </tbody>
+            </table>
+          </div>
+
+          <h4 data-i18n="uw_auto_h4_0049">How Stats Counter Each Other</h4>
+          <ul>
+            <li data-i18n="uw_auto_li_0050"><strong>HP + DEF vs. Attack:</strong> High HP and DEF scale together to reduce incoming raw damage and extend your march's battle lifetime.</li>
+            <li data-i18n="uw_auto_li_0051"><strong>HP + DEF vs. Lethality:</strong> High HP and DEF raise the <strong>Lethal Damage Threshold</strong>, making it significantly harder for enemy Lethality rolls to succeed.</li>
+          </ul>
+
+          <p data-i18n="uw_auto_p_0052"><strong>Example 1 (Stat Countering):</strong> If an opponent stacks massive Lethality to force instant kills, increasing your army's HP and DEF raises the execution threshold. This prevents the opponent's Lethality roll from initiating troop loss checks.</p>
+          <p data-i18n="uw_auto_p_0053"><strong>Example 2 (Tactical Damage):</strong> A hero ability dealing "150% Extra Tactical Damage" calculates that damage separately from basic armor calculations. Even if the enemy has massive basic DEF, the Tactical Damage lands clean flat damage on top of your normal attack turn.</p>
+        </section>
+
+        <section id="battle-report" class="uw-subsection">
+          <h3 data-i18n="uw_battle_report_title">
+  3. Deciphering the Battle Report
+</h3>
+
+<p data-i18n="uw_battle_report_intro">
+  After every clash, battle details break down troop states into five distinct categories:
+</p>
+
+          <div class="uw-table-wrap">
+            <table class="uw-table">
+              <th data-i18n="uw_report_term">
+  Report Term
+</th>
+
+<th data-i18n="uw_definition">
+  Definition
+</th>
+
+<th data-i18n="uw_impact_player">
+  Impact on Player
+</th>
+              <tbody>
+                <td>
+  <strong data-i18n="uw_total_troops">
+    Total Troops
+  </strong>
+</td>
+
+<td data-i18n="uw_total_troops_desc">
+  Entire force brought into battle.
+</td>
+
+<td data-i18n="uw_total_troops_impact">
+  Starting baseline.
+</td>
+                <td>
+  <strong data-i18n="uw_loss">
+    Loss
+  </strong>
+</td>
+
+<td data-i18n="uw_loss_desc">
+  Troops permanently killed in action.
+</td>
+
+<td data-i18n="uw_loss_impact">
+  Cannot be recovered; requires new troop training.
+</td>
+                <tr><td data-i18n="uw_auto_td_0056"><strong>Heavily Wounded</strong></td><td data-i18n="uw_auto_td_0057">Troops whose HP reached 0 and were sent to Hospital.</td><td data-i18n="uw_auto_td_0058">Recoverable via resources and time (or Recruitment Hall if Hospital is full).</td></tr>
+                <tr><td data-i18n="uw_auto_td_0059"><strong>Lightly Wounded</strong></td><td data-i18n="uw_auto_td_0060">Troops that took partial damage but avoided Hospital.</td><td data-i18n="uw_auto_td_0061">Recover 100% HP automatically upon returning to base.</td></tr>
+                <tr><td data-i18n="uw_auto_td_0062"><strong>Survived</strong></td><td data-i18n="uw_auto_td_0063">Troops that took zero damage during combat.</td><td data-i18n="uw_auto_td_0064">Ready for immediate deployment.</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p data-i18n="uw_auto_p_0065"><strong>Example:</strong> Out of a 100,000 troop march, a battle report showing <strong>10,000 Lightly Wounded</strong>, <strong>20,000 Heavily Wounded</strong>, and <strong>0 Loss</strong> means you suffered zero permanent casualties. Your 10,000 Lightly Wounded are instantly healed at base, while your 20,000 Heavily Wounded reside safely in your Hospital.</p>
+        </section>
+
+        <section id="pvp-defense-advantage" class="uw-subsection">
+          <h3 data-i18n="uw_auto_h3_0066">4. PvP Battles &amp; Defender's Advantage</h3>
+          <p data-i18n="uw_auto_p_0067">PvP encounters follow a strict turn-based framework with specific positional rules and defensive safety nets.</p>
+
+          <h4 data-i18n="uw_auto_h4_0068">Turn Mechanics &amp; Position Rules</h4>
+          <ol>
+            <li data-i18n="uw_auto_li_0069"><strong>Initiator Advantage:</strong> The attacking player always moves first in Turn 1.</li>
+            <li data-i18n="uw_auto_li_0070"><strong>Hero Execution Order:</strong> Heroes act based on their order in your formation, moving from <strong>Left to Right</strong> (Leftmost Hero moves first).</li>
+            <li data-i18n="uw_auto_li_0071"><strong>Passive Warskill Activation:</strong> Any passive warskill activates immediately at the start of that hero's action step before launching an attack.</li>
+            <li data-i18n="uw_auto_li_0072"><strong>40% Incapacitation Cap:</strong> Battles end instantly when <strong>40% of either side's total troops</strong> are incapacitated.</li>
+          </ol>
+
+          <h4 data-i18n="uw_auto_h4_0073">Attacking vs. Defending Dynamics</h4>
+          <div class="uw-flow">
+            <span data-i18n="uw_auto_span_0074">Attacker Lethality</span><b>→</b><span data-i18n="uw_auto_span_0075">Checks Defender HP/DEF</span><b>→</b><span data-i18n="uw_auto_span_0076">Hospital Space Available?</span>
+          </div>
+          <div class="uw-flow uw-flow-two">
+            <span data-i18n="uw_auto_span_0077">YES: Converted to HEAVILY WOUNDED (0 Loss in Report)</span>
+            <span data-i18n="uw_auto_span_0078">NO: PERMANENT LOSS</span>
+          </div>
+
+          <ul>
+            <li data-i18n="uw_auto_li_0079"><strong>Defender's Advantage:</strong> When defending your base, any troop that would normally die due to enemy Lethality is automatically converted into a <strong>Heavily Wounded</strong> troop—as long as your Hospital has available capacity.</li>
+            <li data-i18n="uw_auto_li_0080"><strong>The "Hidden Kill" Effect:</strong> As a defender, your post-battle report will display <strong>Zero Loss</strong> even if the attacker stacked high Lethality. However, those kills are recorded in the attacker's detail metrics as "should be killed troops" that were redirected to your Hospital.</li>
+            <li data-i18n="uw_auto_li_0081"><strong>Full Hospital Penalty:</strong> The moment your Hospital reaches 100% capacity, Defender's Advantage deactivates. All subsequent lethal hits instantly convert to permanent <strong>Loss</strong>.</li>
+            <li data-i18n="uw_auto_li_0082"><strong>Defender's Lethality:</strong> A defender's Lethality operates at 100% full fatality against an attacker from turn 1, inflicting instant permanent kills relative to the attacker's HP and DEF.</li>
+          </ul>
+
+          <p data-i18n="uw_auto_p_0083"><strong>Example 1 (Defending):</strong> You get attacked by a high-Lethality player. Your battle report shows 0 Losses and 15,000 Heavily Wounded. Because your Hospital was empty, the game converted 15,000 lethal kills into hospital admissions.</p>
+          <p data-i18n="uw_auto_p_0084"><strong>Example 2 (Attacking):</strong> You launch a solo attack against an enemy base. Because you are the attacker, you do NOT get Defender's Advantage. Any lethal damage dealt by the defender instantly results in permanent <strong>Loss</strong> on your report.</p>
+        </section>
+
+        <section id="hero-index" class="uw-subsection">
+          <h3 data-i18n="uw_auto_h3_0085">5. Hero Index &amp; Class Synergies</h3>
+          <p data-i18n="uw_auto_p_0086">Each deployment march accommodates up to <strong>3 Heroes</strong> (must be 1 Bomber, 1 Shield, and 1 Shooter) and <strong>1 Robot Power Armor</strong>.</p>
+
+          <div class="uw-hero-list">
+
+  <!-- =========================
+       BOMBER HEROES
+       ========================= -->
+
+  <h4 data-i18n="uw_auto_h4_0087">Bomber Heroes</h4>
+
+  <article class="uw-hero-card">
+    <div class="uw-hero-head">
+      <img src="assets/alph.png" alt="Alph">
+      <strong>1. Alph (Surgecaster)</strong>
+    </div>
+
+    <ul>
+      <li data-i18n="uw_auto_li_0088"><strong>Photon Shield:</strong> Reduces enemy troop Lethality by 20%.</li>
+      <li data-i18n="uw_auto_li_0089"><strong>Clever Tuning:</strong> Reduces enemy DEF by 20%.</li>
+      <li data-i18n="uw_auto_li_0090"><strong>Adaptive Warfare:</strong> When fighting a higher-Power enemy, increases allied DEF by 30%.</li>
+      <li data-i18n="uw_auto_li_0091"><strong>Exclusive Equipment:</strong> Solo attacks → Allied troops gain +16% ATK.</li>
+    </ul>
+
+    <p data-i18n="uw_auto_p_0092">
+      <strong>Synergy Example:</strong>
+      Outstanding defensive choice when fighting stronger opponents.
+      Pairing Alph against a higher-Power march triggers a 30% DEF boost
+      while suppressing enemy Lethality by 20%.
+    </p>
+  </article>
+
+
+  <article class="uw-hero-card">
+    <div class="uw-hero-head">
+      <img src="assets/lanchester.png" alt="Lanchester">
+      <strong>2. Lanchester (Machinist)</strong>
+    </div>
+
+    <ul>
+      <li data-i18n="uw_auto_li_0093"><strong>Adaptive Transformation:</strong> If enemy initial Power &gt; ours, increases allied HP by 25%. Otherwise, increases allied Lethality by 30%.</li>
+      <li data-i18n="uw_auto_li_0094"><strong>Structural Analysis:</strong> All troops have a 20% chance to Stun enemies for 1 round upon attacking.</li>
+      <li data-i18n="uw_auto_li_0095"><strong>Kinetic Offset:</strong> Reduces enemy troop Damage by 20%.</li>
+      <li data-i18n="uw_auto_li_0096"><strong>Exclusive Equipment (Mech Ascension Lv.5):</strong> Defending → Allied troops gain +16% DEF.</li>
+    </ul>
+
+    <p data-i18n="uw_auto_p_0097">
+      <strong>Synergy Example:</strong>
+      Excellent control unit. The 20% Stun chance disrupts enemy turn cycles,
+      while the conditional stat shifts adapt to both offensive bullying and
+      defensive turtle strategies.
+    </p>
+  </article>
+
+
+  <article class="uw-hero-card">
+    <div class="uw-hero-head">
+      <img src="assets/koschevoi.png" alt="Koschevoi">
+      <strong>3. Koschevoi (Magic Gunner)</strong>
+    </div>
+
+    <ul>
+      <li data-i18n="uw_auto_li_0098"><strong>Precision Strike:</strong> Increases allied troop Damage by 25%.</li>
+      <li data-i18n="uw_auto_li_0099"><strong>Cannon Barrage:</strong> Bombers deal an extra 50% Tactical DMG each round.</li>
+      <li data-i18n="uw_auto_li_0100"><strong>Artillery Support:</strong> Increases Bomber ATK by 30% and DEF by 15%.</li>
+      <li data-i18n="uw_auto_li_0101"><strong>Exclusive Equipment (Surveillance Probe Lv.5):</strong> Solo attacks → Allied troops gain +16% DEF.</li>
+    </ul>
+
+    <p data-i18n="uw_auto_p_0102">
+      <strong>Synergy Example:</strong>
+      Pure Bomber damage amplifier. Pairs exceptionally well with Tactical
+      DMG scaling setups like Bastion Power Armor to maximize flat damage output
+      every single round.
+    </p>
+  </article>
+
+
+  <article class="uw-hero-card">
+    <div class="uw-hero-head">
+      <img src="assets/whisper.png" alt="Whisper">
+      <strong>4. Whisper (the White Reaper)</strong>
+    </div>
+
+    <ul>
+      <li data-i18n="uw_auto_li_0103"><strong>Curse:</strong> Reduces enemy DEF by 20%.</li>
+      <li data-i18n="uw_auto_li_0104"><strong>Evacuation:</strong> 20% chance each round to become immune to all Damage.</li>
+      <li data-i18n="uw_auto_li_0105"><strong>Erosion:</strong> 50% chance upon attacking to increase allied Damage by 50%.</li>
+      <li data-i18n="uw_auto_li_0106"><strong>Exclusive Equipment (Nether Nectar Lv.5):</strong> Rally attacks → Allied troops gain +16% Lethality.</li>
+    </ul>
+
+    <p data-i18n="uw_auto_p_0107">
+      <strong>Synergy Example:</strong>
+      High-variance burst hero. When Erosion triggers alongside a Rally Attack,
+      your entire army's damage potential spikes dramatically.
+    </p>
+  </article>
+
+
+  <article class="uw-hero-card">
+    <div class="uw-hero-head">
+      <img src="assets/wukong.png" alt="Wukong">
+      <strong>5. Wukong (Monkey King)</strong>
+    </div>
+
+    <ul>
+      <li data-i18n="uw_auto_li_0108"><strong>Calamity Inferno:</strong> Every 3 rounds, Bombers deal Tactical DMG equal to 150% ATK.</li>
+      <li data-i18n="uw_auto_li_0109"><strong>Battle Fervor:</strong> Increases Bomber Damage by 25%.</li>
+      <li data-i18n="uw_auto_li_0110"><strong>Battle Hardened:</strong> Increases all allied troop Damage by 25%.</li>
+      <li data-i18n="uw_auto_li_0111"><strong>Exclusive Equipment (Divine Power Lv.5):</strong> Rally attacks → Allied troops gain +16% Lethality.</li>
+    </ul>
+
+    <p data-i18n="uw_auto_p_0112">
+      <strong>Synergy Example:</strong>
+      Every 3rd round, Wukong delivers a devastating 150% Tactical burst.
+      Combine with heroes that increase enemy Damage Taken to amplify this burst.
+    </p>
+  </article>
+
+
+  <article class="uw-hero-card">
+    <div class="uw-hero-head">
+      <img src="assets/worrell.png" alt="Worrell">
+      <strong>6. Worrell (Paradox Engine)</strong>
+    </div>
+
+    <ul>
+      <li data-i18n="uw_auto_li_0113"><strong>Charged Launch:</strong> Increases Basic Attack Damage by 25% for all troops.</li>
+      <li data-i18n="uw_auto_li_0114"><strong>Double Lash:</strong> Bombers have a 50% chance to trigger a Combo (extra basic attack) when using basic attacks.</li>
+      <li data-i18n="uw_auto_li_0115"><strong>Combat Simulation:</strong> Simulates an equal-troop battle; if won, increases Bomber ATK by 75% in actual combat.</li>
+      <li data-i18n="uw_auto_li_0116"><strong>Exclusive Equipment (Punisher's Grip Lv.5):</strong> Solo combat → Allied troops gain +16% ATK.</li>
+    </ul>
+
+    <p data-i18n="uw_auto_p_0117">
+      <strong>Synergy Example:</strong>
+      Basic Attack specialist. Worrell's 50% Combo chance allows Bombers
+      to hit twice in a single turn, doubling basic attack value.
+    </p>
+  </article>
+
+
+  <article class="uw-hero-card">
+    <div class="uw-hero-head">
+      <img src="assets/ryuichi-ito.png" alt="Ryuichi Ito">
+      <strong>7. Ryuichi Ito (Ghost Ninja)</strong>
+    </div>
+
+    <ul>
+      <li data-i18n="uw_auto_li_0118"><strong>Weakness Detection:</strong> 25% chance to land a Critical Strike during basic attacks.</li>
+      <li data-i18n="uw_auto_li_0119"><strong>Agile Stance:</strong> 20% chance to evade enemy basic attacks.</li>
+      <li data-i18n="uw_auto_li_0120"><strong>Combo Strikes:</strong> Every 2 basic attacks, Bombers launch an extra basic attack dealing 100% Damage.</li>
+      <li data-i18n="uw_auto_li_0121"><strong>Exclusive Equipment (Pinpoint Assault Lv.5):</strong> Rally attacks → Allied troops gain +16% ATK.</li>
+    </ul>
+
+    <p data-i18n="uw_auto_p_0122">
+      <strong>Synergy Example:</strong>
+      High mobility and sustain carry. Evading attacks mitigates incoming
+      damage, while guaranteed extra attacks trigger consistently every 2 turns.
+    </p>
+  </article>
+
+
+  <article class="uw-hero-card">
+    <div class="uw-hero-head">
+      <img src="assets/lee.png" alt="Lee">
+      <strong>8. Lee (King of Gamblers)</strong>
+    </div>
+
+    <ul>
+      <li data-i18n="uw_auto_li_0123"><strong>Stealth Assault:</strong> Bomber attacks increase target's Tactical DMG taken by 50% for 1 round.</li>
+      <li data-i18n="uw_auto_li_0124"><strong>Intel Support:</strong> Increases allied troop HP by 25%.</li>
+      <li data-i18n="uw_auto_li_0125"><strong>Strategic Chain:</strong> 25% chance per round for Bombers to deal 100% ATK Tactical DMG to all enemies.</li>
+      <li data-i18n="uw_auto_li_0126"><strong>Exclusive Equipment (Careful Ambush Lv.5):</strong> Defending → Allied troops gain +16% ATK.</li>
+    </ul>
+
+    <p data-i18n="uw_auto_p_0127">
+      <strong>Synergy Example:</strong>
+      Essential enabler for Tactical DMG builds. Lee's 50% Tactical DMG
+      debuff primes targets for massive follow-up hits from Shooters or
+      fellow Bombers.
+    </p>
+  </article>
+
+
+ <!-- =========================
+     SHIELD HEROES
+     ========================= -->
+
+<h4 data-i18n="uw_shield_heroes_title">Shield Heroes</h4>
+
+
+<!-- =========================
+     1. TYRONN
+     ========================= -->
+
+<article class="uw-hero-card">
+  <div class="uw-hero-head">
+    <img src="assets/tyron.png" alt="Tyronn">
+    <strong data-i18n="uw_shield_tyronn_name">1. Tyronn (Scarlet Butcher)</strong>
+  </div>
+
+  <ul>
+    <li data-i18n="uw_shield_tyronn_skill_1">
+      <strong>Cripple:</strong> Increases enemy Damage taken by 25%.
+    </li>
+
+    <li data-i18n="uw_shield_tyronn_skill_2">
+      <strong>Blood Feast:</strong> Increases allied Lethality by 25%.
+    </li>
+
+    <li data-i18n="uw_shield_tyronn_skill_3">
+      <strong>Death Toll:</strong> 20% chance to Stun the enemy for 1 round when attacking.
+    </li>
+
+    <li data-i18n="uw_shield_tyronn_equipment">
+      <strong>Exclusive Equipment (Bull Rush Lv.5):</strong> Rally attacks → Allied troops gain +16% ATK.
+    </li>
+  </ul>
+
+  <p data-i18n="uw_shield_tyronn_synergy">
+    <strong>Synergy Example:</strong>
+    Offensive frontline tank. Applying a flat +25% Damage taken debuff
+    to enemies boosts the damage of your Shooters and Bombers simultaneously.
+  </p>
+</article>
+
+
+<!-- =========================
+     2. ZOLTAN
+     ========================= -->
+
+<article class="uw-hero-card">
+  <div class="uw-hero-head">
+    <img src="assets/zoltan.png" alt="Zoltan">
+    <strong data-i18n="uw_shield_zoltan_name">2. Zoltan (the Redeemer)</strong>
+  </div>
+
+  <ul>
+    <li data-i18n="uw_shield_zoltan_skill_1">
+      <strong>Cycle Protection:</strong> On round numbers that are multiples of 4 (Turn 4, 8, 12...), reduces all incoming damage taken by 80%.
+    </li>
+
+    <li data-i18n="uw_shield_zoltan_skill_2">
+      <strong>Mecha Upgrade:</strong> Increases Shieldbearer Damage by 100%.
+    </li>
+
+    <li data-i18n="uw_shield_zoltan_skill_3">
+      <strong>Behemoth's Wrath:</strong> Shieldbearers retaliate after taking each basic attack, dealing 30% Tactical DMG.
+    </li>
+
+    <li data-i18n="uw_shield_zoltan_equipment">
+      <strong>Exclusive Equipment (Redemption Shield Lv.5):</strong> Defending → Allied troops gain +16% DEF.
+    </li>
+  </ul>
+
+  <p data-i18n="uw_shield_zoltan_synergy">
+    <strong>Synergy Example:</strong>
+    Defensive powerhouse. Retaliating with 30% Tactical DMG every time Shieldbearers take a basic hit punishes multi-hitting enemy comps.
+  </p>
+</article>
+
+
+<!-- =========================
+     3. CAESAR
+     ========================= -->
+
+<article class="uw-hero-card">
+  <div class="uw-hero-head">
+    <img src="assets/caesar.png" alt="Caesar">
+    <strong data-i18n="uw_shield_caesar_name">3. Caesar (Apex Ape)</strong>
+  </div>
+
+  <ul>
+    <li data-i18n="uw_shield_caesar_skill_1">
+      <strong>Gene Activity:</strong> 20% chance at round end to revive soldiers lost during that round.
+    </li>
+
+    <li data-i18n="uw_shield_caesar_skill_2">
+      <strong>Impact Barrier:</strong> Increases allied DEF by 25%.
+    </li>
+
+    <li data-i18n="uw_shield_caesar_skill_3">
+      <strong>Crushing Blow:</strong> Reduces enemy troop HP by 20%.
+    </li>
+
+    <li data-i18n="uw_shield_caesar_equipment">
+      <strong>Exclusive Equipment (Avenger's Fury Lv.5):</strong> Defending → Allied troops gain +16% ATK.
+    </li>
+  </ul>
+
+  <p data-i18n="uw_shield_caesar_synergy">
+    <strong>Synergy Example:</strong>
+    Exceptional attrition tank. Reviving 20% of fallen troops at turn end directly counters high enemy ATK pressure.
+  </p>
+</article>
+
+
+<!-- =========================
+     4. MARCUS
+     ========================= -->
+
+<article class="uw-hero-card">
+  <div class="uw-hero-head">
+    <img src="assets/marcus.png" alt="Marcus">
+    <strong data-i18n="uw_shield_marcus_name">4. Marcus (Stitched Monster)</strong>
+  </div>
+
+  <ul>
+    <li data-i18n="uw_shield_marcus_skill_1">
+      <strong>Monster Intimidation:</strong> On round numbers that are multiples of 2, reduces incoming basic attack damage by 50%.
+    </li>
+
+    <li data-i18n="uw_shield_marcus_skill_2">
+      <strong>Self-Sacrificing Battle:</strong> On round numbers that are multiples of 3, Shieldbearers skip their attack, allowing Shooters and Bombers to launch 1 extra basic attack dealing 150% DMG.
+    </li>
+
+    <li data-i18n="uw_shield_marcus_skill_3">
+      <strong>Death Aura:</strong> Reduces Shieldbearer damage taken by 15% and increases Bomber damage dealt by 25%.
+    </li>
+
+    <li data-i18n="uw_shield_marcus_equipment">
+      <strong>Exclusive Equipment (Flesh Revival Lv.5):</strong> Defending → Allied troops gain +16% HP.
+    </li>
+  </ul>
+
+  <p data-i18n="uw_shield_marcus_synergy">
+    <strong>Synergy Example:</strong>
+    The ultimate sacrifice enabler. Skipping Shieldbearer attacks on turn 3 lets your Shooters and Bombers execute devestating 150% extra basic attacks.
+  </p>
+</article>
+
+
+<!-- =========================
+     5. OTTO
+     ========================= -->
+
+<article class="uw-hero-card">
+  <div class="uw-hero-head">
+    <img src="assets/otto.png" alt="Otto">
+    <strong data-i18n="uw_shield_otto_name">5. Otto (Tiger King)</strong>
+  </div>
+
+  <ul>
+    <li data-i18n="uw_shield_otto_skill_1">
+      <strong>Natural Hymn:</strong> Odd rounds → -60% Shieldbearer Tactical DMG taken. Even rounds → -40% Shieldbearer Basic Attack DMG taken.
+    </li>
+
+    <li data-i18n="uw_shield_otto_skill_2">
+      <strong>Iron Protection:</strong> 83% chance each round to Shelter 1 troop type, reducing their damage taken by 75%.
+    </li>
+
+    <li data-i18n="uw_shield_otto_skill_3">
+      <strong>Forest Echo:</strong> Increases allied Tactical DMG by 75%.
+    </li>
+
+    <li data-i18n="uw_shield_otto_equipment">
+      <strong>Exclusive Equipment (Entrenched Position Lv.5):</strong> Defending → Allied troops gain +16% DEF.
+    </li>
+  </ul>
+
+  <p data-i18n="uw_shield_otto_synergy">
+    <strong>Synergy Example:</strong>
+    Massive tactical damage buffer (+75%) while providing an 83% chance to protect a random troop type with 75% mitigation every turn.
+  </p>
+</article>
+
+
+<!-- =========================
+     6. XUANMING
+     ========================= -->
+
+<article class="uw-hero-card">
+  <div class="uw-hero-head">
+    <img src="assets/xuanming.png" alt="Xuanming">
+    <strong data-i18n="uw_shield_xuanming_name">6. Xuanming (Grove Drunkard)</strong>
+  </div>
+
+  <ul>
+    <li data-i18n="uw_shield_xuanming_skill_1">
+      <strong>Mountain Cleaver:</strong> Increases allied Lethality by 25%.
+    </li>
+
+    <li data-i18n="uw_shield_xuanming_skill_2">
+      <strong>Ironclad Protection:</strong> Increases allied DEF by 25%.
+    </li>
+
+    <li data-i18n="uw_shield_xuanming_skill_3">
+      <strong>Vital Surge:</strong> Reduces damage taken by 20%. If army size drops to ≤80%, recovers 10% of Lightly Wounded soldiers post-battle.
+    </li>
+
+    <li data-i18n="uw_shield_xuanming_equipment">
+      <strong>Exclusive Equipment (Qimen Formation Lv.2):</strong> Defending → Allied troops gain +16% ATK.
+    </li>
+  </ul>
+
+  <p data-i18n="uw_shield_xuanming_synergy">
+    <strong>Synergy Example:</strong>
+    Durable anchor providing passive DEF, Lethality, and post-battle troop recovery to minimize hospital load.
+  </p>
+</article>
+
+  <!-- =========================
+       SHOOTER HEROES
+       ========================= -->
+
+  <h4 data-i18n="uw_auto_h4_0137">Shooter Heroes</h4>
+
+  <article class="uw-hero-card">
+    <div class="uw-hero-head">
+      <img src="assets/mireya.png" alt="Mireya">
+      <strong>1. Mireya (Shadowpiercer)</strong>
+    </div>
+
+    <ul>
+      <li data-i18n="uw_auto_li_0138"><strong>Stealth Cloak:</strong> Reduces enemy ATK by 20%.</li>
+      <li data-i18n="uw_auto_li_0139"><strong>Mind's Eye:</strong> Increases allied ATK by 25%.</li>
+      <li data-i18n="uw_auto_li_0140"><strong>Banshee's Lament:</strong> Increases allied Damage by 20% (+10% extra if enemy Power is lower than ours).</li>
+      <li data-i18n="uw_auto_li_0141"><strong>Exclusive Equipment (Whispering Death Lv.5):</strong> Rally attacks → Allied troops gain +16% Lethality.</li>
+    </ul>
+
+    <p data-i18n="uw_auto_p_0142">
+      <strong>Synergy Example:</strong>
+      Premier offensive stat buffer that weakens enemy ATK while maximizing
+      allied damage against weaker marches.
+    </p>
+  </article>
+
+
+  <article class="uw-hero-card">
+    <div class="uw-hero-head">
+      <img src="assets/drake.png" alt="Drake">
+      <strong>2. Drake (Hell Warrior)</strong>
+    </div>
+
+    <ul>
+      <li data-i18n="uw_auto_li_0143"><strong>Charged Barrage:</strong> Every multiple of 3 rounds, Shooters deal an extra 110% Tactical DMG at round end.</li>
+      <li data-i18n="uw_auto_li_0144"><strong>Fear Aura:</strong> 50% chance to reduce enemy damage dealt by 40%.</li>
+      <li data-i18n="uw_auto_li_0145"><strong>Infernal Surge:</strong> Increases allied ATK by 14% and Lethality by 12%.</li>
+      <li data-i18n="uw_auto_li_0146"><strong>Exclusive Equipment (Break Out Lv.5):</strong> Defending → Allied troops gain +16% Lethality.</li>
+    </ul>
+
+    <p data-i18n="uw_auto_p_0147">
+      <strong>Synergy Example:</strong>
+      Excellent defense and burst unit. The 50% chance to cut enemy damage
+      by 40% protects your frontline while preparing turn 3 bursts.
+    </p>
+  </article>
+
+
+  <article class="uw-hero-card">
+    <div class="uw-hero-head">
+      <img src="assets/sawyer.png" alt="Sawyer">
+      <strong>3. Sawyer (the Collector)</strong>
+    </div>
+
+    <ul>
+      <li data-i18n="uw_auto_li_0148"><strong>Rust Erosion:</strong> Reduces enemy HP by 20%.</li>
+      <li data-i18n="uw_auto_li_0149"><strong>Rage Strike:</strong> Increases allied ATK by 25%.</li>
+      <li data-i18n="uw_auto_li_0150"><strong>Steel Rend:</strong> Increases allied HP by 25%. If enemy drops below 70% force, debuffs enemy Stat Provider DEF by 5% for 5 seconds.</li>
+      <li data-i18n="uw_auto_li_0151"><strong>Exclusive Equipment (Howling Engine Lv.5):</strong> Rally attacks → Allied troops gain +16% HP.</li>
+    </ul>
+
+    <p data-i18n="uw_auto_p_0152">
+      <strong>Synergy Example:</strong>
+      Stat-stripping support hero that reduces enemy HP right at battle start.
+    </p>
+  </article>
+
+
+  <article class="uw-hero-card">
+    <div class="uw-hero-head">
+      <img src="assets/edwin.png" alt="Edwin">
+      <strong>4. Edwin (the Judge)</strong>
+    </div>
+
+    <ul>
+      <li data-i18n="uw_auto_li_0153"><strong>Iron Body:</strong> Reduces Shieldbearer damage taken by 20% and Shooter damage taken by 30%.</li>
+      <li data-i18n="uw_auto_li_0154"><strong>Command Shooting:</strong> Whenever enemies take Tactical DMG, Shooters have a 30% chance to launch an extra basic attack (25% ATK).</li>
+      <li data-i18n="uw_auto_li_0155"><strong>Judgment of Justice:</strong> Every multiple of 3 rounds, Shooters deal 125% Tactical DMG (scales up by +15% for every multiple of 3 enemy troop size exceeds ours, up to +75%).</li>
+      <li data-i18n="uw_auto_li_0156"><strong>Exclusive Equipment (Resolute Heart Lv.5):</strong> Solo attacks → Allied troops gain +16% HP.</li>
+    </ul>
+
+    <p data-i18n="uw_auto_p_0157">
+      <strong>Synergy Example:</strong>
+      Synergizes perfectly with Lee or Koschevoi. When Lee triggers Tactical
+      DMG, Edwin's Command Shooting fires extra basic attacks out of turn.
+    </p>
+  </article>
+
+
+  <article class="uw-hero-card">
+    <div class="uw-hero-head">
+      <img src="assets/kate.png" alt="Kate">
+      <strong>5. Kate (Dream Chaser)</strong>
+    </div>
+
+    <ul>
+      <li data-i18n="uw_auto_li_0158"><strong>Sprint Signal:</strong> Increases allied ATK by 25%.</li>
+      <li data-i18n="uw_auto_li_0159"><strong>Position Block:</strong> Reduces enemy Shieldbearer Lethality by 20% and Bomber Lethality by 25%.</li>
+      <li data-i18n="uw_auto_li_0160"><strong>Corner Overtake:</strong> Every 4 rounds, allied Damage increases by 43% for 2 rounds (scales +1% higher per 10% lost troops).</li>
+      <li data-i18n="uw_auto_li_0161"><strong>Exclusive Equipment (Home Advantage Lv.5):</strong> Defending → Allied troops gain +16% Lethality.</li>
+    </ul>
+
+    <p data-i18n="uw_auto_p_0162">
+      <strong>Synergy Example:</strong>
+      Anti-Lethality defender. Suppresses enemy Shield and Bomber Lethality
+      while providing massive late-game comeback damage on turn 4.
+    </p>
+  </article>
+
+
+  <article class="uw-hero-card">
+    <div class="uw-hero-head">
+      <img src="assets/ada.png" alt="Ada">
+      <strong>6. Ada (Duo Face)</strong>
+    </div>
+
+    <ul>
+      <li data-i18n="uw_auto_li_0163"><strong>Sweet Smile:</strong> Reduces enemy DEF by 10% and HP by 15%.</li>
+      <li data-i18n="uw_auto_li_0164"><strong>Continuous Destruction:</strong> When Shieldbearers and Bombers land basic attacks, Shooters have a 25% chance to follow up with a 70% ATK basic attack.</li>
+      <li data-i18n="uw_auto_li_0165"><strong>Firepower Barrage:</strong> After every 4 attacks, Shooters deal a 50% ATK basic attack to ALL enemy units.</li>
+      <li data-i18n="uw_auto_li_0166"><strong>Exclusive Equipment (Firearm Mastery Lv.5):</strong> Rally attacks → Allied troops gain +16% ATK.</li>
+    </ul>
+
+    <p data-i18n="uw_auto_p_0167">
+      <strong>Synergy Example:</strong>
+      Relentless attack trigger hero. Works amazingly with Worrell
+      (Bomber double basic attacks), triggering endless out-of-turn
+      Shooter follow-ups.
+    </p>
+  </article>
+
+
+  <article class="uw-hero-card">
+    <div class="uw-hero-head">
+      <img src="assets/veronica.png" alt="Veronica">
+      <strong>7. Veronica (Inferna Dancer)</strong>
+    </div>
+
+    <ul>
+      <li data-i18n="uw_auto_li_0168"><strong>Darkness Blade:</strong> 50% chance upon attacking to increase enemy Damage Taken by 50%.</li>
+      <li data-i18n="uw_auto_li_0169"><strong>Veiling Mist:</strong> Increases allied Lethality by 25%.</li>
+      <li data-i18n="uw_auto_li_0170"><strong>Phantom Steps:</strong> Increases allied DEF by 25%.</li>
+      <li data-i18n="uw_auto_li_0171"><strong>Exclusive Equipment (Scarlet Pursuit Lv.5):</strong> Solo attacks → Allied troops gain +16% Lethality.</li>
+    </ul>
+
+    <p data-i18n="uw_auto_p_0172">
+      <strong>Synergy Example:</strong>
+      High Lethality enabler. Stacking Veronica's +25% Lethality with
+      high-ATK marches forces fast kill checks against opponents.
+    </p>
+  </article>
+
+</div>
+
+        <section id="robot-arsenal" class="uw-subsection">
+          <h3 data-i18n="uw_auto_h3_0173">6. Power Armor / Robot Arsenal</h3>
+          <p data-i18n="uw_auto_p_0174">Each march is led by 1 Power Armor. Activate Core Link nodes to unlock game-changing Exclusive Equipments.</p>
+
+          <div class="uw-robot-grid">
+            <article class="uw-robot-card"><img src="assets/musashimaru.png" alt="Musashimaru"><h4 data-i18n="uw_auto_h4_0175">1. Musashimaru</h4><p data-i18n="uw_auto_p_0176"><strong>Base Stats:</strong> +76% Shooter ATK / +76% Shooter DEF.</p><p data-i18n="uw_auto_p_0177"><strong>Core Link Skill (15 Nodes):</strong> Increases Shieldbearers' and Shooters' Lethality by 30% and reduces their Damage taken by 45%.</p><p data-i18n="uw_auto_p_0178"><strong>Best Pairing:</strong> Hybrid Shooter/Shield setups. Pairing Musashimaru with Edwin and Zoltan grants massive 45% damage mitigation to your front and back lines.</p></article>
+            <article class="uw-robot-card"><img src="assets/bastion.png" alt="Bastion"><h4 data-i18n="uw_auto_h4_0179">2. Bastion</h4><p data-i18n="uw_auto_p_0180"><strong>Base Stats:</strong> +76% Bomber ATK / +76% Bomber DEF.</p><p data-i18n="uw_auto_p_0181"><strong>Core Link Skill (15 Nodes):</strong> Increases troop DEF by 40% and Tactical DMG by 50%. On rounds that are NOT multiples of 3, Tactical DMG increases by an additional 230% (Total +280% Tactical DMG boost).</p><p data-i18n="uw_auto_p_0182"><strong>Best Pairing:</strong> Tactical Bomber comps (Wukong, Koschevoi, Lee). Deals astronomical flat damage on turns 1, 2, 4, 5, 7, 8, etc.</p></article>
+            <article class="uw-robot-card"><img src="assets/yokozuna.png" alt="Yokozuna"><h4 data-i18n="uw_auto_h4_0183">3. Yokozuna</h4><p data-i18n="uw_auto_p_0184"><strong>Base Stats:</strong> +76% Bomber ATK / +76% Bomber DEF.</p><p data-i18n="uw_auto_p_0185"><strong>Core Link Skill (15 Nodes):</strong> Increases troop HP by 30%. After Bombers attack 3 times, Shieldbearers take 60% less DMG and Bombers deal 30% more DMG for 2 rounds.</p><p data-i18n="uw_auto_p_0186"><strong>Best Pairing:</strong> Fast-attacking Bombers like Worrell or Ryuichi Ito.</p></article>
+            <article class="uw-robot-card"><img src="assets/halo.png" alt="Halo"><h4 data-i18n="uw_auto_h4_0187">4. Halo</h4><p data-i18n="uw_auto_p_0188"><strong>Base Stats:</strong> +76% Bomber ATK / +76% Bomber DEF.</p><p data-i18n="uw_auto_p_0189"><strong>Core Link Skill (15 Nodes):</strong> Increases troop Lethality by 30%. Every 5 attacks launched by Bombers, reduces all troop Damage taken by 25% and boosts Bomber Lethality by +50% for 2 rounds.</p><p data-i18n="uw_auto_p_0190"><strong>Best Pairing:</strong> High-Lethality Bomber marches (e.g., Whisper, Wukong). Stacks Lethality up to +80% during peak turns.</p></article>
+            <article class="uw-robot-card"><img src="assets/robot01.png" alt="Phantom Cat"><h4 data-i18n="uw_auto_h4_0191">5. Phantom Cat</h4><p data-i18n="uw_auto_p_0192"><strong>Base Stats:</strong> +76% Shooter ATK / +76% Shooter DEF.</p><p data-i18n="uw_auto_p_0193"><strong>Core Link Skill (15 Nodes):</strong> Increases troop Lethality by 37.50%. Every 4 attacks launched by Shooters triggers an extra 80% Tactical DMG hit.</p><p data-i18n="uw_auto_p_0194"><strong>Best Pairing:</strong> Multi-striking Shooter comps featuring Ada or Edwin.</p></article>
+            <article class="uw-robot-card"><img src="assets/atlas.png" alt="Atlas"><h4 data-i18n="uw_auto_h4_0195">6. Atlas</h4><p data-i18n="uw_auto_p_0196"><strong>Base Stats:</strong> +65% Shieldbearer ATK / +65% Shieldbearer DEF.</p><p data-i18n="uw_auto_p_0197"><strong>Core Link Skill (12 Nodes):</strong> Increases all troop HP by 30%, boosts Shieldbearer Damage by 40%, and reduces Shieldbearer Damage taken from Bombers by 20%.</p><p data-i18n="uw_auto_p_0198"><strong>Best Pairing:</strong> Pure frontline defense builds.</p></article>
+            <article class="uw-robot-card">
+  <img src="assets/robot02.png" alt="Infercore">
+
+  <h4 data-i18n="uw_auto_h4_0199">7. Infercore</h4>
+
+  <p data-i18n="uw_infercore_base_stats"><strong>Base Stats:</strong> +65% Bomber ATK / +65% Shooter ATK.</p>
+  <p data-i18n="uw_infercore_core_link"><strong>Core Link Skill (12 Nodes):</strong> Increases both Bombers' and Shooters' Lethality by 60%.</p>
+  <p data-i18n="uw_infercore_best_pairing"><strong>Best Pairing:</strong> Glass-cannon offensive rallies. Combining dual DPS ATK bonuses with a massive +60% Lethality boost ignores enemy armor and inflicts heavy casualties.</p>
+</article>
+          </div>
+        </section>
+      </section>
+
+      <section id="solo-attack" class="uw-section">
+        <header class="uw-section-title"><span class="uw-section-kicker" data-i18n="uw_auto_span_0203">SOLO ATTACK</span><h2 data-i18n="uw_auto_h2_0204">The Master Guide to Solo Attack</h2></header>
+
+        <section id="solo-attack-equipment" class="uw-subsection">
+          <h3 data-i18n="uw_auto_h3_0205">1. The Solo Attack Equipment Filter</h3>
+          <p data-i18n="uw_auto_p_0206">Always attempt to pick your Bomber and Shooter from the Solo Equipment List to lock in two guaranteed +16% army-wide stat buffs.</p>
+          <div class="uw-table-wrap">
+            <table class="uw-table">
+              <thead><tr><th data-i18n="uw_auto_th_0207">Class</th><th data-i18n="uw_auto_th_0208">Hero</th><th data-i18n="uw_auto_th_0209">Equipment</th><th data-i18n="uw_auto_th_0210">Trigger</th></tr></thead>
+              <tbody>
+                <tr><td data-i18n="uw_auto_td_0211">Bomber</td><td><span class="uw-hero-inline" data-i18n="uw_auto_span_0213"><img src="assets/worrell.png" alt="Worrell">Worrell</span></td><td data-i18n="uw_auto_td_0214">+16% Allied Troop ATK</td><td data-i18n="uw_auto_td_0215">Solo Attack</td></tr>
+                <tr><td data-i18n="uw_auto_td_0216">Bomber</td><td><span class="uw-hero-inline" data-i18n="uw_auto_span_0218"><img src="assets/heroes/alph.png" alt="Alph">Alph</span></td><td data-i18n="uw_auto_td_0219">+16% Allied Troop ATK</td><td data-i18n="uw_auto_td_0220">Solo Attack</td></tr>
+                <tr><td data-i18n="uw_auto_td_0221">Bomber</td><td><span class="uw-hero-inline" data-i18n="uw_auto_span_0223"><img src="assets/koschevoi.png" alt="Koschevoi">Koschevoi</span></td><td data-i18n="uw_auto_td_0224">+16% Allied Troop DEF</td><td data-i18n="uw_auto_td_0225">Solo Attack</td></tr>
+                <tr><td data-i18n="uw_auto_td_0226">Shooter</td><td><span class="uw-hero-inline" data-i18n="uw_auto_span_0228"><img src="assets/veronica.png" alt="Veronica">Veronica</span></td><td data-i18n="uw_auto_td_0229">+16% Allied Troop Lethality</td><td data-i18n="uw_auto_td_0230">Solo Attack</td></tr>
+                <tr><td data-i18n="uw_auto_td_0231">Shooter</td><td><span class="uw-hero-inline" data-i18n="uw_auto_span_0233"><img src="assets/edwin.png" alt="Edwin">Edwin</span></td><td data-i18n="uw_auto_td_0234">+16% Allied Troop HP</td><td data-i18n="uw_auto_td_0235">Solo Attack</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p data-i18n="uw_auto_p_0236"><strong>Note:</strong> None of the 6 Shield Heroes possess a Solo Attack equipment trigger—all Shield equipment skills trigger during Defending or Rally Attacks. Therefore, for your Shield slot in Solo Attacks, you choose purely based on baseline skill synergies.</p>
+
+          <h4 data-i18n="uw_solo_2step_title">The 2-Step Hero Selection Process for Solo Attacks</h4>
+          <ol>
+            <li data-i18n="uw_solo_2step_1"><strong>Step 1 (Equipment Activation):</strong> Always attempt to pick your Bomber and Shooter from the Solo Equipment List to lock in two guaranteed +16% army-wide stat buffs.</li>
+            <li data-i18n="uw_solo_2step_2"><strong>Step 2 (Skill Synergy):</strong> Compare the active/passive skills of those equipment-matched heroes to hard-counter the scouted target.</li>
+          </ol>
+        </section>
+
+        <section id="solo-attack-formations" class="uw-subsection">
+          <h3 data-i18n="uw_auto_h3_0237">2. Optimized Solo Attack Formations &amp; Examples</h3>
+          <div class="uw-step-list">
+            <p data-i18n="uw_auto_p_0238"><strong>Step 1: Equipment Filter (Select Solo-Active Heroes)</strong></p>
+            <p data-i18n="uw_auto_p_0239">Bomber Slot → Worrell (+16% ATK), Alph (+16% ATK), or Koschevoi (+16% DEF)</p>
+            <p data-i18n="uw_auto_p_0240">Shooter Slot → Veronica (+16% Lethality) or Edwin (+16% HP)</p>
+            <p data-i18n="uw_auto_p_0241">Shield Slot → Best Mechanical Complement (e.g., Caesar, Otto, Tyronn)</p>
+            <p data-i18n="uw_auto_p_0242"><strong>Step 2: Skill Synergy Match vs. Scout Report</strong></p>
+          </div>
+
+          <h4 data-i18n="uw_auto_h4_0243">FORMATION 1: The First-Strike Tactical Executioner</h4>
+          <p data-i18n="uw_auto_p_0244"><strong>Primary Focus:</strong> High raw damage, instant turn-1 stat suppression, and multi-hit basic attack combos.</p>
+          <ol>
+            <li data-i18n="uw_auto_li_0245"><strong>Bomber Choice:</strong> <strong>Worrell</strong> (Equipment: +16% ATK active in Solo Combat). Skills grant +25% Basic Attack DMG and a 50% Combo chance for Bombers.</li>
+            <li data-i18n="uw_auto_li_0246"><strong>Shooter Choice:</strong> <strong>Edwin</strong> (Equipment: +16% HP active in Solo Attack). Skills grant +20% Shieldbearer / +30% Shooter damage reduction and turn-3 Tactical bursts.</li>
+            <li data-i18n="uw_auto_li_0247"><strong>Shield Choice:</strong> <strong>Caesar</strong> (Best Mechanical Fit). Skills lower enemy HP by 20% right at battle start and provide a 20% chance to revive fallen troops.</li>
+          </ol>
+          <p data-i18n="uw_auto_p_0248"><strong>Power Armor / Robot:</strong> <strong>Bastion</strong> (+76% Bomber ATK/DEF, +280% Tactical DMG on non-multiple of 3 turns) or <strong>Phantom Cat</strong> (+76% Shooter ATK/DEF, +37.5% Lethality).</p>
+
+          <p data-i18n="uw_formation1_buffs"><strong>Active Equipment Buffs:</strong> +16% Army ATK (Worrell Equipment); +16% Army HP (Edwin Equipment); <strong>Total Buffs: +16% ATK, +16% HP</strong>.</p>
+          <p data-i18n="uw_formation1_scenario_title"><strong>Scenario A: Striking an Equal-Power Balanced Base</strong></p>
+          <p data-i18n="uw_formation1_scenario_profile"><strong>Scout Profile:</strong> Equal power, balanced troop ratio (33% / 33% / 33%), high baseline health.</p>
+          <p data-i18n="uw_formation1_scenario_play"><strong>The Play:</strong> Deploy Worrell + Edwin + Caesar with Bastion.</p>
+          <p data-i18n="uw_formation1_scenario_steps_label"><strong>Step-by-Step Execution:</strong></p>
+          <ol>
+            <li data-i18n="uw_formation1_scenario_step1"><strong>Pre-Battle Buff Phase:</strong> Worrell's equipment grants +16% ATK and Edwin's equipment grants +16% HP to your entire army.</li>
+            <li data-i18n="uw_formation1_scenario_step2"><strong>Battle Start (Debuff Application):</strong> Caesar's Crushing Blow immediately cuts enemy base HP by 20%.</li>
+            <li data-i18n="uw_formation1_scenario_step3"><strong>Turn 1 (Attacker Advantage):</strong> Your march moves first. Worrell attacks with a 50% chance to trigger Double Lash, landing a second full basic attack.</li>
+            <li data-i18n="uw_formation1_scenario_step4"><strong>Tactical Amplification:</strong> Because Turn 1 is not a multiple of 3, Bastion boosts all Tactical Damage by 280%. Worrell's double basic attack paired with Edwin's defensive survival baseline melts the enemy frontline before they can retaliate.</li>
+          </ol>
+
+          <h4 data-i18n="uw_auto_h4_0249">FORMATION 2: The Lethality Armor-Shredder</h4>
+          <p data-i18n="uw_auto_p_0250"><strong>Primary Focus:</strong> Bypassing enemy Defense to trigger instant troop kill checks against high-HP targets.</p>
+          <ol>
+            <li data-i18n="uw_auto_li_0251"><strong>Bomber Choice:</strong> <strong>Alph</strong> (Equipment: +16% ATK active in Solo Combat). Skills reduce enemy Lethality by 20% and reduce enemy DEF by 20%.</li>
+            <li data-i18n="uw_auto_li_0252"><strong>Shooter Choice:</strong> <strong>Veronica</strong> (Equipment: +16% Lethality active in Solo Attack). Skills grant +25% Lethality, +25% DEF, and a 50% chance to increase enemy damage taken by 50%.</li>
+            <li data-i18n="uw_auto_li_0253"><strong>Shield Choice:</strong> <strong>Tyronn</strong> (Best Mechanical Fit). Skills grant +25% Lethality and increase enemy damage taken by 25%.</li>
+          </ol>
+          <p data-i18n="uw_auto_p_0254"><strong>Power Armor / Robot:</strong> <strong>Infercore</strong> (+65% Bomber/Shooter ATK, +60% Lethality) or <strong>Halo</strong> (+76% Bomber ATK/DEF, +30% to +80% Lethality).</p>
+
+          <p data-i18n="uw_formation2_buffs"><strong>Active Equipment Buffs:</strong> +16% Army ATK (Alph Equipment); +16% Army Lethality (Veronica Equipment); <strong>Total Buffs: +16% ATK, +16% Lethality</strong>.</p>
+          <p data-i18n="uw_formation2_scenario_title"><strong>Scenario B: Breaking a Heavy Defense Turtle (Zoltan / Otto Defenders)</strong></p>
+          <p data-i18n="uw_formation2_scenario_profile"><strong>Scout Profile:</strong> Heavy Shieldbearer ratio (60%), High base Defense, low offensive damage.</p>
+          <p data-i18n="uw_formation2_scenario_play"><strong>The Play:</strong> Deploy Alph + Veronica + Tyronn with Infercore.</p>
+          <p data-i18n="uw_formation2_scenario_steps_label"><strong>Step-by-Step Execution:</strong></p>
+          <ol>
+            <li data-i18n="uw_formation2_scenario_step1"><strong>Lethality Stacking:</strong> Your army receives +16% Lethality from Veronica's equipment, +25% from Veronica's skill, +25% from Tyronn's skill, and +60% from Infercore, resulting in a massive +126% Total Army Lethality.</li>
+            <li data-i18n="uw_formation2_scenario_step2"><strong>Armor & Damage Suppression:</strong> Alph's Clever Tuning cuts enemy DEF by 20%, while Tyronn's Cripple increases enemy damage taken by 25%.</li>
+            <li data-i18n="uw_formation2_scenario_step3"><strong>Turn 1 Execution:</strong> When Veronica strikes, her 50% chance on Darkness Blade increases enemy damage taken by an additional 50% (Total +75% Damage Taken debuff on defender).</li>
+            <li data-i18n="uw_formation2_scenario_step4"><strong>Resolution:</strong> Your army's extreme Lethality (+126%) combined with reduced enemy armor strips away the defender's Shieldbearer wall instantly, turning what would be a long stall fight into a fast victory.</li>
+          </ol>
+
+          <h4 data-i18n="uw_auto_h4_0255">FORMATION 3: The High-Lethality Defense Counter (Anti-Trap)</h4>
+          <p data-i18n="uw_auto_p_0256"><strong>Primary Focus:</strong> Attacking high-Lethality defender traps safely without suffering permanent troop Losses.</p>
+          <ol>
+            <li data-i18n="uw_auto_li_0257"><strong>Bomber Choice:</strong> <strong>Koschevoi</strong> (Equipment: +16% DEF active in Solo Attack). Skills grant +25% flat Damage, +30% Bomber ATK, +15% Bomber DEF, and guaranteed round-by-round Tactical Damage.</li>
+            <li data-i18n="uw_auto_li_0258"><strong>Shooter Choice:</strong> <strong>Edwin</strong> (Equipment: +16% HP active in Solo Attack). Skills cut Shieldbearer damage taken by 20% and Shooter damage taken by 30%.</li>
+            <li data-i18n="uw_auto_li_0259"><strong>Shield Choice:</strong> <strong>Otto</strong> (Best Mechanical Fit). Skills grant up to 75% Damage Reduction and cut incoming Tactical/Basic damage.</li>
+          </ol>
+          <p data-i18n="uw_auto_p_0260"><strong>Power Armor / Robot:</strong> <strong>Musashimaru</strong> (+76% Shooter ATK/DEF, +30% Shield/Shooter Lethality, +45% Shield/Shooter Damage Reduction) or <strong>Atlas</strong> (+30% Army HP).</p>
+
+          <p data-i18n="uw_formation3_buffs"><strong>Active Equipment Buffs:</strong> +16% Army DEF (Koschevoi Equipment); +16% Army HP (Edwin Equipment); <strong>Total Buffs: +16% DEF, +16% HP</strong>.</p>
+          <p data-i18n="uw_formation3_scenario_title"><strong>Scenario C: Attacking a Defender Stacking High Lethality Gear</strong></p>
+          <p data-i18n="uw_formation3_scenario_profile"><strong>Scout Profile:</strong> Moderate troops, but extremely high Lethality stats designed to inflict permanent deaths on solo attackers.</p>
+          <p data-i18n="uw_formation3_scenario_play"><strong>The Play:</strong> Deploy Koschevoi + Edwin + Otto with Musashimaru.</p>
+          <p data-i18n="uw_formation3_scenario_steps_label"><strong>Step-by-Step Execution:</strong></p>
+          <ol>
+            <li data-i18n="uw_formation3_scenario_step1"><strong>Survival Threshold Elevation:</strong> Koschevoi's equipment grants +16% DEF, Edwin's equipment grants +16% HP, and Musashimaru reduces incoming damage to Shieldbearers and Shooters by 45%.</li>
+            <li data-i18n="uw_formation3_scenario_step2"><strong>Turn-by-Turn Mitigation:</strong> Otto's Iron Protection triggers an 83% chance each round to grant a troop type 75% Damage Reduction, while Edwin cuts incoming Shooter damage by 30%.</li>
+            <li data-i18n="uw_formation3_scenario_step3"><strong>Counter-Strike Execution:</strong> Because your HP and Defense baseline is boosted by equipment and skill reduction layers, the defender's Lethality rolls fail to reach the Lethal Damage Threshold.</li>
+            <li data-i18n="uw_formation3_scenario_step4"><strong>Resolution:</strong> Koschevoi's guaranteed Cannon Barrage (50% extra Tactical Damage every round) wears down the enemy forces safely, securing the win with 0 permanent Losses.</li>
+          </ol>
+
+        </section>
+
+        <section id="solo-scout-analysis" class="uw-subsection">
+          <h3 data-i18n="uw_auto_h3_0261">3. Scout Analysis &amp; Counter Selection with Equipment Priority</h3>
+          <p data-i18n="uw_auto_p_0262">When evaluating a scout report, use this decision framework to select your heroes:</p>
+          <div class="uw-decision-table">
+            <div><strong>High DEF / High HP Wall</strong><span data-i18n="uw_auto_span_0263">→ Worrell (+16% ATK) + Edwin (+16% HP) + Caesar</span><small>Power Armor: Bastion</small></div>
+            <div><strong>High Troop / Low DEF Target</strong><span data-i18n="uw_auto_span_0264">→ Alph (+16% ATK) + Veronica (+16% Lethality) + Tyronn</span><small>Power Armor: Infercore</small></div>
+            <div><strong>High Lethality Trap</strong><span data-i18n="uw_auto_span_0265">→ Koschevoi (+16% DEF) + Edwin (+16% HP) + Otto</span><small>Power Armor: Musashimaru</small></div>
+          </div>
+          <h4 data-i18n="uw_auto_h4_0266">Summary of Hero Priority for Solo Attacks</h4>
+          <ol>
+            <li data-i18n="uw_auto_li_0267"><strong>Always lock in equipment triggers first:</strong> Choosing Worrell, Alph, or Koschevoi for Bomber, and Veronica or Edwin for Shooter ensures two active +16% equipment buffs.</li>
+            <li data-i18n="uw_auto_li_0268"><strong>Adapt skills second:</strong> Use Worrell/Edwin for raw damage and tactical bursts, Alph/Veronica for armor-shredding and high Lethality, or Koschevoi/Edwin for defense against high-damage traps.</li>
+            <li data-i18n="uw_auto_li_0269"><strong>Pick the Shield hero to complement the team:</strong> Since Shield heroes lack Solo Attack equipment triggers, select Caesar for HP reduction, Tyronn for debuffs and Lethality, or Otto for damage reduction.</li>
+          </ol>
+        </section>
+      </section>
+
+      <section id="solo-defense" class="uw-section">
+        <header class="uw-section-title"><span class="uw-section-kicker" data-i18n="uw_auto_span_0270">SOLO DEFENSE</span><h2 data-i18n="uw_auto_h2_0271">The Master Guide to Solo Defense</h2></header>
+        <p data-i18n="uw_auto_p_0272">Solo Defense is where defenders hold the ultimate structural advantage in the game. When defending your base, <strong>Defender’s Advantage</strong> activates: as long as your Hospital has available capacity, any of your troops that would normally die from enemy Lethality are automatically converted into <strong>Heavily Wounded</strong> troops (0 permanent Losses on your report).</p>
+        <p data-i18n="uw_auto_p_0273">Meanwhile, your own Lethality operates at <strong>100% full fatality</strong> against the attacker, sending their troops directly to the graveyard as permanent <strong>Losses</strong>.</p>
+
+        <section id="solo-defense-equipment" class="uw-subsection">
+          <h3 data-i18n="uw_auto_h3_0274">1. The Triple-Equipment Defensive Filter</h3>
+          <p data-i18n="uw_auto_p_0275">Unlike Solo Attacks where Shield heroes lack solo equipment triggers, <strong>Solo Defense allows you to activate Exclusive Equipment (Lv.5) across ALL THREE hero slots simultaneously.</strong></p>
+          <p data-i18n="uw_auto_p_0276">This gives your defense a free baseline boost of up to <strong>+48% in army-wide stats</strong> before skills or power armor are calculated.</p>
+          <div class="uw-table-wrap">
+            <table class="uw-table">
+              <thead><tr><th data-i18n="uw_auto_th_0277">Class</th><th data-i18n="uw_auto_th_0278">Hero</th><th data-i18n="uw_auto_th_0279">Defensive Equipment (Lv.5)</th><th data-i18n="uw_auto_th_0280">Trigger Condition</th></tr></thead>
+              <tbody>
+                <tr><td data-i18n="uw_auto_td_0281">Bomber</td><td data-i18n="uw_auto_td_0282">Lanchester</td><td data-i18n="uw_auto_td_0283">+16% Allied Troop DEF</td><td data-i18n="uw_auto_td_0284">While Defending</td></tr>
+                <tr><td data-i18n="uw_auto_td_0285">Bomber</td><td data-i18n="uw_auto_td_0286">Lee</td><td data-i18n="uw_auto_td_0287">+16% Allied Troop ATK</td><td data-i18n="uw_auto_td_0288">While Defending</td></tr>
+                <tr><td data-i18n="uw_auto_td_0289">Shield</td><td data-i18n="uw_auto_td_0290">Marcus</td><td data-i18n="uw_auto_td_0291">+16% Allied Troop HP</td><td data-i18n="uw_auto_td_0292">While Defending</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section id="solo-defense-archetypes" class="uw-subsection">
+          <h3 data-i18n="uw_solodef_archetypes_title">2. Defensive Formation Archetypes &amp; Step-by-Step Scenarios</h3>
+
+        <section id="solo-defense-archetype-1" class="uw-subsection">
+          <h4 data-i18n="uw_archetype1_title">ARCHETYPE 1: The Iron Fortress (Maximum Damage Mitigation)</h4>
+          <p data-i18n="uw_archetype1_focus"><strong>Primary Focus:</strong> Neutralizing incoming attack power, protecting Hospital capacity, and making your frontline impossible to break.</p>
+          <ol>
+            <li data-i18n="uw_archetype1_hero1"><strong>Bomber:</strong> Lanchester (Eq: +16% DEF). Grants +25% HP if enemy Power is higher, provides a 20% Stun chance, and cuts enemy Damage by 20%.</li>
+            <li data-i18n="uw_archetype1_hero2"><strong>Shield:</strong> Otto (Eq: +16% DEF). Gives an 83% chance every round to grant 75% Damage Reduction to a troop type, plus alternating 60%/40% mitigation.</li>
+            <li data-i18n="uw_archetype1_hero3"><strong>Shooter:</strong> Kate (Eq: +16% Lethality). Cuts enemy Shieldbearer Lethality by 20% and Bomber Lethality by 25%. Boosts army Damage by +43% starting on Turn 4.</li>
+          </ol>
+          <p data-i18n="uw_archetype1_robot"><strong>Power Armor / Robot:</strong> Musashimaru (+76% Shooter ATK/DEF, +30% Shield/Shooter Lethality, +45% Damage Reduction for Shield/Shooter).</p>
+          <p data-i18n="uw_archetype1_buffs"><strong>Total Active Equipment Buffs:</strong> +16% Army DEF (Lanchester Equipment); +16% Army DEF (Otto Equipment); +16% Army Lethality (Kate Equipment); <strong>Total Stat Boost: +32% Army DEF, +16% Army Lethality</strong>.</p>
+          <p data-i18n="uw_archetype1_scenario_title"><strong>Scenario A: Defending Against a High-Power Solo Attacker</strong></p>
+          <p data-i18n="uw_archetype1_scenario_attackprofile"><strong>Attack Profile:</strong> A whale/high-power player launches a solo march with high ATK stats, attempting to brute-force your wall.</p>
+          <p data-i18n="uw_archetype1_scenario_ratio"><strong>Defensive Troop Ratio:</strong> 50% Shield / 25% Bomber / 25% Shooter.</p>
+          <p data-i18n="uw_archetype1_scenario_setup"><strong>The Setup:</strong> Deploy Lanchester + Otto + Kate with Musashimaru.</p>
+          <p data-i18n="uw_archetype1_scenario_steps_label"><strong>Step-by-Step Combat Execution:</strong></p>
+          <ol>
+            <li data-i18n="uw_archetype1_scenario_step1"><strong>Pre-Battle Activation:</strong> Lanchester, Otto, and Kate trigger their equipment skills simultaneously, giving your base +32% Army DEF and +16% Army Lethality.</li>
+            <li data-i18n="uw_archetype1_scenario_step2"><strong>Power Differential Adjustment:</strong> Because the attacker's initial power is higher, Lanchester's Adaptive Transformation triggers, boosting your entire army's HP by an extra 25%.</li>
+            <li data-i18n="uw_archetype1_scenario_step3"><strong>Lethality Neutralization:</strong> Kate's Position Block suppresses the attacker's Bomber Lethality by 25% and Shieldbearer Lethality by 20%.</li>
+            <li data-i18n="uw_archetype1_scenario_step4"><strong>Layered Damage Reduction:</strong> On Turn 1, Musashimaru reduces incoming damage to your Shieldbearers and Shooters by 45%. Otto's Iron Protection (83% chance) applies an additional 75% Damage Reduction to your frontline.</li>
+            <li data-i18n="uw_archetype1_scenario_step5"><strong>Resolution:</strong> The attacker's high-ATK march hits a wall with over 80% stacked damage mitigation and boosted HP. Their attack rolls fail to trigger kill checks, resulting in 0 permanent Losses for you while your counter-attacks send their troops directly to the hospital.</li>
+          </ol>
+        </section>
+
+        <section id="solo-defense-archetype-2" class="uw-subsection">
+          <h4 data-i18n="uw_archetype2_title">ARCHETYPE 2: The Lethality Punisher (Attacker Execution Setup)</h4>
+          <p data-i18n="uw_archetype2_focus"><strong>Primary Focus:</strong> Exploiting Defender's Advantage to turn incoming damage into guaranteed permanent kills against the attacker.</p>
+          <ol>
+            <li data-i18n="uw_archetype2_hero1"><strong>Bomber:</strong> Lee (Eq: +16% ATK). Increases target Tactical DMG taken by 50% and provides a 25% chance per round to deal 100% ATK Tactical DMG to all enemies.</li>
+            <li data-i18n="uw_archetype2_hero2"><strong>Shield:</strong> Caesar (Eq: +16% ATK). Cuts enemy HP by 20% at start of battle, boosts allied DEF by 25%, and revives 20% of fallen troops at round end.</li>
+            <li data-i18n="uw_archetype2_hero3"><strong>Shooter:</strong> Drake (Eq: +16% Lethality). Grants +14% ATK and +12% Lethality passively, gives a 50% chance to cut enemy damage by 40%, and fires a Turn-3 Tactical burst (110% DMG).</li>
+          </ol>
+          <p data-i18n="uw_archetype2_robot"><strong>Power Armor / Robot:</strong> Infercore (+65% Bomber/Shooter ATK, +60% Lethality) or Halo (+30% Lethality baseline, +50% extra Lethality after 5 Bomber attacks).</p>
+          <p data-i18n="uw_archetype2_buffs"><strong>Total Active Equipment Buffs:</strong> +16% Army ATK (Lee Equipment); +16% Army ATK (Caesar Equipment); +16% Army Lethality (Drake Equipment); <strong>Total Stat Boost: +32% Army ATK, +16% Army Lethality</strong>.</p>
+          <p data-i18n="uw_archetype2_scenario_title"><strong>Scenario B: Punishing a High-Troop / Low-HP March</strong></p>
+          <p data-i18n="uw_archetype2_scenario_attackprofile"><strong>Attack Profile:</strong> An opponent sends a march with massive troop numbers but weak base Defense and HP stats.</p>
+          <p data-i18n="uw_archetype2_scenario_ratio"><strong>Defensive Troop Ratio:</strong> 20% Shield / 40% Bomber / 40% Shooter.</p>
+          <p data-i18n="uw_archetype2_scenario_setup"><strong>The Setup:</strong> Deploy Lee + Caesar + Drake with Infercore.</p>
+          <p data-i18n="uw_archetype2_scenario_steps_label"><strong>Step-by-Step Combat Execution:</strong></p>
+          <ol>
+            <li data-i18n="uw_archetype2_scenario_step1"><strong>Battle Start (Stat Application):</strong> Equipment unlocks +32% Army ATK and +16% Army Lethality. Caesar's Crushing Blow immediately chops 20% off the attacker's base HP.</li>
+            <li data-i18n="uw_archetype2_scenario_step2"><strong>Lethality Stacking:</strong> Drake (+16% Equipment, +12% Passive) combined with Infercore (+60% to Bombers and Shooters) pushes your backline Lethality boost to +88%.</li>
+            <li data-i18n="uw_archetype2_scenario_step3"><strong>Turn 1 Counter-Strike:</strong> Lee's Stealth Assault marks the enemy, increasing their Tactical DMG taken by 50%. When Lee's Strategic Chain triggers, it hits all enemy units with 100% ATK Tactical Damage.</li>
+            <li data-i18n="uw_archetype2_scenario_step4"><strong>Attacker Fatality Execution:</strong> Because you are defending, your +88% Lethality operates at 100% kill efficiency. The attacker's low-HP units melt under the Tactical AoE, and their battle report shows massive permanent Losses, while your wounded troops are redirected safely to your Hospital.</li>
+          </ol>
+        </section>
+
+        <section id="solo-defense-archetype-3" class="uw-subsection">
+          <h4 data-i18n="uw_archetype3_title">ARCHETYPE 3: The Turn-3 Counter-Burst Trap</h4>
+          <p data-i18n="uw_archetype3_focus"><strong>Primary Focus:</strong> Absorbing early turns using heavy basic attack reduction, then wiping out the attacker on Turn 3 with synchronized extra attacks and tactical bursts.</p>
+          <ol>
+            <li data-i18n="uw_archetype3_hero1"><strong>Bomber:</strong> Lee (Eq: +16% ATK). Increases target Tactical DMG taken by 50% for 1 round.</li>
+            <li data-i18n="uw_archetype3_hero2"><strong>Shield:</strong> Marcus (Eq: +16% HP). Cuts basic attack damage taken by 50% on even turns (Turn 2, 4...). On Turn 3, Shieldbearers skip attacking so Shooters and Bombers can fire an extra basic attack dealing 150% DMG.</li>
+            <li data-i18n="uw_archetype3_hero3"><strong>Shooter:</strong> Drake (Eq: +16% Lethality). Fires an extra tactical attack dealing 110% Tactical DMG on round numbers that are multiples of 3.</li>
+          </ol>
+          <p data-i18n="uw_archetype3_robot"><strong>Power Armor / Robot:</strong> Bastion (+76% Bomber ATK/DEF, +40% DEF, +50% Tactical DMG) or Phantom Cat.</p>
+          <p data-i18n="uw_archetype3_buffs"><strong>Total Active Equipment Buffs:</strong> +16% Army ATK (Lee Equipment); +16% Army HP (Marcus Equipment); +16% Army Lethality (Drake Equipment); <strong>Total Stat Boost: +16% ATK, +16% HP, +16% Lethality</strong>.</p>
+          <p data-i18n="uw_archetype3_scenario_title"><strong>Scenario C: Baiting an Aggressive Shooter March</strong></p>
+          <p data-i18n="uw_archetype3_scenario_attackprofile"><strong>Attack Profile:</strong> An attacker scouts your base and sees a moderate defense, prompting them to send a heavy Shooter march (15% Shield / 25% Bomber / 60% Shooter) to break your wall quickly.</p>
+          <p data-i18n="uw_archetype3_scenario_ratio"><strong>Defensive Troop Ratio:</strong> 30% Shield / 45% Bomber / 25% Shooter.</p>
+          <p data-i18n="uw_archetype3_scenario_setup"><strong>The Setup:</strong> Deploy Lee + Marcus + Drake with Bastion.</p>
+          <p data-i18n="uw_archetype3_scenario_steps_label"><strong>Step-by-Step Combat Execution:</strong></p>
+          <ol>
+            <li data-i18n="uw_archetype3_scenario_step1"><strong>Turn 1 &amp; 2 (Stalling Phase):</strong> Marcus's Monster Intimidation cuts incoming basic attack damage by 50% on Turn 2, preserving your frontline HP.</li>
+            <li data-i18n="uw_archetype3_scenario_step2_label"><strong>Turn 3 Activation (The Trap Triggers):</strong>
+              <ul>
+                <li data-i18n="uw_archetype3_scenario_step2a"><strong>Marcus:</strong> Self-Sacrificing Battle activates. Your Shieldbearers skip their turn, allowing your 45% Bomber stack and 25% Shooter stack to launch an extra basic attack dealing 150% DMG.</li>
+                <li data-i18n="uw_archetype3_scenario_step2b"><strong>Lee:</strong> Increases enemy Tactical DMG taken by 50%.</li>
+                <li data-i18n="uw_archetype3_scenario_step2c"><strong>Drake:</strong> Charged Barrage triggers on Turn 3, firing an extra tactical attack for 110% Tactical DMG.</li>
+              </ul>
+            </li>
+            <li data-i18n="uw_archetype3_scenario_step3"><strong>Resolution:</strong> On Turn 3, your Bombers and Shooters hit the attacker with double basic attacks at 150% power, stacked on top of Drake's 110% Tactical burst. The incoming attacker march is wiped out in a single turn.</li>
+          </ol>
+        </section>
+        </section>
+
+
+        <section id="solo-defense-scout-matrix" class="uw-subsection">
+          <h3 data-i18n="uw_solodef_scoutmatrix_title">3. Scout Response &amp; Defensive Matrix</h3>
+          <p data-i18n="uw_solodef_scoutmatrix_intro">When an incoming march or rally scout appears on your base, use this matrix to select your defensive hero composition and troop ratio:</p>
+          <div class="uw-table-wrap">
+            <table class="uw-table">
+              <thead><tr>
+                <th data-i18n="uw_solodef_th_profile">Incoming Attacker Profile</th>
+                <th data-i18n="uw_solodef_th_vulnerability">Attacker Vulnerability</th>
+                <th data-i18n="uw_solodef_th_ratio">Recommended Defensive Ratio</th>
+                <th data-i18n="uw_solodef_th_setup">Best Hero Setup (Equipment Active)</th>
+                <th data-i18n="uw_solodef_th_robot">Ideal Robot</th>
+              </tr></thead>
+              <tbody>
+                <tr>
+                  <td data-i18n="uw_solodef_row1_profile">Heavy Shooter March (60% Shooters)</td>
+                  <td data-i18n="uw_solodef_row1_vuln">Vulnerable to Bomber counter-damage &amp; Turn 3 bursts</td>
+                  <td data-i18n="uw_solodef_row1_ratio">30% Shield / 50% Bomber / 20% Shooter</td>
+                  <td data-i18n="uw_solodef_row1_setup">Lee + Marcus + Drake (ATK / HP / Lethality)</td>
+                  <td data-i18n="uw_solodef_row1_robot">Bastion or Halo</td>
+                </tr>
+                <tr>
+                  <td data-i18n="uw_solodef_row2_profile">Heavy Shield March (60% Shields)</td>
+                  <td data-i18n="uw_solodef_row2_vuln">Vulnerable to Shooter DPS &amp; Defense Reduction</td>
+                  <td data-i18n="uw_solodef_row2_ratio">20% Shield / 20% Bomber / 60% Shooter</td>
+                  <td data-i18n="uw_solodef_row2_setup">Lanchester + Caesar + Kate (DEF / ATK / Lethality)</td>
+                  <td data-i18n="uw_solodef_row2_robot">Phantom Cat or Musashimaru</td>
+                </tr>
+                <tr>
+                  <td data-i18n="uw_solodef_row3_profile">High Lethality Solo March</td>
+                  <td data-i18n="uw_solodef_row3_vuln">Stopped by HP/DEF stacking &amp; damage reduction</td>
+                  <td data-i18n="uw_solodef_row3_ratio">50% Shield / 25% Bomber / 25% Shooter</td>
+                  <td data-i18n="uw_solodef_row3_setup">Lanchester + Otto + Kate (DEF / DEF / Lethality)</td>
+                  <td data-i18n="uw_solodef_row3_robot">Musashimaru or Atlas</td>
+                </tr>
+                <tr>
+                  <td data-i18n="uw_solodef_row4_profile">High ATK Burst March</td>
+                  <td data-i18n="uw_solodef_row4_vuln">Stopped by Stuns &amp; Turn 2/4 mitigation layers</td>
+                  <td data-i18n="uw_solodef_row4_ratio">40% Shield / 30% Bomber / 30% Shooter</td>
+                  <td data-i18n="uw_solodef_row4_setup">Lanchester + Zoltan + Drake (DEF / DEF / Lethality)</td>
+                  <td data-i18n="uw_solodef_row4_robot">Atlas or Musashimaru</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+      </section>
+
+      <section id="rally-attack" class="uw-section">
+        <header class="uw-section-title"><span class="uw-section-kicker" data-i18n="uw_auto_span_0293">RALLY ATTACK</span><h2 data-i18n="uw_auto_h2_0294">The Master Guide to Rally Attacks</h2></header>
+        <p data-i18n="uw_auto_p_0295">Rally Attacks combine the forces of multiple alliance members into a single massive march.</p>
+        <ol>
+          <li data-i18n="uw_auto_li_0296"><strong>The Rally Captain (Starter):</strong> Provides the base march, <strong>all 3 hero skills</strong>, <strong>1 Power Armor (Robot)</strong>, and <strong>3 active Rally Attack Equipment (+48% total army stats)</strong>.</li>
+          <li data-i18n="uw_auto_li_0297"><strong>The 4 Joiner Assist Heroes:</strong> Only the 1st Skill of the lead hero from the first 4 joiners will assist and buff the entire rally army.</li>
+          <li data-i18n="uw_auto_li_0298"><strong>Rally Priority Control:</strong> As the Rally Captain, you can manually reorder the joiner list in your rally menu to ensure the 4 best Joiner Skill 1s are active.</li>
+        </ol>
+
+        <section id="rally-attack-equipment" class="uw-subsection">
+          <h3 data-i18n="uw_auto_h3_0299">1. The Triple-Equipment Rally Starter Filter</h3>
+          <p data-i18n="uw_auto_p_0300">Just like Solo Defense, Rally Attacks allow the Rally Captain to activate <strong>Exclusive Equipment (Lv.5) across ALL THREE hero slots simultaneously</strong>. Before looking at joiners, the Rally Captain MUST build their starting march exclusively from these heroes to lock in <strong>+48% baseline rally stats</strong>.</p>
+
+          <div class="uw-table-wrap">
+            <table class="uw-table">
+              <thead><tr>
+                <th data-i18n="uw_rallyfilter_th_class">Class</th>
+                <th data-i18n="uw_rallyfilter_th_hero">Hero</th>
+                <th data-i18n="uw_rallyfilter_th_equipment">Rally Equipment (Lv.5)</th>
+                <th data-i18n="uw_rallyfilter_th_trigger">Trigger Condition</th>
+              </tr></thead>
+              <tbody>
+                <tr>
+                  <td data-i18n="uw_rallyfilter_row1_class">Bomber</td>
+                  <td data-i18n="uw_rallyfilter_row1_hero">Wukong</td>
+                  <td data-i18n="uw_rallyfilter_row1_eq">+16% Allied Troop Lethality</td>
+                  <td data-i18n="uw_rallyfilter_row1_trig">During Rally Attacks</td>
+                </tr>
+                <tr>
+                  <td data-i18n="uw_rallyfilter_row2_class">Bomber</td>
+                  <td data-i18n="uw_rallyfilter_row2_hero">Whisper</td>
+                  <td data-i18n="uw_rallyfilter_row2_eq">+16% Allied Troop Lethality</td>
+                  <td data-i18n="uw_rallyfilter_row2_trig">During Rally Attacks</td>
+                </tr>
+                <tr>
+                  <td data-i18n="uw_rallyfilter_row3_class">Bomber</td>
+                  <td data-i18n="uw_rallyfilter_row3_hero">Ryuichi Ito</td>
+                  <td data-i18n="uw_rallyfilter_row3_eq">+16% Allied Troop ATK</td>
+                  <td data-i18n="uw_rallyfilter_row3_trig">During Rally Attacks</td>
+                </tr>
+                <tr>
+                  <td data-i18n="uw_rallyfilter_row4_class">Shield</td>
+                  <td data-i18n="uw_rallyfilter_row4_hero">Tyronn</td>
+                  <td data-i18n="uw_rallyfilter_row4_eq">+16% Allied Troop ATK</td>
+                  <td data-i18n="uw_rallyfilter_row4_trig">During Rally Attacks</td>
+                </tr>
+                <tr>
+                  <td data-i18n="uw_rallyfilter_row5_class">Shooter</td>
+                  <td data-i18n="uw_rallyfilter_row5_hero">Mireya</td>
+                  <td data-i18n="uw_rallyfilter_row5_eq">+16% Allied Troop Lethality</td>
+                  <td data-i18n="uw_rallyfilter_row5_trig">During Rally Attacks</td>
+                </tr>
+                <tr>
+                  <td data-i18n="uw_rallyfilter_row6_class">Shooter</td>
+                  <td data-i18n="uw_rallyfilter_row6_hero">Ada</td>
+                  <td data-i18n="uw_rallyfilter_row6_eq">+16% Allied Troop ATK</td>
+                  <td data-i18n="uw_rallyfilter_row6_trig">During Rally Attacks</td>
+                </tr>
+                <tr>
+                  <td data-i18n="uw_rallyfilter_row7_class">Shooter</td>
+                  <td data-i18n="uw_rallyfilter_row7_hero">Sawyer</td>
+                  <td data-i18n="uw_rallyfilter_row7_eq">+16% Allied Troop HP</td>
+                  <td data-i18n="uw_rallyfilter_row7_trig">During Rally Attacks</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p data-i18n="uw_rallyfilter_deploy_bomber"><strong>Bomber Slot →</strong> Select Wukong (+16% Lethality), Whisper (+16% Lethality), or Ryuichi Ito (+16% ATK)</p>
+          <p data-i18n="uw_rallyfilter_deploy_shield"><strong>Shield Slot →</strong> Select Tyronn (+16% ATK) — Mandatory (Only Shield hero with Rally equipment!)</p>
+          <p data-i18n="uw_rallyfilter_deploy_shooter"><strong>Shooter Slot →</strong> Select Mireya (+16% Lethality), Ada (+16% ATK), or Sawyer (+16% HP)</p>
+          <p data-i18n="uw_rallyfilter_deploy_result"><strong>Result:</strong> 3 Active Equipment Buffs (+48% Total Stats)</p>
+
+        </section>
+
+        <section id="rally-attack-joiners" class="uw-subsection">
+          <h3 data-i18n="uw_rallyjoiners_title">2. The Top 4 Joiner Assist Pool (Skill 1 Only)</h3>
+          <p data-i18n="uw_rallyjoiners_intro">When alliance members send marches to your rally, you must rearrange the top 4 joiners so their Lead Heroes provide the most impactful Skill 1 assists.</p>
+
+          <div class="uw-role-grid">
+            <div><h4 data-i18n="uw_rallyjoiners_cat1_title">Top Damage Buffers</h4><ul>
+              <li data-i18n="uw_rallyjoiners_cat1_li1"><strong>Koschevoi (Bomber - Skill 1: Precision Strike):</strong> Increases total Damage for all rally troops by <strong>+25%</strong>.</li>
+              <li data-i18n="uw_rallyjoiners_cat1_li2"><strong>Kate (Shooter - Skill 1: Sprint Signal):</strong> Increases total ATK for all rally troops by <strong>+25%</strong>.</li>
+              <li data-i18n="uw_rallyjoiners_cat1_li3"><strong>Worrell (Bomber - Skill 1: Charged Launch):</strong> Increases Basic Attack Damage for all rally troops by <strong>+25%</strong>.</li>
+            </ul></div>
+            <div><h4 data-i18n="uw_rallyjoiners_cat2_title">Top Enemy Stat Strippers</h4><ul>
+              <li data-i18n="uw_rallyjoiners_cat2_li1"><strong>Sawyer (Shooter - Skill 1: Rust Erosion):</strong> Reduces enemy HP by <strong>20%</strong> right at battle start.</li>
+              <li data-i18n="uw_rallyjoiners_cat2_li2"><strong>Ada (Shooter - Skill 1: Sweet Smile):</strong> Reduces enemy DEF by <strong>10%</strong> and HP by <strong>15%</strong>.</li>
+              <li data-i18n="uw_rallyjoiners_cat2_li3"><strong>Whisper (Bomber - Skill 1: Curse):</strong> Reduces enemy DEF by <strong>20%</strong>.</li>
+            </ul></div>
+            <div><h4 data-i18n="uw_rallyjoiners_cat3_title">Top Damage Multipliers</h4><ul>
+              <li data-i18n="uw_rallyjoiners_cat3_li1"><strong>Tyronn (Shield - Skill 1: Cripple):</strong> Increases all enemy troops' Damage Taken by <strong>+25%</strong>.</li>
+              <li data-i18n="uw_rallyjoiners_cat3_li2"><strong>Lee (Bomber - Skill 1: Stealth Assault):</strong> Increases target Tactical Damage Taken by <strong>+50%</strong> for 1 round whenever Bombers hit.</li>
+            </ul></div>
+            <div><h4 data-i18n="uw_rallyjoiners_cat4_title">Top Defensive &amp; Survival Assists</h4><ul>
+              <li data-i18n="uw_rallyjoiners_cat4_li1"><strong>Alph (Bomber - Skill 1: Photon Shield):</strong> Reduces enemy troop Lethality by <strong>20%</strong>.</li>
+              <li data-i18n="uw_rallyjoiners_cat4_li2"><strong>Caesar (Shield - Skill 1: Gene Activity):</strong> Provides a <strong>20% chance</strong> to revive fallen soldiers at round end.</li>
+            </ul></div>
+          </div>
+        </section>
+
+        <section id="rally-scenarios" class="uw-subsection">
+          <h3 data-i18n="uw_auto_h3_0301">3. Rally Scenarios &amp; Step-by-Step Executions</h3>
+
+          <h4 data-i18n="uw_auto_h4_0302">SCENARIO 1: The Total Annihilation Rally (Maximum Casualties)</h4>
+          <p data-i18n="uw_auto_p_0303"><strong>Target Profile:</strong> A heavily populated enemy alliance city or level-3 facility with balanced defenders.</p>
+          <p data-i18n="uw_auto_p_0304"><strong>Objective:</strong> Overwhelm the garrison with massive stacked Lethality and raw ATK to force immediate permanent casualties.</p>
+          <p data-i18n="uw_auto_p_0305"><strong>Step 1: Rally Starter Setup</strong></p>
+          <ul>
+            <li data-i18n="uw_auto_li_0306"><strong>Bomber:</strong> Wukong (Eq: +16% Lethality). Skills deal 150% Tactical bursts every 3 rounds and boost allied damage.</li>
+            <li data-i18n="uw_auto_li_0307"><strong>Shield:</strong> Tyronn (Eq: +16% ATK). Skills increase enemy damage taken by 25%, boost Lethality by 25%, and give a 20% Stun chance.</li>
+            <li data-i18n="uw_auto_li_0308"><strong>Shooter:</strong> Mireya (Eq: +16% Lethality). Skills cut enemy ATK by 20%, boost allied ATK by 25%, and increase allied damage by up to 30%.</li>
+            <li data-i18n="uw_auto_li_0309"><strong>Power Armor / Robot:</strong> Infercore (+65% Bomber/Shooter ATK, +60% Lethality).</li>
+          </ul>
+          <p data-i18n="uw_auto_p_0310"><strong>Starter Active Equipment Buffs:</strong> +16% Army ATK (Tyronn Equipment); +16% Army Lethality (Wukong Equipment); +16% Army Lethality (Mireya Equipment); <strong>Total Starter Buffs: +16% ATK, +32% Lethality</strong>.</p>
+          <p data-i18n="uw_auto_p_0311"><strong>Step 2: The 4 Joiner Assists (Organized by Captain)</strong></p>
+          <ol>
+            <li data-i18n="uw_auto_li_0312"><strong>Joiner 1 (Koschevoi):</strong> Skill 1 (Precision Strike) → <strong>+25% Flat Army Damage</strong>.</li>
+            <li data-i18n="uw_auto_li_0313"><strong>Joiner 2 (Sawyer):</strong> Skill 1 (Rust Erosion) → <strong>-20% Enemy Base HP</strong>.</li>
+            <li data-i18n="uw_auto_li_0314"><strong>Joiner 3 (Kate):</strong> Skill 1 (Sprint Signal) → <strong>+25% Flat Army ATK</strong>.</li>
+            <li data-i18n="uw_auto_li_0315"><strong>Joiner 4 (Xuanming):</strong> Skill 1 (Mountain Cleaver) → <strong>+25% Flat Army Lethality</strong>.</li>
+          </ol>
+          <p data-i18n="uw_auto_p_0316"><strong>Step 3: Combat Execution</strong></p>
+          <ol>
+            <li data-i18n="uw_auto_li_0317"><strong>Battle Start (Debuff Layering):</strong> Before round 1 begins, Sawyer’s assist cuts enemy base HP by <strong>20%</strong>. Mireya’s Stealth Cloak reduces enemy ATK by <strong>20%</strong>.</li>
+            <li data-i18n="uw_auto_li_0318"><strong>Lethality Stacking:</strong> Starter Equipment (+32%) + Tyronn Skill (+25%) + Xuanming Assist (+25%) + Infercore (+60%) = <strong>+142% Total Army Lethality</strong>.</li>
+            <li data-i18n="uw_auto_li_0319"><strong>Damage Multiplier Layering:</strong> Tyronn's Cripple increases enemy damage taken by <strong>25%</strong>. Koschevoi’s assist (+25% DMG), Kate’s assist (+25% ATK), and Mireya's skills push raw damage output to extreme levels.</li>
+          </ol>
+
+          <h4 data-i18n="uw_auto_h4_0320">SCENARIO 2: The Bunker-Buster Rally (Anti-Heavy Shield Garrison)</h4>
+          <p data-i18n="uw_auto_p_0321"><strong>Target Profile:</strong> A fortified enemy base utilizing high DEF, high HP, and heavy Shieldbearer defenders (e.g., Zoltan or Otto defensive setups).</p>
+          <p data-i18n="uw_auto_p_0322"><strong>Objective:</strong> Strip away the defender's base Armor and HP so your backline DPS can shred their frontline.</p>
+          <ul>
+            <li data-i18n="uw_auto_li_0323"><strong>Bomber:</strong> Whisper (Eq: +16% Lethality). Skills cut enemy DEF by 20%, grant a 20% chance for complete damage immunity, and give a 50% chance for +50% Army Damage.</li>
+            <li data-i18n="uw_auto_li_0324"><strong>Shield:</strong> Tyronn (Eq: +16% ATK). Skills increase enemy damage taken by 25%.</li>
+            <li data-i18n="uw_auto_li_0325"><strong>Shooter:</strong> Ada (Eq: +16% ATK). Skills reduce enemy DEF by 10% and HP by 15%, while triggering extra Shooter basic attacks.</li>
+            <li data-i18n="uw_auto_li_0326"><strong>Power Armor / Robot:</strong> Phantom Cat (+76% Shooter ATK/DEF, +37.5% Lethality, 80% Tactical hit every 4 Shooter attacks) or Bastion.</li>
+          </ul>
+          <p data-i18n="uw_auto_p_0327"><strong>Starter Active Equipment Buffs:</strong> +16% Army ATK (Tyronn Equipment); +16% Army ATK (Ada Equipment); +16% Army Lethality (Whisper Equipment); <strong>Total Starter Buffs: +32% ATK, +16% Lethality</strong>.</p>
+
+          <h4 data-i18n="uw_auto_h4_0328">SCENARIO 3: The High-Sustain Siege Rally (Anti-High-Lethality Trap)</h4>
+          <p data-i18n="uw_auto_p_0329"><strong>Target Profile:</strong> A defending player running high Lethality gear, high ATK, and Drake or Kate on defense, designed to dissolve incoming rallies through attrition.</p>
+          <p data-i18n="uw_auto_p_0330"><strong>Objective:</strong> Maintain rally structural integrity, prevent individual member troop deaths, and win through steady, high-sustain pressure.</p>
+          <ul>
+            <li data-i18n="uw_auto_li_0331"><strong>Bomber:</strong> Ryuichi Ito (Eq: +16% ATK). Skills grant a 20% Evade chance and extra attacks every 2 rounds.</li>
+            <li data-i18n="uw_auto_li_0332"><strong>Shield:</strong> Tyronn (Eq: +16% ATK). Skills increase enemy damage taken by 25% and provide a 20% Stun chance.</li>
+            <li data-i18n="uw_auto_li_0333"><strong>Shooter:</strong> Sawyer (Eq: +16% HP). Skills reduce enemy HP by 20% and increase allied HP by 25%.</li>
+            <li data-i18n="uw_auto_li_0334"><strong>Power Armor / Robot:</strong> Musashimaru (+76% Shooter ATK/DEF, +45% Damage Reduction for Shield/Shooter) or Atlas (+30% Army HP).</li>
+          </ul>
+          <p data-i18n="uw_auto_p_0335"><strong>Starter Active Equipment Buffs:</strong> +16% Army ATK (Ryuichi Ito Equipment); +16% Army ATK (Tyronn Equipment); +16% Army HP (Sawyer Equipment); <strong>Total Starter Buffs: +32% ATK, +16% HP</strong>.</p>
+        </section>
+
+        <section id="rally-matrix" class="uw-subsection">
+          <h3 data-i18n="uw_auto_h3_0336">4. Rally Captain Quick-Reference Matrix</h3>
+          <div class="uw-table-wrap">
+            <table class="uw-table uw-matrix">
+              <thead><tr><th data-i18n="uw_auto_th_0337">Target Garrison Profile</th><th data-i18n="uw_auto_th_0338">Starter March (Equipment Active)</th><th data-i18n="uw_auto_th_0339">Robot Choice</th><th data-i18n="uw_auto_th_0340">Top 4 Joiner Assist Lead Heroes (Skill 1)</th></tr></thead>
+              <tbody>
+                <tr><td data-i18n="uw_auto_td_0341"><strong>Balanced Garrison</strong></td><td data-i18n="uw_auto_td_0342">Wukong + Tyronn + Mireya <em>(Lethality / ATK / Lethality)</em></td><td data-i18n="uw_auto_td_0343">Infercore</td><td data-i18n="uw_auto_td_0344">Koschevoi, Sawyer, Kate, Xuanming</td></tr>
+                <tr><td data-i18n="uw_auto_td_0345"><strong>Heavy Shield Turtle</strong></td><td data-i18n="uw_auto_td_0346">Whisper + Tyronn + Ada <em>(Lethality / ATK / ATK)</em></td><td data-i18n="uw_auto_td_0347">Phantom Cat</td><td data-i18n="uw_auto_td_0348">Ada, Koschevoi, Lee, Worrell</td></tr>
+                <tr><td data-i18n="uw_auto_td_0349"><strong>High-Lethality Trap</strong></td><td data-i18n="uw_auto_td_0350">Ryuichi Ito + Tyronn + Sawyer <em>(ATK / ATK / HP)</em></td><td data-i18n="uw_auto_td_0351">Musashimaru</td><td data-i18n="uw_auto_td_0352">Alph, Caesar, Kate, Koschevoi</td></tr>
+                <tr><td data-i18n="uw_auto_td_0353"><strong>High ATK Burst Garrison</strong></td><td data-i18n="uw_auto_td_0354">Wukong + Tyronn + Sawyer <em>(Lethality / ATK / HP)</em></td><td data-i18n="uw_auto_td_0355">Bastion</td><td data-i18n="uw_auto_td_0356">Alph, Koschevoi, Sawyer, Tyronn</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </section>
+
+      <section id="rally-garrison-defense" class="uw-section">
+        <header class="uw-section-title"><span class="uw-section-kicker" data-i18n="uw_auto_span_0357">RALLY / GARRISON DEFENSE</span><h2 data-i18n="uw_auto_h2_0358">The Master Guide to Rally Garrison Defense</h2></header>
+        <p data-i18n="uw_auto_p_0359">Rally Garrison Defense protects allied cities, fortresses, and bunkers against incoming alliance rallies. In a Rally Garrison, the <strong>Garrison Captain</strong> sets the defensive foundation, providing <strong>3 full hero skill sets</strong>, <strong>1 Power Armor (Robot)</strong>, and <strong>3 active Defending Equipment (+48% total army stats)</strong>.</p>
+        <p data-i18n="uw_auto_p_0360">Meanwhile, the alliance members who reinforce the garrison bring their own troops, and the <strong>top 4 joiners</strong> contribute their lead hero’s <strong>Skill 1 only</strong> to assist the entire garrisoned army.</p>
+
+        <section id="garrison-equipment" class="uw-subsection">
+          <h3 data-i18n="uw_auto_h3_0361">1. The Triple-Equipment Garrison Starter Filter</h3>
+          <p data-i18n="uw_auto_p_0362">To maximize survival and kill potential, the Garrison Captain must build the starting garrison army exclusively using heroes whose Exclusive Equipment (Lv.5) triggers while <strong>Defending</strong>:</p>
+          <div class="uw-table-wrap">
+            <table class="uw-table">
+              <thead><tr><th data-i18n="uw_auto_th_0363">Class</th><th data-i18n="uw_auto_th_0364">Hero</th><th data-i18n="uw_auto_th_0365">Garrison Equipment (Lv.5)</th><th data-i18n="uw_auto_th_0366">Trigger Condition</th></tr></thead>
+              <tbody>
+                <tr><td data-i18n="uw_auto_td_0367">Bomber</td><td data-i18n="uw_auto_td_0368">Lanchester</td><td data-i18n="uw_auto_td_0369">+16% Allied Troop DEF</td><td data-i18n="uw_auto_td_0370">While Defending</td></tr>
+                <tr><td data-i18n="uw_auto_td_0371">Bomber</td><td data-i18n="uw_auto_td_0372">Lee</td><td data-i18n="uw_auto_td_0373">+16% Allied Troop ATK</td><td data-i18n="uw_auto_td_0374">While Defending</td></tr>
+                <tr><td data-i18n="uw_auto_td_0375">Shield</td><td data-i18n="uw_auto_td_0376">Otto</td><td data-i18n="uw_auto_td_0377">+16% Allied Troop DEF</td><td data-i18n="uw_auto_td_0378">While Defending</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section id="garrison-joiners" class="uw-subsection">
+          <h3 data-i18n="uw_auto_h3_0379">2. Top 4 Defensive Joiner Assist Pool (Skill 1 Only)</h3>
+          <p data-i18n="uw_auto_p_0380">As Garrison Captain, you must organize the top 4 joiners in the garrison menu so their lead heroes provide the most effective defensive Skill 1 assists.</p>
+
+          <div class="uw-role-grid">
+            <div><h4 data-i18n="uw_auto_h4_0381">Lethality &amp; Survival Neutralizers</h4><ul>
+              <li data-i18n="uw_auto_li_0382"><strong>Alph (Bomber - Skill 1: Photon Shield):</strong> Reduces incoming enemy troop Lethality by <strong>20%</strong>.</li>
+              <li data-i18n="uw_auto_li_0383"><strong>Caesar (Shield - Skill 1: Gene Activity):</strong> Grants a <strong>20% chance</strong> to revive fallen soldiers at round end.</li>
+              <li data-i18n="uw_auto_li_0384"><strong>Lanchester (Bomber - Skill 1: Adaptive Transformation):</strong> Grants <strong>+25% Army HP</strong> if the attacking rally's power is higher.</li>
+            </ul></div>
+            <div><h4 data-i18n="uw_auto_h4_0385">Enemy Stat Strippers</h4><ul>
+              <li data-i18n="uw_auto_li_0386"><strong>Sawyer (Shooter - Skill 1: Rust Erosion):</strong> Reduces enemy base HP by <strong>20%</strong> at battle start.</li>
+              <li data-i18n="uw_auto_li_0387"><strong>Ada (Shooter - Skill 1: Sweet Smile):</strong> Reduces enemy DEF by <strong>10%</strong> and enemy HP by <strong>15%</strong>.</li>
+            </ul></div>
+            <div><h4 data-i18n="uw_auto_h4_0388">Counter-Attack Amplifiers</h4><ul>
+              <li data-i18n="uw_auto_li_0389"><strong>Tyronn (Shield - Skill 1: Cripple):</strong> Increases all enemy troops' Damage Taken by <strong>+25%</strong>.</li>
+              <li data-i18n="uw_auto_li_0390"><strong>Koschevoi (Bomber - Skill 1: Precision Strike):</strong> Increases total Damage for all garrison troops by <strong>+25%</strong>.</li>
+              <li data-i18n="uw_auto_li_0391"><strong>Kate (Shooter - Skill 1: Sprint Signal):</strong> Increases total ATK for all garrison troops by <strong>+25%</strong>.</li>
+            </ul></div>
+          </div>
+        </section>
+
+        <section id="garrison-scenarios" class="uw-subsection">
+          <h3 data-i18n="uw_auto_h3_0392">3. Rally Garrison Scenarios &amp; Step-by-Step Executions</h3>
+
+          <h4 data-i18n="uw_auto_h4_0393">SCENARIO 1: The Iron Fortress Garrison (vs. Massive High-ATK Enemy Rally)</h4>
+          <p data-i18n="uw_auto_p_0394"><strong>Incoming Rally Profile:</strong> A high-power enemy whale leading an aggressive rally stacked with high ATK and Lethality.</p>
+          <p data-i18n="uw_auto_p_0395"><strong>Objective:</strong> Stack absolute damage mitigation, suppress enemy Lethality, and absorb the incoming impact without losing frontline integrity.</p>
+          <p data-i18n="uw_auto_p_0396"><strong>Step 1: Garrison Captain Setup</strong></p>
+          <ul>
+            <li data-i18n="uw_auto_li_0397"><strong>Bomber:</strong> Lanchester (Eq: +16% DEF). Skills grant +25% HP when outnumbered, a 20% Stun chance, and cut enemy damage by 20%.</li>
+            <li data-i18n="uw_auto_li_0398"><strong>Shield:</strong> Otto (Eq: +16% DEF). Skills grant an 83% chance for 75% Damage Reduction every round, plus alternating 60%/40% damage mitigation.</li>
+            <li data-i18n="uw_auto_li_0399"><strong>Shooter:</strong> Kate (Eq: +16% Lethality). Skills reduce enemy Bomber Lethality by 25% and Shieldbearer Lethality by 20%.</li>
+            <li data-i18n="uw_auto_li_0400"><strong>Power Armor / Robot:</strong> Musashimaru (+76% Shooter ATK/DEF, +45% Shield/Shooter Damage Reduction) or Atlas (+30% Army HP).</li>
+            <li data-i18n="uw_auto_li_0401"><strong>Troop Ratio:</strong> 50% Shield / 25% Bomber / 25% Shooter.</li>
+          </ul>
+          <p data-i18n="uw_auto_p_0402"><strong>Captain Active Equipment Buffs:</strong> +16% Army DEF (Lanchester Equipment); +16% Army DEF (Otto Equipment); +16% Army Lethality (Kate Equipment); <strong>Total Captain Buffs: +32% DEF, +16% Lethality</strong>.</p>
+          <p data-i18n="uw_auto_p_0403"><strong>Step 2: The 4 Joiner Assists</strong></p>
+          <ol>
+            <li data-i18n="uw_auto_li_0404"><strong>Joiner 1 (Alph):</strong> Skill 1 (Photon Shield) → <strong>-20% Enemy Troop Lethality</strong>.</li>
+            <li data-i18n="uw_auto_li_0405"><strong>Joiner 3 (Sawyer):</strong> Skill 1 (Rust Erosion) → <strong>-20% Enemy Base HP</strong>.</li>
+            <li data-i18n="uw_auto_li_0406"><strong>Joiner 3 (Lanchester):</strong> Skill 1 (Adaptive Transformation) → <strong>+25% Army HP</strong> (power differential active).</li>
+            <li data-i18n="uw_auto_li_0407"><strong>Joiner 4 (Caesar):</strong> Skill 1 (Gene Activity) → <strong>20% Chance to Revive Fallen Troops</strong> at turn end.</li>
+          </ol>
+          <p data-i18n="uw_auto_p_0408"><strong>Step 3: Combat Execution</strong></p>
+          <ol>
+            <li data-i18n="uw_auto_li_0409"><strong>Lethality Neutralization:</strong> Kate’s passive skills combined with Alph’s assist reduce the incoming rally's Lethality by up to <strong>45%</strong>.</li>
+            <li data-i18n="uw_auto_li_0410"><strong>Layered Damage Mitigation:</strong> On Turn 1, Musashimaru reduces damage to your Shieldbearers and Shooters by <strong>45%</strong>, while Otto’s Iron Protection (83% chance) grants <strong>75% Damage Reduction</strong>.</li>
+            <li data-i18n="uw_auto_li_0411"><strong>HP Expansion &amp; Revival:</strong> Lanchester's assist boosts garrison HP by <strong>25%</strong>. At the end of every round, Caesar’s assist skill provides a <strong>20% chance to revive fallen soldiers</strong>.</li>
+          </ol>
+          <p data-i18n="uw_auto_p_0412"><strong>Resolution:</strong> The incoming rally's high ATK hits an unbreakably tanky frontline. The attacker fails to reach the damage threshold needed to inflict permanent deaths, resulting in massive hospital fills for the attacker while your garrison stays intact.</p>
+
+          <h4 data-i18n="uw_auto_h4_0413">SCENARIO 2: The Executioner Garrison (vs. High-Troop / Low-HP Rally)</h4>
+          <p data-i18n="uw_auto_p_0414"><strong>Incoming Rally Profile:</strong> An enemy rally composed of massive troop numbers but lacking base HP and Defense stats.</p>
+          <p data-i18n="uw_auto_p_0415"><strong>Objective:</strong> Leverage Defender's Advantage to send the attacking rally troops directly to the graveyard using extreme Lethality counter-damage.</p>
+          <ul>
+            <li data-i18n="uw_auto_li_0416"><strong>Bomber:</strong> Lee (Eq: +16% ATK). Skills increase target Tactical DMG taken by 50% and deal 100% ATK Tactical AoE damage.</li>
+            <li data-i18n="uw_auto_li_0417"><strong>Shield:</strong> Caesar (Eq: +16% ATK). Skills cut enemy base HP by 20% at battle start and boost allied DEF by 25%.</li>
+            <li data-i18n="uw_auto_li_0418"><strong>Shooter:</strong> Drake (Eq: +16% Lethality). Skills grant +14% ATK, +12% Lethality, and a 110% Tactical burst on Turn 3.</li>
+            <li data-i18n="uw_auto_li_0419"><strong>Power Armor / Robot:</strong> Infercore (+65% Bomber/Shooter ATK, +60% Lethality) or Halo (+30% to +80% Lethality).</li>
+            <li data-i18n="uw_auto_li_0420"><strong>Troop Ratio:</strong> 25% Shield / 40% Bomber / 35% Shooter.</li>
+          </ul>
+          <p data-i18n="uw_auto_p_0421"><strong>Captain Active Equipment Buffs:</strong> +16% Army ATK (Lee Equipment); +16% Army ATK (Caesar Equipment); +16% Army Lethality (Drake Equipment); <strong>Total Captain Buffs: +32% ATK, +16% Lethality</strong>.</p>
+
+          <h4 data-i18n="uw_auto_h4_0422">SCENARIO 3: The Turn-3 Counter-Burst Garrison (vs. Heavy Shooter Rally)</h4>
+          <p data-i18n="uw_auto_p_0423"><strong>Incoming Rally Profile:</strong> An enemy rally stacked with 60% Shooters designed to break garrisons rapidly through heavy backline DPS.</p>
+          <p data-i18n="uw_auto_p_0424"><strong>Objective:</strong> Mitigate early damage, absorb Turn 2 hits, and launch a massive Turn-3 counter-attack that wipes out their Shooter backline.</p>
+          <ul>
+            <li data-i18n="uw_auto_li_0425"><strong>Bomber:</strong> Lee (Eq: +16% ATK). Skills mark targets for +50% Tactical DMG taken.</li>
+            <li data-i18n="uw_auto_li_0426"><strong>Shield:</strong> Marcus (Eq: +16% HP). Cuts basic attack damage taken by 50% on even turns (Turn 2, 4). On Turn 3, allows Bombers/Shooters to fire an extra basic attack dealing 150% DMG.</li>
+            <li data-i18n="uw_auto_li_0427"><strong>Shooter:</strong> Kate (Eq: +16% Lethality). Cuts enemy Shooter/Bomber effectiveness and boosts army Damage by +43% starting on Turn 4.</li>
+            <li data-i18n="uw_auto_li_0428"><strong>Robot:</strong> Bastion.</li>
+            <li data-i18n="uw_auto_li_0429"><strong>Troop Ratio:</strong> 30% Shield / 50% Bomber / 20% Shooter.</li>
+          </ul>
+          <p data-i18n="uw_auto_p_0430"><strong>Captain Active Equipment Buffs:</strong> +16% Army ATK (Lee Equipment); +16% Army HP (Marcus Equipment); +16% Army Lethality (Kate Equipment); <strong>Total Captain Buffs: +16% ATK, +16% HP, +16% Lethality</strong>.</p>
+          <ol>
+            <li data-i18n="uw_auto_li_0431"><strong>Turn 1 &amp; 2 Mitigation:</strong> Marcus’s Monster Intimidation cuts incoming basic attack damage by <strong>50%</strong> on Turn 2, keeping your 50% Bomber stack healthy.</li>
+            <li data-i18n="uw_auto_li_0432"><strong>Targeting Synergy:</strong> Bombers deal counter-damage to Shooters. Your 50% Bomber stack naturally targets their 60% Shooter backline, with a <strong>20% chance per attack to bypass the frontline completely</strong>.</li>
+            <li data-i18n="uw_auto_li_0433"><strong>Turn 3 Trap Execution:</strong> Marcus activates Self-Sacrificing Battle. Your Shieldbearers skip their turn, granting your 50% Bomber stack an extra basic attack dealing <strong>150% DMG</strong>. Lee boosts all incoming Tactical DMG taken by <strong>50%</strong>. Bastion fires a <strong>280% Tactical DMG</strong> burst.</li>
+            <li data-i18n="uw_auto_li_0434"><strong>Resolution:</strong> The incoming Shooter rally takes a double basic attack at 150% power combined with a 280% Tactical burst from Bastion. Their Shooter backline collapses on Turn 3.</li>
+          </ol>
+        </section>
+
+        <section id="garrison-matrix" class="uw-subsection">
+          <h3 data-i18n="uw_auto_h3_0435">4. Rally Garrison Quick-Reference Matrix</h3>
+          <div class="uw-table-wrap">
+            <table class="uw-table uw-matrix">
+              <thead><tr><th data-i18n="uw_auto_th_0436">Incoming Enemy Rally Type</th><th data-i18n="uw_auto_th_0437">Captain Setup (Equipment Active)</th><th data-i18n="uw_auto_th_0438">Robot Choice</th><th data-i18n="uw_auto_th_0439">Ideal Troop Ratio</th><th data-i18n="uw_auto_th_0440">Top 4 Joiner Assists (Skill 1)</th></tr></thead>
+              <tbody>
+                <tr><td data-i18n="uw_auto_td_0441"><strong>High-Power / High-ATK Rally</strong></td><td data-i18n="uw_auto_td_0442"><span class="uw-hero-inline" data-i18n="uw_auto_span_0443"><img src="assets/lanchester.png" alt="Lanchester">Lanchester</span> + Otto + Kate <em>(DEF / DEF / Lethality)</em></td><td data-i18n="uw_auto_td_0444">Musashimaru</td><td data-i18n="uw_auto_td_0445">50% Shield / 25% Bomber / 25% Shooter</td><td data-i18n="uw_auto_td_0446">Alph, Sawyer, Lanchester, Caesar</td></tr>
+                <tr><td data-i18n="uw_auto_td_0447"><strong>High-Troop / Low-HP Rally</strong></td><td data-i18n="uw_auto_td_0448">Lee + Caesar + Drake <em>(ATK / ATK / Lethality)</em></td><td data-i18n="uw_auto_td_0449">Infercore</td><td data-i18n="uw_auto_td_0450">25% Shield / 40% Bomber / 35% Shooter</td><td data-i18n="uw_auto_td_0451">Tyronn, Koschevoi, Kate, Sawyer</td></tr>
+                <tr><td data-i18n="uw_auto_td_0452"><strong>Heavy Shooter DPS Rally</strong></td><td data-i18n="uw_auto_td_0453">Lee + Marcus + Kate <em>(ATK / HP / Lethality)</em></td><td data-i18n="uw_auto_td_0454">Bastion</td><td data-i18n="uw_auto_td_0455">30% Shield / 50% Bomber / 20% Shooter</td><td data-i18n="uw_auto_td_0456">Lee, Ada, Koschevoi, Alph</td></tr>
+                <tr><td data-i18n="uw_auto_td_0457"><strong>Heavy Shield Turtle Rally</strong></td><td data-i18n="uw_auto_td_0458">Lee + Xuanming + Drake <em>(ATK / ATK / Lethality)</em></td><td data-i18n="uw_auto_td_0459">Phantom Cat</td><td data-i18n="uw_auto_td_0460">20% Shield / 20% Bomber / 60% Shooter</td><td data-i18n="uw_auto_td_0461">Ada, Sawyer, Tyronn, Koschevoi</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </section>
+    </article>
+
+    <footer id="uw-end" class="uw-footer">
+      <p data-i18n="uw_auto_p_0462">The Ultimate Tactical Warfare Guide prepared by el Fuego</p>
+    </footer>
+  </main>
+
+  <div class="uw-scroll-controls" aria-label="Page navigation">
+    <button type="button" id="uw-to-top" aria-label="Go to top" data-i18n="uw_auto_button_0463">↑ <span data-i18n="uw_auto_span_0464">Top</span></button>
+    <button type="button" id="uw-to-end" aria-label="Go to end" data-i18n="uw_auto_button_0465">↓ <span data-i18n="uw_auto_span_0466">End</span></button>
+  </div>
+
+  <footer>
+    <span data-i18n="footer_text">Unofficial community database - Server #185 &amp; #197 - el Fuego</span>
+  </footer>
+
+  <script>
+    const themeBtn = document.getElementById("themeBtn");
+
+    if (themeBtn) {
+      themeBtn.addEventListener("click", () => {
+        document.body.classList.toggle("ui-contrast");
+      });
+    }
+  </script>
+
+  <script src="lang.js"></script>
+  <script src="ultimatewarfare.js"></script>
+</body>
+</html>
