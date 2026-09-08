@@ -1,0 +1,112 @@
+/* =========================================================
+   ARENA COUNTER ANALYZER
+   2-2-3 formation grid: 2 heroes / 2 (smaller) Power Armors / 3 heroes.
+   Reuses .cc-slot, .cc-picker, .tc-avatar etc. from
+   counter-analyzer.css and tactical-calculator.css.
+   ========================================================= */
+
+.aa-formation-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+}
+
+.aa-row {
+  display: grid;
+  gap: 12px;
+  width: 100%;
+}
+
+.aa-row-heroes-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.aa-row-heroes-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.aa-row-robots-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  max-width: 70%;
+  margin: 0 auto;
+}
+
+.aa-slot {
+  min-height: 108px;
+}
+
+.aa-slot-robot {
+  min-height: 78px;
+  padding: 10px 8px;
+}
+
+.aa-slot-robot .tc-avatar { width: 36px; height: 36px; }
+
+@media (max-width: 700px) {
+  .aa-row-robots-2 { max-width: 85%; }
+  .aa-slot { min-height: 94px; }
+  .aa-slot-robot { min-height: 66px; }
+}
+
+@media (max-width: 420px) {
+  .aa-row-heroes-3 { gap: 8px; }
+  .aa-row-heroes-2 { gap: 8px; }
+  .aa-row-robots-2 { gap: 8px; max-width: 100%; }
+  .aa-slot { min-height: 84px; padding: 8px 4px; }
+  .aa-slot .cc-slot-name { font-size: 11px; }
+  .aa-slot-robot { min-height: 60px; }
+}
+
+/* ---- Counter formation result cards reuse the same 2-2-3 grid,
+        but with filled read-only display cards instead of buttons ---- */
+
+.aa-result-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 12px 8px;
+  background: var(--uw-surface);
+  border: 1px solid rgba(245, 166, 35, 0.25);
+  border-radius: 12px;
+  min-height: 108px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.aa-result-card.aa-result-robot {
+  min-height: 78px;
+  flex-direction: row;
+  gap: 8px;
+  justify-content: center;
+}
+
+.aa-result-card.aa-result-robot .tc-avatar { width: 36px; height: 36px; }
+
+.aa-result-name {
+  font-weight: 700;
+  font-size: 13px;
+  color: var(--uw-accent);
+}
+
+.aa-result-role {
+  font-size: 10.5px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--uw-text-muted);
+}
+
+@media (max-width: 420px) {
+  .aa-result-card { min-height: 84px; padding: 8px 4px; }
+  .aa-result-name { font-size: 11.5px; }
+}
+
+/* ---- Already-used Hero/Power Armor greyed out in the picker ---- */
+
+.cc-picker-item-disabled {
+  opacity: 0.32;
+  cursor: not-allowed !important;
+  pointer-events: none;
+  filter: grayscale(70%);
+}
+
+.cc-picker-item-disabled:hover {
+  border-color: var(--uw-border) !important;
+  box-shadow: none !important;
+  transform: none !important;
+}

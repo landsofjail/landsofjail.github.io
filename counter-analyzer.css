@@ -1,0 +1,290 @@
+/* =========================================================
+   ENEMY COUNTER ANALYZER
+   Page-specific styles. Reuses the .tc-* component classes
+   from tactical-calculator.css (choice buttons, hero cards,
+   ratio bar, etc.) and adds the hero/robot slot + picker modal.
+   ========================================================= */
+
+.cc-substep-label {
+  margin: 0 0 10px;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--uw-text-soft);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.cc-substep-hint {
+  margin: 0 0 14px;
+  font-size: 12.5px;
+  color: var(--uw-text-muted);
+  line-height: 1.5;
+}
+
+.tc-step .cc-substep-label:not(:first-child) {
+  margin-top: 26px;
+}
+
+/* ---------------- HERO / ROBOT SLOTS ---------------- */
+
+.cc-slot-row {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.cc-slot-row-single {
+  grid-template-columns: minmax(0, 1fr);
+  max-width: 260px;
+}
+
+.cc-slot {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  min-height: 108px;
+
+  padding: 14px 10px;
+  background: var(--uw-surface);
+  border: 1px dashed rgba(245, 166, 35, 0.35);
+  border-radius: 12px;
+  color: var(--uw-text-soft);
+  cursor: pointer;
+  box-sizing: border-box;
+  min-width: 0;
+  width: 100%;
+
+  transition: border-color 0.15s ease, box-shadow 0.2s ease, background 0.15s ease;
+}
+
+.cc-slot:hover {
+  border-color: rgba(245, 166, 35, 0.6);
+}
+
+.cc-slot.filled {
+  border-style: solid;
+  border-color: #f5c04a;
+  background: rgba(245, 166, 35, 0.08);
+  box-shadow: 0 0 14px rgba(245, 166, 35, 0.25);
+  color: var(--uw-text);
+}
+
+.cc-slot-role {
+  font-size: 10.5px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--uw-text-muted);
+}
+
+.cc-slot-placeholder {
+  font-size: 12.5px;
+}
+
+.cc-slot-name {
+  font-weight: 700;
+  font-size: 13px;
+  color: var(--uw-accent);
+  text-align: center;
+  word-break: break-word;
+}
+
+@media (max-width: 480px) {
+  .cc-slot-row { gap: 8px; }
+  .cc-slot { min-height: 94px; padding: 10px 6px; }
+  .cc-slot-name { font-size: 12px; }
+  .cc-slot-placeholder { font-size: 11px; }
+}
+
+/* ---------------- PICKER MODAL ---------------- */
+
+.cc-picker {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.cc-picker.hidden {
+  display: none;
+}
+
+.cc-picker-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(4, 5, 8, 0.78);
+  backdrop-filter: blur(2px);
+}
+
+.cc-picker-modal {
+  position: relative;
+  width: 100%;
+  max-width: 560px;
+  max-height: min(80vh, 640px);
+  display: flex;
+  flex-direction: column;
+
+  background: var(--uw-surface-2);
+  border: 1px solid rgba(245, 166, 35, 0.4);
+  border-radius: 16px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5), 0 0 30px rgba(245, 166, 35, 0.12);
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.cc-picker-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 18px 20px 14px;
+  border-bottom: 1px solid var(--uw-border);
+  flex-shrink: 0;
+}
+
+.cc-picker-kicker {
+  display: block;
+  font-size: 10.5px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--uw-text-muted);
+  margin-bottom: 2px;
+}
+
+.cc-picker-header h3 {
+  margin: 0;
+  font-size: 17px;
+  color: var(--uw-accent);
+}
+
+.cc-picker-header button {
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid var(--uw-border);
+  background: var(--uw-surface);
+  color: var(--uw-text);
+  font-size: 18px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.cc-picker-header button:hover {
+  border-color: rgba(245, 166, 35, 0.5);
+  color: var(--uw-accent);
+}
+
+.cc-picker-list {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-auto-rows: min-content;
+  align-items: start;
+  gap: 14px 10px;
+  padding: 18px 20px 22px;
+  overflow-y: auto;
+  box-sizing: border-box;
+}
+
+@media (max-width: 560px) {
+  .cc-picker-list { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+
+@media (max-width: 380px) {
+  .cc-picker-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .cc-picker { padding: 10px; }
+}
+
+.cc-picker-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 6px;
+  padding: 8px 6px;
+  background: var(--uw-surface);
+  border: 1px solid var(--uw-border);
+  border-radius: 10px;
+  cursor: pointer;
+  min-width: 0;
+  height: auto;
+  min-height: 82px;
+  overflow: visible;
+  box-sizing: border-box;
+  isolation: isolate;
+  position: relative;
+  z-index: 1;
+  transition: border-color 0.15s ease, box-shadow 0.2s ease, transform 0.1s ease;
+}
+
+.cc-picker-item:hover {
+  border-color: #f5c04a;
+  box-shadow: 0 0 12px rgba(245, 166, 35, 0.3);
+  transform: translateY(-1px);
+}
+
+.cc-picker-item span {
+  display: block !important;
+  width: 100%;
+  font-size: 11.5px;
+  font-weight: 600;
+  color: var(--uw-text) !important;
+  text-align: center;
+  word-break: break-word;
+  line-height: 1.25;
+  white-space: normal !important;
+  overflow: visible !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  position: relative;
+  z-index: 2;
+}
+
+/* ---------------- ANALYSIS CARD ---------------- */
+
+.cc-analysis-card {
+  margin-bottom: 26px;
+  padding: 16px 18px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--uw-border-strong);
+  border-radius: 12px;
+  box-sizing: border-box;
+}
+
+.cc-analysis-head {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.cc-analysis-head .tc-avatar {
+  border-color: rgba(232, 84, 107, 0.5);
+}
+
+.cc-analysis-label {
+  display: block;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #e8a3af;
+  margin-bottom: 4px;
+}
+
+.cc-analysis-text {
+  margin: 0;
+  font-size: 13.5px;
+  line-height: 1.6;
+  color: var(--uw-text);
+}
+
+@media (max-width: 480px) {
+  .cc-analysis-head { gap: 10px; }
+  .cc-analysis-text { font-size: 13px; }
+}
