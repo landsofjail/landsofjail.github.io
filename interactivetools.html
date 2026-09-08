@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#08090d">
+<title>Interactive Tools - Lands of Jail</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="lj-common.css">
+</head>
+<body>
+
+<header class="topbar">
+
+  <a class="brand" href="index.html">
+    <img class="brand-mark" src="assets/brand-logo.png" alt="Lands of Jail">
+
+    <div>
+      <strong>Lands of Jail</strong>
+      <span data-i18n="hero_database">Full Guide</span>
+      <span class="brand-credit" data-i18n="brand_credit">by el Fuego</span>
+    </div>
+  </a>
+
+  <a href="home.html" class="lj-home-btn" title="Back" aria-label="Back">
+    <svg viewBox="0 0 24 24"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg>
+  </a>
+
+  <nav>
+    <a href="index.html" data-i18n="nav_home">Home</a>
+    <a href="cage.html" data-i18n="nav_events">Events</a>
+  </nav>
+
+  <button id="themeBtn" class="icon-btn" type="button" title="Toggle contrast">
+    UI
+  </button>
+
+</header>
+
+<main>
+
+  <section class="home-menu">
+
+    <div class="home-menu-header">
+      <div class="section-kicker" data-i18n="it_kicker">LANDS OF JAIL</div>
+      <h1 data-i18n="it_title">Interactive Tools</h1>
+      <p data-i18n="it_subtitle">Build and counter formations instantly</p>
+    </div>
+
+    <div class="lang-switcher">
+      <button type="button" class="lang-btn active" data-lang="en" onclick="changeLanguage('en')">English</button>
+      <span class="lang-divider">|</span>
+      <button type="button" class="lang-btn" data-lang="ko" onclick="changeLanguage('ko')">한국어</button>
+      <span class="lang-divider">|</span>
+      <button type="button" class="lang-btn" data-lang="zh-TW" onclick="changeLanguage('zh-TW')">繁體中文</button>
+      <span class="lang-divider">|</span>
+      <button type="button" class="lang-btn" data-lang="de" onclick="changeLanguage('de')">Deutsch</button>
+      <span class="lang-divider">|</span>
+      <button type="button" class="lang-btn" data-lang="tr" onclick="changeLanguage('tr')">Türkçe</button>
+    </div>
+
+    <div class="home-menu-grid">
+      <section class="home-guides">
+
+        <a href="tactical-calculator.html" class="home-guide-card">
+          <img src="images/tacticalcalculator.png" alt="Tactical Calculator">
+          <div class="home-guide-content">
+            <h3 data-i18n="card_tacticalcalc_title">Tactical Formation Calculator</h3>
+            <p data-i18n="card_tacticalcalc_desc">Pick your battle mode and scout the enemy for an instant formation, robot pick and troop ratio.</p>
+          </div>
+        </a>
+
+        <a href="counter-analyzer.html" class="home-guide-card">
+          <img src="images/counteranalyzer.png" alt="Counter Analyzer">
+          <div class="home-guide-content">
+            <h3 data-i18n="card_counteranalyzer_title">Enemy Counter Analyzer</h3>
+            <p data-i18n="card_counteranalyzer_desc">Report the enemy's hero lineup and robot to get a scout report and matching counter formation.</p>
+          </div>
+        </a>
+
+        <a href="arena-counter-analyzer.html" class="home-guide-card">
+          <img src="images/arenacounter.png" alt="Arena Counter Analyzer">
+          <div class="home-guide-content">
+            <h3 data-i18n="card_arenacounter_title">Arena Counter Analyzer</h3>
+            <p data-i18n="card_arenacounter_desc">Report the enemy's 5-Hero Arena lineup and Power Armors for a matching counter build.</p>
+          </div>
+        </a>
+
+      </section>
+    </div>
+
+  </section>
+
+</main>
+
+<footer>
+  <span data-i18n="footer_text">Unofficial community database - Server #185 &amp; #197 - el Fuego</span>
+</footer>
+
+<script>
+  const themeBtn = document.getElementById("themeBtn");
+  if (themeBtn) {
+    themeBtn.addEventListener("click", () => {
+      document.body.classList.toggle("ui-contrast");
+    });
+  }
+</script>
+
+<script src="lang.js"></script>
+
+</body>
+</html>

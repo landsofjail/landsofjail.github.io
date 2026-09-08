@@ -1,0 +1,152 @@
+/* =========================================================
+   LANDS OF JAIL — SHARED PAGE ADDITIONS
+   1) .lj-page-kicker  — square gold-framed topic icon + title
+   2) .lj-home-btn      — centered gold "return home" button
+   3) .eyebrow fix       — stops "EVENT GUIDE" style badges from
+                           wrapping onto two lines on narrow screens
+   Loaded AFTER style.css on every page so these rules win.
+   ========================================================= */
+
+/* ---------- 1. PAGE KICKER (square icon + title) ---------- */
+
+.lj-page-kicker {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: nowrap;
+  text-align: left;
+}
+
+.lj-page-kicker-icon {
+  width: 64px;
+  height: 64px;
+  flex-shrink: 0;
+
+  object-fit: cover;
+  object-position: center;
+
+  border: 2px solid #f5a623;
+  border-radius: 10px;
+  background: #12141c;
+}
+
+.lj-page-kicker-text {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+
+.lj-page-kicker-text .section-kicker {
+  margin: 0;
+}
+
+.lj-page-kicker-text h1 {
+  margin: 0;
+}
+
+@media (max-width: 600px) {
+  .lj-page-kicker { gap: 12px; }
+  .lj-page-kicker-icon { width: 48px; height: 48px; border-radius: 8px; }
+}
+
+/* ---------- 2. HOME BUTTON (centered, gold, doesn't collide with brand) ---------- */
+
+.topbar { position: relative; }
+
+.lj-home-btn {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 5;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+
+  border-radius: 50%;
+  border: 1px solid rgba(245, 166, 35, 0.5);
+  background: rgba(245, 166, 35, 0.08);
+  color: #f5a623;
+  text-decoration: none;
+
+  transition: box-shadow 0.15s ease, background 0.15s ease, transform 0.15s ease;
+}
+
+.lj-home-btn:hover,
+.lj-home-btn:focus-visible {
+  background: rgba(245, 166, 35, 0.16);
+  box-shadow: 0 0 12px rgba(245, 166, 35, 0.4);
+  transform: translate(-50%, -50%) scale(1.06);
+}
+
+.lj-home-btn svg {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+  display: block;
+}
+
+@media (max-width: 700px) {
+  .lj-home-btn { width: 30px; height: 30px; }
+  .lj-home-btn svg { width: 15px; height: 15px; }
+}
+
+@media (max-width: 420px) {
+  .lj-home-btn { width: 26px; height: 26px; }
+  .lj-home-btn svg { width: 13px; height: 13px; }
+}
+
+/* ---------- 4. HOME PAGE MENU CARDS — center the text ----------
+   Selector specificity is boosted (repeated classes) so this wins
+   over any more-specific rule already in style.css. */
+
+.home-guides a.home-guide-card {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  text-align: center !important;
+}
+
+.home-guides a.home-guide-card > img {
+  display: block !important;
+  margin: 0 auto !important;
+}
+
+.home-guides a.home-guide-card .home-guide-content.home-guide-content {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+  width: 100% !important;
+}
+
+.home-guides a.home-guide-card .home-guide-content.home-guide-content h3,
+.home-guides a.home-guide-card .home-guide-content.home-guide-content p {
+  text-align: center !important;
+  width: 100% !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+/* ---------- 3. EYEBROW WRAP FIX (cage / events / guides pages) ---------- */
+
+.eyebrow {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  white-space: nowrap;
+  gap: 8px;
+}
+
+.eyebrow > span:first-child {
+  flex-shrink: 0;
+}
+
+.eyebrow > span:last-child {
+  font-size: clamp(11px, 3.2vw, 13px);
+}

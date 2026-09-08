@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#08090d">
+<title>Lands of Jail - Welcome</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="lj-common.css">
+<style>
+  /* Scoped to the welcome pop-up only — doesn't touch any other page's cards */
+  #welcomeModal .modal-card {
+    width: min(520px, 94vw);
+  }
+  #welcomeModal .hero-detail {
+    padding: 22px 18px 26px;
+  }
+  #welcomeModal .home-menu-header {
+    margin-bottom: 10px;
+  }
+  #welcomeModal .home-guides {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+  #welcomeModal .home-guide-card {
+    padding: 12px 8px;
+  }
+  #welcomeModal .home-guide-card-wide {
+    grid-column: span 2;
+  }
+  #welcomeModal .home-guide-card img {
+    width: 40px !important;
+    height: 40px !important;
+    min-height: 0 !important;
+    max-height: none !important;
+    flex: 0 0 40px !important;
+    padding: 0 !important;
+    margin: 0 auto 6px !important;
+    aspect-ratio: 1 / 1;
+  }
+  #welcomeModal .home-guide-content h3 {
+    font-size: 13px;
+    line-height: 1.2;
+  }
+  #welcomeModal .home-guide-content p {
+    display: none; /* keep the pop-up compact on mobile — titles are enough here */
+  }
+  #welcomeModal .lang-switcher {
+    margin: 6px 0 16px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  @media (max-width: 380px) {
+    #welcomeModal .home-guide-card img { width: 34px !important; height: 34px !important; flex: 0 0 34px !important; }
+    #welcomeModal .home-guide-content h3 { font-size: 12px; }
+  }
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <a class="brand" href="index.html">
+    <img class="brand-mark" src="assets/brand-logo.png" alt="Lands of Jail">
+    <div>
+      <strong>Lands of Jail</strong>
+      <span data-i18n="hero_database">Full Guide</span>
+      <span class="brand-credit" data-i18n="brand_credit">by el Fuego</span>
+    </div>
+  </a>
+  <button id="themeBtn" class="icon-btn" type="button" title="Toggle contrast">UI</button>
+</header>
+
+<main>
+  <section class="home-menu">
+    <div class="home-menu-header">
+      <div class="section-kicker">LANDS OF JAIL</div>
+      <h1 data-i18n="welcome_title">Welcome</h1>
+      <p data-i18n="welcome_subtitle">Where would you like to go?</p>
+    </div>
+
+    <div class="home-menu-grid">
+      <section class="home-guides" id="welcomeFallbackGrid">
+        <a href="index.html" class="home-guide-card">
+          <img src="assets/brand-logo.png" alt="Main Page">
+          <div class="home-guide-content">
+            <h3 data-i18n="welcome_card_main_title">Main Page</h3>
+            <p data-i18n="welcome_card_main_desc">The full hero database and section index.</p>
+          </div>
+        </a>
+        <a href="eventguide.html" class="home-guide-card">
+          <img src="images/cage.png" alt="Event Guide">
+          <div class="home-guide-content">
+            <h3 data-i18n="welcome_card_event_title">Event Guide</h3>
+            <p data-i18n="welcome_card_event_desc">Active in-game events and how to tackle them.</p>
+          </div>
+        </a>
+        <a href="battleguide.html" class="home-guide-card">
+          <img src="images/ultimatewarfare.png" alt="Battle Guide">
+          <div class="home-guide-content">
+            <h3 data-i18n="welcome_card_battle_title">Battle Guide</h3>
+            <p data-i18n="welcome_card_battle_desc">Troop mechanics and the Ultimate Warfare Guide.</p>
+          </div>
+        </a>
+        <a href="upgradingguide.html" class="home-guide-card">
+          <img src="images/tome.png" alt="Upgrading Guide">
+          <div class="home-guide-content">
+            <h3 data-i18n="welcome_card_upgrade_title">Upgrading Guide</h3>
+            <p data-i18n="welcome_card_upgrade_desc">Tome, Trove, Armor, Hero Star and Hero Equipment.</p>
+          </div>
+        </a>
+        <a href="interactivetools.html" class="home-guide-card home-guide-card-wide">
+          <img src="images/interactivetools.png" alt="Interactive Tools">
+          <div class="home-guide-content">
+            <h3 data-i18n="welcome_card_tools_title">Tactical Toolkit</h3>
+            <p data-i18n="welcome_card_tools_desc">Tactical Calculator, Counter Analyzer and Arena Counter Analyzer.</p>
+          </div>
+        </a>
+      </section>
+    </div>
+  </section>
+</main>
+
+<!-- WELCOME POP-UP (opens automatically on load) -->
+<div id="welcomeModal" class="modal">
+  <div class="modal-backdrop" id="welcomeModalBackdrop"></div>
+  <article class="modal-card">
+    <button class="modal-close" id="welcomeModalClose">Close</button>
+    <div class="hero-detail">
+      <div class="home-menu-header">
+        <div class="section-kicker">LANDS OF JAIL</div>
+        <h1 data-i18n="welcome_title">Welcome</h1>
+        <p data-i18n="welcome_subtitle">Where would you like to go?</p>
+      </div>
+
+      <div class="lang-switcher">
+        <button type="button" class="lang-btn active" data-lang="en" onclick="changeLanguage('en')">English</button>
+        <span class="lang-divider">|</span>
+        <button type="button" class="lang-btn" data-lang="ko" onclick="changeLanguage('ko')">한국어</button>
+        <span class="lang-divider">|</span>
+        <button type="button" class="lang-btn" data-lang="zh-TW" onclick="changeLanguage('zh-TW')">繁體中文</button>
+        <span class="lang-divider">|</span>
+        <button type="button" class="lang-btn" data-lang="de" onclick="changeLanguage('de')">Deutsch</button>
+        <span class="lang-divider">|</span>
+        <button type="button" class="lang-btn" data-lang="tr" onclick="changeLanguage('tr')">Türkçe</button>
+      </div>
+
+      <section class="home-guides">
+        <a href="index.html" class="home-guide-card">
+          <img src="assets/brand-logo.png" alt="Main Page">
+          <div class="home-guide-content">
+            <h3 data-i18n="welcome_card_main_title">Main Page</h3>
+            <p data-i18n="welcome_card_main_desc">The full hero database and section index.</p>
+          </div>
+        </a>
+        <a href="eventguide.html" class="home-guide-card">
+          <img src="images/cage.png" alt="Event Guide">
+          <div class="home-guide-content">
+            <h3 data-i18n="welcome_card_event_title">Event Guide</h3>
+            <p data-i18n="welcome_card_event_desc">Active in-game events and how to tackle them.</p>
+          </div>
+        </a>
+        <a href="battleguide.html" class="home-guide-card">
+          <img src="images/ultimatewarfare.png" alt="Battle Guide">
+          <div class="home-guide-content">
+            <h3 data-i18n="welcome_card_battle_title">Battle Guide</h3>
+            <p data-i18n="welcome_card_battle_desc">Troop mechanics and the Ultimate Warfare Guide.</p>
+          </div>
+        </a>
+        <a href="upgradingguide.html" class="home-guide-card">
+          <img src="images/tome.png" alt="Upgrading Guide">
+          <div class="home-guide-content">
+            <h3 data-i18n="welcome_card_upgrade_title">Upgrading Guide</h3>
+            <p data-i18n="welcome_card_upgrade_desc">Tome, Trove, Armor, Hero Star and Hero Equipment.</p>
+          </div>
+        </a>
+        <a href="interactivetools.html" class="home-guide-card home-guide-card-wide">
+          <img src="images/interactivetools.png" alt="Interactive Tools">
+          <div class="home-guide-content">
+            <h3 data-i18n="welcome_card_tools_title">Tactical Toolkit</h3>
+            <p data-i18n="welcome_card_tools_desc">Tactical Calculator, Counter Analyzer and Arena Counter Analyzer.</p>
+          </div>
+        </a>
+      </section>
+    </div>
+  </article>
+</div>
+
+<footer>
+  <span data-i18n="footer_text">Unofficial community database - Server #185 &amp; #197 - el Fuego</span>
+</footer>
+
+<script>
+  const themeBtn = document.getElementById("themeBtn");
+  if (themeBtn) {
+    themeBtn.addEventListener("click", () => {
+      document.body.classList.toggle("ui-contrast");
+    });
+  }
+
+  // Auto-open the welcome pop-up as soon as the page loads.
+  const welcomeModal = document.getElementById("welcomeModal");
+  const closeWelcome = () => welcomeModal.classList.add("hidden");
+  document.getElementById("welcomeModalClose").addEventListener("click", closeWelcome);
+  document.getElementById("welcomeModalBackdrop").addEventListener("click", closeWelcome);
+  // The page behind the pop-up already shows the same 4 options, so closing
+  // it never leaves a dead end.
+</script>
+
+<script src="lang.js"></script>
+
+</body>
+</html>
