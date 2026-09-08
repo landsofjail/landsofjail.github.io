@@ -1,0 +1,587 @@
+/* =========================================================
+   TACTICAL FORMATION & COUNTER CALCULATOR
+   Page-specific styles — reuses the --uw-* variables already
+   defined site-wide so it matches the rest of Lands of Jail.
+   ========================================================= */
+
+.tc-hero {
+  width: 100%;
+  max-width: 900px;
+  margin: 48px auto 32px;
+  padding: 0 20px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.tc-back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 18px;
+  padding: 8px 16px;
+
+  background: rgba(245, 166, 35, 0.06);
+  border: 1px solid rgba(245, 166, 35, 0.35);
+  border-radius: 999px;
+
+  color: #f5c04a;
+  font-size: 12.5px;
+  font-weight: 600;
+  text-decoration: none;
+
+  transition: border-color 0.15s ease, box-shadow 0.2s ease, background 0.15s ease, transform 0.1s ease;
+}
+
+.tc-back-btn:hover,
+.tc-back-btn:focus-visible {
+  border-color: #f5c04a;
+  background: rgba(245, 166, 35, 0.12);
+  box-shadow: 0 0 12px rgba(245, 166, 35, 0.3);
+  transform: translateX(-2px);
+}
+
+@media (max-width: 480px) {
+  .tc-back-btn {
+    font-size: 12px;
+    padding: 7px 14px;
+  }
+}
+
+.tc-hero h1 {
+  margin: 8px 0 14px;
+  font-size: clamp(23px, 5vw, 34px);
+  letter-spacing: 0.01em;
+}
+
+.tc-hero p {
+  color: var(--uw-text-soft);
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+.tc-hero .uw-lang-switcher {
+  margin-top: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.tc-panel {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto 40px;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.tc-step {
+  margin-bottom: 34px;
+}
+
+.tc-step-head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.tc-step-num {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: linear-gradient(145deg, #ffd27a, #f5a623);
+  color: #1a1200;
+  font-weight: 800;
+  font-size: 14px;
+  box-shadow: 0 0 12px rgba(245, 166, 35, 0.4);
+}
+
+.tc-step-head h2 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
+.tc-choice-grid {
+  display: grid;
+  gap: 12px;
+  width: 100%;
+}
+
+.tc-choice-4, .tc-choice-5 {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+.tc-choice-5 { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+
+@media (max-width: 900px) {
+  .tc-choice-4, .tc-choice-5 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.tc-choice {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  align-items: flex-start;
+  text-align: left;
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+
+  padding: 14px 16px;
+  background: var(--uw-surface);
+  border: 1px solid rgba(245, 166, 35, 0.28);
+  border-radius: 12px;
+  color: var(--uw-text);
+  cursor: pointer;
+
+  transition: border-color 0.15s ease, box-shadow 0.2s ease, background 0.15s ease, transform 0.1s ease;
+}
+
+.tc-choice:hover {
+  border-color: rgba(245, 166, 35, 0.55);
+  transform: translateY(-1px);
+}
+
+.tc-choice.active {
+  border-color: #f5c04a;
+  background: rgba(245, 166, 35, 0.1);
+  box-shadow:
+    0 0 0 1px rgba(245, 166, 35, 0.5),
+    0 0 16px 2px rgba(245, 166, 35, 0.45),
+    0 0 34px 6px rgba(245, 166, 35, 0.18);
+}
+
+.tc-choice-title {
+  font-weight: 700;
+  font-size: 14px;
+  word-break: break-word;
+}
+
+.tc-choice-sub {
+  font-size: 11.5px;
+  color: var(--uw-text-soft);
+  line-height: 1.4;
+}
+
+.tc-calc-btn {
+  padding: 14px 28px;
+  background: linear-gradient(145deg, #ffd27a, #f5a623);
+  color: #1a1200;
+  border: none;
+  border-radius: 10px;
+  font-weight: 800;
+  font-size: 15px;
+  letter-spacing: 0.01em;
+  cursor: pointer;
+  transition: opacity 0.15s ease, transform 0.1s ease, box-shadow 0.2s ease;
+  box-shadow: 0 0 0 rgba(245, 166, 35, 0);
+}
+
+.tc-calc-btn:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 0 18px rgba(245, 166, 35, 0.4);
+}
+
+.tc-calc-btn:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.tc-hint {
+  margin-top: 10px;
+  font-size: 13px;
+  color: var(--uw-text-soft);
+}
+
+/* ---------------- RESULTS ---------------- */
+
+.tc-results {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto 80px;
+  padding: 26px 20px;
+  background: var(--uw-surface-2);
+  border: 1px solid var(--uw-border-strong);
+  border-radius: 16px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.tc-results h2 {
+  margin: 0 0 20px;
+  color: var(--uw-accent);
+  font-size: 20px;
+}
+
+.tc-ratio-block {
+  margin-bottom: 30px;
+}
+
+.tc-ratio-label {
+  font-size: 13px;
+  color: var(--uw-text-soft);
+  margin-bottom: 8px;
+}
+
+.tc-ratio-bar {
+  display: flex;
+  width: 100%;
+  height: 26px;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid var(--uw-border);
+}
+
+.tc-ratio-seg {
+  height: 100%;
+  transition: width 0.4s ease;
+}
+
+.tc-seg-shield  { background: #5aa9e6; }
+.tc-seg-bomber  { background: #f5a623; }
+.tc-seg-shooter { background: #e8546b; }
+
+.tc-ratio-legend {
+  display: flex;
+  gap: 18px;
+  margin-top: 10px;
+  font-size: 13px;
+  color: var(--uw-text);
+  flex-wrap: wrap;
+}
+
+.tc-dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 6px;
+}
+
+.tc-dot-shield  { background: #5aa9e6; }
+.tc-dot-bomber  { background: #f5a623; }
+.tc-dot-shooter { background: #e8546b; }
+
+.tc-formation-title {
+  margin: 0 0 16px;
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  color: var(--uw-accent);
+}
+
+.tc-formation-title-alt {
+  color: #a8c6ea;
+}
+
+.tc-formation-divider {
+  height: 1px;
+  margin: 30px 0;
+  background: linear-gradient(90deg, transparent, var(--uw-border-strong), transparent);
+}
+
+.tc-hero-cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  margin-bottom: 16px;
+}
+
+@media (max-width: 760px) {
+  .tc-hero-cards { grid-template-columns: 1fr; }
+}
+
+.tc-hero-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 16px 14px;
+  background: var(--uw-surface);
+  border: 1px solid rgba(245, 166, 35, 0.2);
+  border-radius: 12px;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+.tc-hero-card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  min-width: 0;
+}
+
+.tc-hero-card-head {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  margin-bottom: 10px;
+}
+
+.tc-hero-role {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--uw-text-soft);
+}
+
+.tc-hero-name {
+  font-weight: 800;
+  font-size: 16px;
+  color: var(--uw-accent);
+}
+
+
+/* ---------------- SHARED AVATAR SYSTEM ----------------
+   A fixed-size circular window (.tc-avatar) with overflow:hidden;
+   the <img> inside is scaled up and centered so it fills the
+   circle edge-to-edge even if the source PNG has built-in padding
+   around the character. Tune TC_AVATAR_ZOOM below if your final
+   art needs more/less crop. */
+
+.tc-avatar {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  position: relative !important;
+  border-radius: 50% !important;
+  overflow: hidden !important;
+  background: var(--uw-surface-3);
+  flex: 0 0 auto !important;
+  border: 2px solid rgba(245, 166, 35, 0.4);
+  box-sizing: border-box !important;
+}
+
+.tc-avatar img {
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  max-width: 100% !important;
+  max-height: 100% !important;
+  object-fit: cover !important;
+  object-position: center !important;
+  transform: scale(1.35); /* <- increase (e.g. 1.5) for more zoom/crop, decrease for less */
+  transform-origin: center !important;
+}
+
+.tc-avatar.tc-avatar-lg { width: 56px !important; height: 56px !important; }
+.tc-avatar.tc-avatar-md { width: 48px !important; height: 48px !important; }
+.tc-avatar.tc-avatar-picker { width: 46px !important; height: 46px !important; }
+
+@media (max-width: 380px) {
+  .tc-avatar.tc-avatar-picker { width: 42px !important; height: 42px !important; }
+}
+.tc-avatar.tc-avatar-sm { width: 44px !important; height: 44px !important; border-width: 2px; }
+.tc-avatar.tc-avatar-xs { width: 22px !important; height: 22px !important; border-width: 1px; }
+
+.tc-hero-card > .tc-avatar-lg {
+  margin: 4px 0 10px;
+}
+
+.cc-analysis-head > .tc-avatar-md {
+  margin-top: 2px;
+}
+
+@media (max-width: 480px) {
+  .tc-avatar.tc-avatar-sm { width: 38px !important; height: 38px !important; }
+}
+
+.tc-badge {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  max-width: 100%;
+  word-break: break-word;
+}
+
+.tc-badge-on {
+  background: rgba(90, 220, 140, 0.16);
+  color: #8bf0b0;
+  border: 1px solid rgba(90, 220, 140, 0.4);
+}
+
+.tc-badge-off {
+  background: rgba(255, 255, 255, 0.07);
+  color: var(--uw-text-soft);
+  border: 1px solid var(--uw-border);
+}
+
+.tc-hero-eq-name {
+  font-size: 12px;
+  color: var(--uw-text);
+  margin: 0 0 10px;
+}
+
+.tc-hero-eq-name em {
+  color: var(--uw-text-soft);
+  font-style: normal;
+}
+
+.tc-hero-scores {
+  display: flex;
+  gap: 14px;
+  font-size: 12px;
+  color: var(--uw-text-soft);
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.tc-hero-scores b {
+  color: var(--uw-text);
+}
+
+.tc-robot-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 18px;
+  margin-bottom: 16px;
+  background: rgba(245, 166, 35, 0.08);
+  border: 1px solid rgba(245, 166, 35, 0.3);
+  border-radius: 12px;
+  box-sizing: border-box;
+}
+
+@media (max-width: 480px) {
+  .tc-robot-card {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+
+.tc-robot-card-body {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.tc-robot-label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--uw-text-soft);
+  margin-bottom: 3px;
+}
+
+.tc-robot-name {
+  font-weight: 800;
+  font-size: 17px;
+  color: var(--uw-accent);
+  margin-bottom: 4px;
+}
+
+.tc-robot-note {
+  margin: 0;
+  font-size: 13px;
+  color: var(--uw-text);
+  line-height: 1.5;
+}
+
+.tc-summary {
+  font-size: 13px;
+  color: var(--uw-text);
+  margin: 0 0 10px;
+  line-height: 1.6;
+}
+
+.tc-reason {
+  font-size: 13px;
+  color: var(--uw-text-soft);
+  line-height: 1.6;
+  margin: 0;
+  padding: 12px 14px;
+  background: rgba(255, 255, 255, 0.03);
+  border-left: 3px solid rgba(245, 166, 35, 0.5);
+  border-radius: 0 8px 8px 0;
+}
+
+.tc-disclaimer {
+  font-size: 11px;
+  color: var(--uw-text-muted);
+  margin: 24px 0 0;
+}
+
+/* ---------------- JOINER HEROES (Skill 1 only, Rally modes) ---------------- */
+
+.tc-joiners {
+  margin: 4px 0 18px;
+  padding: 12px 14px;
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid var(--uw-border);
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
+.tc-joiners-title {
+  margin: 0 0 10px;
+  font-size: 11.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--uw-text-soft);
+}
+
+.tc-joiners-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.tc-joiner-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+}
+
+
+.tc-joiner-text {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0 6px;
+  min-width: 0;
+}
+
+.tc-joiner-name {
+  font-weight: 700;
+  font-size: 12.5px;
+  color: var(--uw-accent);
+  flex-shrink: 0;
+}
+
+.tc-joiner-effect {
+  font-size: 11.5px;
+  color: var(--uw-text-soft);
+  line-height: 1.4;
+}
+
+@media (max-width: 480px) {
+  .tc-joiners { padding: 10px; }
+  .tc-joiner-name { font-size: 12px; }
+  .tc-joiner-effect { font-size: 11px; }
+}
+
+/* ---------------- SMALL PHONES ---------------- */
+
+@media (max-width: 480px) {
+  .tc-hero, .tc-panel { padding: 0 14px; }
+  .tc-results { padding: 20px 14px; }
+  .tc-choice { padding: 12px; }
+  .tc-choice-title { font-size: 13px; }
+  .tc-choice-sub { font-size: 11px; }
+  .tc-step-head h2 { font-size: 16px; }
+  .tc-ratio-legend { gap: 12px; font-size: 12px; }
+}
