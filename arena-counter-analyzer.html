@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#08090d">
+<link rel="icon" type="image/png" href="assets/brand-logo.png">
+  <title>Arena Counter Analyzer</title>
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="ultimatewarfare.css">
+  <link rel="stylesheet" href="tactical-calculator.css">
+  <link rel="stylesheet" href="counter-analyzer.css">
+  <link rel="stylesheet" href="arena-counter-analyzer.css">
+</head>
+<body>
+
+<header class="topbar">
+  <a class="brand" href="index.html">
+    <img class="brand-mark" src="assets/brand-logo.png" alt="Lands of Jail">
+    <div>
+      <strong>Lands of Jail</strong>
+      <span data-i18n="hero_database">Full Guide</span>
+      <span class="brand-credit" data-i18n="brand_credit">by el Fuego</span>
+    </div>
+  </a>
+
+  <nav>
+    <a href="index.html" data-i18n="nav_home">Home</a>
+    <a href="cage.html" data-i18n="nav_events">Events</a>
+    <a href="ultimatewarfare_clean.html" data-i18n="tc_nav_guide">Guide</a>
+    <a href="tactical-calculator.html" data-i18n="cc_nav_calculator">Calculator</a>
+    <a href="counter-analyzer.html" data-i18n="cc_nav_analyzer">Counter Analyzer</a>
+  </nav>
+
+  <button id="themeBtn" class="icon-btn" type="button" title="Toggle contrast">UI</button>
+</header>
+
+<main class="uw-guide" id="aa-top">
+
+  <section class="tc-hero">
+    <a href="ultimatewarfare_clean.html" class="tc-back-btn" data-i18n="tc_back_to_guide">← Back to the Guide</a>
+    <p class="uw-eyebrow" data-i18n="aa_kicker">ARENA COUNTER ANALYZER</p>
+    <h1 data-i18n="aa_title">Arrest Skill Counter Formation</h1>
+    <p data-i18n="aa_intro">Enter the enemy's 5-Hero Arena lineup and 2 Power Armors — the engine reads their Arrest Skills for the class they lean on, then builds a 5-Hero + 2-Power-Armor counter using the Shield → Bomber → Shooter → Shield priority-targeting cycle.</p>
+
+    <div class="lang-switcher uw-lang-switcher">
+      <button type="button" class="lang-btn active" data-lang="en" onclick="changeLanguage('en')">English</button>
+      <span class="lang-divider">|</span>
+      <button type="button" class="lang-btn" data-lang="ko" onclick="changeLanguage('ko')">한국어</button>
+      <span class="lang-divider">|</span>
+      <button type="button" class="lang-btn" data-lang="zh-TW" onclick="changeLanguage('zh-TW')">繁體中文</button>
+      <span class="lang-divider">|</span>
+      <button type="button" class="lang-btn" data-lang="de" onclick="changeLanguage('de')">Deutsch</button>
+      <span class="lang-divider">|</span>
+      <button type="button" class="lang-btn" data-lang="tr" onclick="changeLanguage('tr')">Türkçe</button>
+    </div>
+  </section>
+
+  <section class="tc-panel">
+
+    <div class="tc-step">
+      <div class="tc-step-head">
+        <span class="tc-step-num">1</span>
+        <h2 data-i18n="aa_step1_title">Report the Enemy's Arena Lineup</h2>
+      </div>
+      <p class="cc-substep-hint" data-i18n="aa_step1_hint">Any Hero can go in any slot — there's no class restriction here, just their 5 strongest Arrest picks.</p>
+
+      <div class="aa-formation-grid">
+        <div class="aa-row aa-row-heroes-2">
+          <button type="button" class="cc-slot aa-slot" data-slot="enemy-h-0" data-picker="hero"><span class="cc-slot-placeholder" data-i18n="cc_tap_to_select">Tap to select</span></button>
+          <button type="button" class="cc-slot aa-slot" data-slot="enemy-h-1" data-picker="hero"><span class="cc-slot-placeholder" data-i18n="cc_tap_to_select">Tap to select</span></button>
+        </div>
+        <div class="aa-row aa-row-robots-2">
+          <button type="button" class="cc-slot aa-slot aa-slot-robot" data-slot="enemy-r-0" data-picker="robot"><span class="cc-slot-placeholder" data-i18n="cc_tap_to_select">Tap to select</span></button>
+          <button type="button" class="cc-slot aa-slot aa-slot-robot" data-slot="enemy-r-1" data-picker="robot"><span class="cc-slot-placeholder" data-i18n="cc_tap_to_select">Tap to select</span></button>
+        </div>
+        <div class="aa-row aa-row-heroes-3">
+          <button type="button" class="cc-slot aa-slot" data-slot="enemy-h-2" data-picker="hero"><span class="cc-slot-placeholder" data-i18n="cc_tap_to_select">Tap to select</span></button>
+          <button type="button" class="cc-slot aa-slot" data-slot="enemy-h-3" data-picker="hero"><span class="cc-slot-placeholder" data-i18n="cc_tap_to_select">Tap to select</span></button>
+          <button type="button" class="cc-slot aa-slot" data-slot="enemy-h-4" data-picker="hero"><span class="cc-slot-placeholder" data-i18n="cc_tap_to_select">Tap to select</span></button>
+        </div>
+      </div>
+    </div>
+
+    <div class="tc-step">
+      <button type="button" id="aa-calc-btn" class="tc-calc-btn" disabled data-i18n="aa_calc_btn">
+        Analyze &amp; Build Counter
+      </button>
+      <p class="tc-hint" id="aa-hint" data-i18n="aa_hint">Fill all 5 Hero slots and both Power Armor slots above to unlock the analyzer.</p>
+    </div>
+
+  </section>
+
+  <!-- RESULTS -->
+  <section class="tc-results" id="aa-results" hidden>
+
+    <h2 data-i18n="aa_results_title">Recommended Counter Formation</h2>
+
+    <div class="cc-analysis-card" id="aa-analysis-card"></div>
+
+    <h3 class="tc-formation-title" data-i18n="aa_lineup_title">Counter Arena Lineup</h3>
+    <div class="aa-formation-grid" id="aa-counter-grid"></div>
+
+    <h3 class="tc-formation-title tc-formation-title-alt" data-i18n="cc_why_title">Why This Counter?</h3>
+    <p class="tc-reason" id="aa-reason"></p>
+    <p class="tc-reason" id="aa-priority-note"></p>
+
+    <p class="tc-disclaimer" data-i18n="tc_disclaimer">This tool applies simplified scoring rules based on the guide's published skill and equipment data. Always verify against live in-game numbers before committing resources.</p>
+
+  </section>
+
+</main>
+
+<footer>
+  <span data-i18n="footer_text">Unofficial community database - Server #185 &amp; #197 - el Fuego</span>
+</footer>
+
+<!-- HERO / ROBOT PICKER MODAL -->
+<div id="ccPicker" class="cc-picker hidden">
+  <div class="cc-picker-backdrop"></div>
+  <div class="cc-picker-modal">
+    <div class="cc-picker-header">
+      <div>
+        <span class="cc-picker-kicker" data-i18n="cc_picker_kicker">SELECT</span>
+        <h3 id="ccPickerTitle" data-i18n="cc_picker_title_hero">Select Hero</h3>
+      </div>
+      <button type="button" id="ccPickerClose" aria-label="Close">×</button>
+    </div>
+    <div id="ccPickerList" class="cc-picker-list"></div>
+  </div>
+</div>
+
+<script>
+  const themeBtn = document.getElementById("themeBtn");
+  if (themeBtn) {
+    themeBtn.addEventListener("click", () => {
+      document.body.classList.toggle("ui-contrast");
+    });
+  }
+</script>
+
+<script src="lang.js"></script>
+<script src="tc_arena_heroes.js"></script>
+<script src="tc_arena_robots.js"></script>
+<script src="tc_arena_engine.js"></script>
+<script src="arena-counter-analyzer.js"></script>
+
+</body>
+</html>
