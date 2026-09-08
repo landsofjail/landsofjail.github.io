@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#08090d">
+<link rel="icon" type="image/png" href="assets/brand-logo.png">
+<title>Upgrading Guide - Lands of Jail</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="lj-common.css">
+</head>
+<body>
+
+<header class="topbar">
+
+  <a class="brand" href="index.html">
+    <img class="brand-mark" src="assets/brand-logo.png" alt="Lands of Jail">
+
+    <div>
+      <strong>Lands of Jail</strong>
+      <span data-i18n="hero_database">Full Guide</span>
+      <span class="brand-credit" data-i18n="brand_credit">by el Fuego</span>
+    </div>
+  </a>
+
+  <a href="home.html" class="lj-home-btn" title="Back" aria-label="Back">
+    <svg viewBox="0 0 24 24"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg>
+  </a>
+
+  <nav>
+    <a href="index.html" data-i18n="nav_home">Home</a>
+    <a href="cage.html" data-i18n="nav_events">Events</a>
+  </nav>
+
+  <button id="themeBtn" class="icon-btn" type="button" title="Toggle contrast">
+    UI
+  </button>
+
+</header>
+
+<main>
+
+  <section class="home-menu">
+
+    <div class="home-menu-header">
+      <div class="section-kicker" data-i18n="ug_kicker">LANDS OF JAIL</div>
+      <h1 data-i18n="ug_title">Upgrading Guide</h1>
+      <p data-i18n="ug_subtitle">Level up your gear and heroes</p>
+    </div>
+
+    <div class="lang-switcher">
+      <button type="button" class="lang-btn active" data-lang="en" onclick="changeLanguage('en')">English</button>
+      <span class="lang-divider">|</span>
+      <button type="button" class="lang-btn" data-lang="ko" onclick="changeLanguage('ko')">한국어</button>
+      <span class="lang-divider">|</span>
+      <button type="button" class="lang-btn" data-lang="zh-TW" onclick="changeLanguage('zh-TW')">繁體中文</button>
+      <span class="lang-divider">|</span>
+      <button type="button" class="lang-btn" data-lang="de" onclick="changeLanguage('de')">Deutsch</button>
+      <span class="lang-divider">|</span>
+      <button type="button" class="lang-btn" data-lang="tr" onclick="changeLanguage('tr')">Türkçe</button>
+    </div>
+
+    <div class="home-menu-grid">
+      <section class="home-guides">
+
+        <a href="tome.html" class="home-guide-card">
+          <img src="images/tome.png" alt="Tome Upgrade">
+          <div class="home-guide-content">
+            <h3 data-i18n="card_tome_title">Tome Upgrade</h3>
+            <p data-i18n="card_tome_desc">Tome upgrade requirements.</p>
+          </div>
+        </a>
+
+        <a href="trove.html" class="home-guide-card">
+          <img src="images/trove.png" alt="Trove Upgrade">
+          <div class="home-guide-content">
+            <h3 data-i18n="card_trove_title">Trove Upgrade</h3>
+            <p data-i18n="card_trove_desc">Trove upgrade requirements.</p>
+          </div>
+        </a>
+
+        <a href="armor.html" class="home-guide-card">
+          <img src="images/armor.png" alt="Prisoner Armor">
+          <div class="home-guide-content">
+            <h3 data-i18n="card_armor_title">Prisoner Armor</h3>
+            <p data-i18n="card_armor_desc">Prisoner Armor levelling and core upgrading requirements.</p>
+          </div>
+        </a>
+
+        <a href="herostar.html" class="home-guide-card">
+          <img src="images/herostar.png" alt="Hero Star">
+          <div class="home-guide-content">
+            <h3 data-i18n="card_hero_star_title">Hero Star</h3>
+            <p data-i18n="card_hero_star_desc">Hero star upgrade requirements.</p>
+          </div>
+        </a>
+
+        <a href="equipment.html" class="home-guide-card">
+          <img src="images/equipment.png" alt="Hero Equipment Reformation">
+          <div class="home-guide-content">
+            <h3 data-i18n="card_equip_ref_title">Hero Equipment Reformation</h3>
+            <p data-i18n="card_equip_ref_desc">Hero Equipment Reformation upgrade requirements.</p>
+          </div>
+        </a>
+
+        <a href="heroequipment.html" class="home-guide-card">
+          <img src="images/heroequipment.png" alt="Hero Exclusive Equipment">
+          <div class="home-guide-content">
+            <h3 data-i18n="card_hero_equip_title">Hero Exclusive Equipment</h3>
+            <p data-i18n="card_hero_equip_desc">Hero exclusive equipment information and requirements.</p>
+          </div>
+        </a>
+
+      </section>
+    </div>
+
+  </section>
+
+</main>
+
+<footer>
+  <span data-i18n="footer_text">Unofficial community database - Server #185 &amp; #197 - el Fuego</span>
+</footer>
+
+<script>
+  const themeBtn = document.getElementById("themeBtn");
+  if (themeBtn) {
+    themeBtn.addEventListener("click", () => {
+      document.body.classList.toggle("ui-contrast");
+    });
+  }
+</script>
+
+<script src="lang.js"></script>
+
+</body>
+</html>
